@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 photo = '$photo' 
               WHERE id = $patient_id");
 
-          $sql =  "UPDATE patient_details SET
+       /*   $sql =  "UPDATE patient_details SET
              family_history = '$family_medical_history',
                 smoker = '$smoking_history',
                 social_history = '$social_history',
@@ -119,11 +119,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 
     
-    if (mysqli_query($conn, $sql)) {
+    if (mysqli_query($conn, $sql)) { */
         header("Location: view_patient.php?id=$patient_id&message=Patient updated successfully");
-    } else {
+  /*  } else {
         $error = "Error updating record: " . mysqli_error($conn);
-    }
+    } */
 }
 ?>
 
@@ -217,7 +217,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             background: #27ae60;
         }
         .btn-cancel {
-            background: #95a5a6;
+            background: #e74c3c;
         }
         .btn-cancel:hover {
             background: #7f8c8d;
@@ -397,7 +397,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
             </div>
             
-            <div class="section">
+            <div class="section" style="display: none;">
                 <h2>Medical History</h2>
                 <div class="row">
                     <div class="col">
@@ -499,7 +499,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             
             
-            <div class="section">
+            <div class="section"  style="display: none;">
              <!--   <h2>Diagnosis and Notes</h2> -->
                <div class="form-group" style="display: none;">
                     <label for="diagnosis">Diagnosis</label>

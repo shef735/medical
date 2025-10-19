@@ -356,6 +356,61 @@ $filetoresult=ltrim($my_tables_use).'_resources.record_bp';
 
 
 
+				$prefix=ltrim($main_table_use).'_resources.clinic_visits';
+										  $col_name = 'last_name';
+										  $column_attr = "LONGTEXT NOT NULL";
+										  $col = mysqli_query($conn,"SELECT ".$col_name." FROM ".$prefix);
+										  if (!$col){
+											  mysqli_query($conn,"ALTER TABLE ".$prefix." ADD ".$col_name." ". $column_attr );
+											  echo $col_name.' added </br>';			
+										  }
+										  else
+										  {
+											  echo $col_name.' already exists! </br>';
+										  }	
+
+
+										  $prefix=ltrim($main_table_use).'_resources.clinic_visits';
+										  $col_name = 'first_name';
+										  $column_attr = "LONGTEXT NOT NULL";
+										  $col = mysqli_query($conn,"SELECT ".$col_name." FROM ".$prefix);
+										  if (!$col){
+											  mysqli_query($conn,"ALTER TABLE ".$prefix." ADD ".$col_name." ". $column_attr );
+											  echo $col_name.' added </br>';			
+										  }
+										  else
+										  {
+											  echo $col_name.' already exists! </br>';
+										  }	
+
+
+$prefix=ltrim($main_table_use).'_resources.clinic_visits';
+										  $col_name = 'middle_name';
+										  $column_attr = "LONGTEXT NOT NULL";
+										  $col = mysqli_query($conn,"SELECT ".$col_name." FROM ".$prefix);
+										  if (!$col){
+											  mysqli_query($conn,"ALTER TABLE ".$prefix." ADD ".$col_name." ". $column_attr );
+											  echo $col_name.' added </br>';			
+										  }
+										  else
+										  {
+											  echo $col_name.' already exists! </br>';
+										  }	
+
+										  $prefix=ltrim($main_table_use).'_resources.clinic_visits';
+										  $col_name = 'patient_code';
+										  $column_attr = "LONGTEXT NOT NULL";
+										  $col = mysqli_query($conn,"SELECT ".$col_name." FROM ".$prefix);
+										  if (!$col){
+											  mysqli_query($conn,"ALTER TABLE ".$prefix." ADD ".$col_name." ". $column_attr );
+											  echo $col_name.' added </br>';			
+										  }
+										  else
+										  {
+											  echo $col_name.' already exists! </br>';
+										  }	
+
+
 
 
 										     	$prefix=ltrim($main_table_use).'_schedule.appointments';

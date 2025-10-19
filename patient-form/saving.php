@@ -41,14 +41,14 @@ if(isset($_POST['last_name'])) {
     $full_name=strtoupper($_POST['last_name'].', '.$_POST['first_name'].' '.$_POST['middle_name']);
 
     $_SESSION['date']=$presentdate;
-    $_SESSION['last_name']=$_POST['last_name'];
-    $_SESSION['first_name']=$_POST['first_name'];
-    $_SESSION['middle_name']=$_POST['middle_name'];
+    $_SESSION['last_name']=clean($_POST['last_name']);
+    $_SESSION['first_name']=clean($_POST['first_name']);
+    $_SESSION['middle_name']=clean($_POST['middle_name']);
  
     $_SESSION['password']='';
     $_SESSION['phone']=cleanfile($_POST['phone']);
     $_SESSION['sex']=$_POST['sex'];
-    $_SESSION['email']=$_POST['email'];
+    $_SESSION['email']=clean($_POST['email']);
     $_SESSION['birthday']=$_POST['birthday'];
     $_SESSION['height_cm']=cleanfile($_POST['height_cm']);
     $_SESSION['weight_kg']=cleanfile($_POST['weight_kg']);
@@ -65,13 +65,13 @@ if(isset($_POST['last_name'])) {
     $_SESSION['psgc_barangay']=substr($_POST['psgc_barangay'], (strpos($_POST['psgc_barangay'], '~') ?: -1) + 1);
     $_SESSION['ZipCode']=$_POST['ZipCode'];
 
-       $_SESSION['address']= substr($_SESSION['NoBldgName'], (strpos($_SESSION['NoBldgName'], '~') ?: -1) + 1).' '.
+       $_SESSION['address']= clean(substr($_SESSION['NoBldgName'], (strpos($_SESSION['NoBldgName'], '~') ?: -1) + 1).' '.
        substr($_SESSION['StreetName'], (strpos($_SESSION['StreetName'], '~') ?: -1) + 1).' '.
          substr($_SESSION['psgc_region'], (strpos($_SESSION['psgc_region'], '~') ?: -1) + 1).''.
          substr($_SESSION['psgc_province'], (strpos($_SESSION['psgc_province'], '~') ?: -1) + 1).''.
            substr($_SESSION['psgc_municipality'], (strpos($_SESSION['psgc_municipality'], '~') ?: -1) + 1).''.
             substr($_SESSION['psgc_barangay'], (strpos($_SESSION['psgc_barangay'], '~') ?: -1) + 1).' '.
-   substr($_SESSION['ZipCode'], (strpos($_SESSION['ZipCode'], '~') ?: -1) + 1);
+   substr($_SESSION['ZipCode'], (strpos($_SESSION['ZipCode'], '~') ?: -1) + 1));
 
     $_SESSION['civil_status']=$_POST['civil_status'];
 
