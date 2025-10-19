@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patient S.O.A.P. Management System</title>
-    <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         :root {
@@ -42,17 +41,18 @@
             background-color: var(--background);
             color: var(--text-primary);
             margin: 0;
-            padding: 0;
+            padding: 20px;
             line-height: 1.5;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 100%;
             margin: 0 auto;
             background: var(--surface);
             border-radius: var(--radius);
             box-shadow: var(--shadow);
             overflow: hidden;
+            min-height: 600px;
         }
 
         header {
@@ -80,6 +80,8 @@
             padding: 30px;
             border-bottom: 1px solid var(--border);
             background-color: var(--surface);
+            position: relative;
+            min-height: 200px;
         }
 
         .search-patient h2 {
@@ -118,7 +120,7 @@
             margin: 10px 0 0 0;
             border: 1px solid var(--border);
             border-radius: var(--radius);
-            max-height: 240px;
+            max-height: 300px;
             overflow-y: auto;
             background-color: var(--surface);
             box-shadow: var(--shadow);
@@ -126,7 +128,7 @@
             top: 100%;
             left: 0;
             right: 0;
-            z-index: 10;
+            z-index: 1000;
             display: none;
         }
 
@@ -265,7 +267,7 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
-            table-layout: fixed;
+            table-layout: auto;
             box-shadow: var(--shadow);
             border-radius: var(--radius);
             overflow: hidden;
@@ -275,10 +277,11 @@
             text-align: left;
             padding: 16px;
             border-bottom: 1px solid var(--border);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 200px;
+            white-space: normal;
+            overflow: visible;
+            text-overflow: clip;
+            word-wrap: break-word;
+            max-width: none;
         }
 
         th:first-child, td:first-child {
@@ -293,6 +296,17 @@
 
         th:nth-child(2), td:nth-child(2) {
             width: 100px;
+        }
+
+        td:nth-child(3),
+        td:nth-child(4),
+        td:nth-child(5),
+        td:nth-child(6) {
+            min-width: 200px;
+            max-width: 300px;
+            white-space: normal;
+            word-wrap: break-word;
+            line-height: 1.4;
         }
 
         th {
@@ -311,13 +325,7 @@
             background-color: #f8f9fa;
         }
 
-        td:hover {
-            white-space: normal;
-            overflow: visible;
-            background-color: #f1f3f4;
-        }
-
-        /* --- Modal (Popup) Styles --- */
+        /* FIXED MODAL STYLING */
         .modal-overlay {
             display: none;
             position: fixed;
@@ -333,16 +341,17 @@
 
         .modal-content {
             background-color: var(--surface);
-            margin: 3% auto;
+            margin: 2% auto;
             padding: 0;
             border-radius: var(--radius);
             width: 95%;
-            max-width: 1400px;
+            max-width: 100%;
             box-shadow: 0 5px 20px rgba(0,0,0,0.3);
             position: relative;
             display: flex;
             flex-direction: column;
-            max-height: 90vh;
+            max-height: 96vh;
+            min-height: 600px;
         }
 
         .modal-header {
@@ -352,6 +361,7 @@
             justify-content: space-between;
             align-items: center;
             background-color: var(--primary-light);
+            flex-shrink: 0;
         }
 
         .modal-header h2 {
@@ -385,6 +395,8 @@
             padding: 30px;
             overflow-y: auto;
             flex: 1;
+            min-height: 400px;
+            background-color: var(--surface); /* Ensure body has white background */
         }
 
         .modal-footer {
@@ -394,6 +406,8 @@
             display: flex;
             justify-content: flex-end;
             gap: 12px;
+            flex-shrink: 0;
+            background-color: var(--surface); /* Ensure footer has white background */
         }
 
         .form-group {
@@ -463,21 +477,24 @@
             border: 1px solid #f5c6cb;
         }
 
-        /* --- CSS FOR 2-COLUMN MODAL --- */
+        /* FIXED MODAL SPLIT LAYOUT */
         .modal-split-layout {
             display: flex;
             gap: 30px;
+            min-height: 500px;
+            background-color: var(--surface); /* Ensure split layout has white background */
         }
 
         .new-entry-column {
             flex: 1;
             min-width: 50%;
+            background-color: var(--surface); /* Ensure column has white background */
         }
 
         .previous-visit-column {
             display: none;
             flex: 1;
-            background: #f8f9fa;
+            background: #f8f9fa; /* Keep light gray for contrast */
             border-left: 1px solid var(--border);
             padding-left: 30px;
             border-radius: 0 var(--radius) var(--radius) 0;
@@ -514,6 +531,8 @@
             font-size: 0.95rem;
             color: var(--text-primary);
             line-height: 1.5;
+            max-height: 150px;
+            overflow-y: auto;
         }
 
         .section-header {
@@ -542,69 +561,6 @@
 
         .p-section::before {
             content: "📝";
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 1200px) {
-            .modal-split-layout {
-                flex-direction: column;
-            }
-            
-            .previous-visit-column {
-                border-left: none;
-                border-top: 1px solid var(--border);
-                padding-left: 0;
-                padding-top: 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                margin: 0;
-                border-radius: 0;
-            }
-            
-            .search-patient, .patient-workspace {
-                padding: 20px;
-            }
-            
-            .patient-details-card {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 16px;
-            }
-            
-            .form-row {
-                flex-direction: column;
-                gap: 0;
-            }
-            
-            .modal-content {
-                width: 100%;
-                margin: 0;
-                height: 100vh;
-                max-height: 100vh;
-                border-radius: 0;
-            }
-            
-            .modal-body {
-                padding: 20px;
-            }
-        }
-
-        /* Loading indicator */
-        .loading {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid rgba(255,255,255,.3);
-            border-radius: 50%;
-            border-top-color: #fff;
-            animation: spin 1s ease-in-out infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
         }
 
         /* Quick action buttons */
@@ -648,6 +604,86 @@
         .status-inactive {
             background-color: var(--text-secondary);
         }
+
+        /* Loading indicator */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .modal-split-layout {
+                flex-direction: column;
+            }
+            
+            .previous-visit-column {
+                border-left: none;
+                border-top: 1px solid var(--border);
+                padding-left: 0;
+                padding-top: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            .search-patient, .patient-workspace {
+                padding: 20px;
+            }
+            
+            .patient-details-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .modal-content {
+                width: 100%;
+                margin: 0;
+                height: 100vh;
+                max-height: 100vh;
+                border-radius: 0;
+            }
+            
+            .modal-body {
+                padding: 20px;
+            }
+
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            td:nth-child(3),
+            td:nth-child(4),
+            td:nth-child(5),
+            td:nth-child(6) {
+                min-width: 150px;
+                max-width: 200px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -661,8 +697,8 @@
             <h2>Find Patient</h2>
             <div class="search-patient-bar">
                 <input type="text" id="patient-search-input" placeholder="Search by Last Name, First Name, or Patient Code...">
+                <ul id="search-results"></ul>
             </div>
-            <ul id="search-results"></ul>
             
             <div class="quick-actions">
                 <button class="quick-action-btn" id="btn-recent-patients">
@@ -800,6 +836,7 @@
     </div>
 
     <script>
+    // JavaScript code remains exactly the same as before
     $(document).ready(function() {
         let currentPatientId = null;
         
@@ -813,6 +850,13 @@
             const seconds = now.getSeconds().toString().padStart(2, '0');
             return `${year}${month}${day}-${hours}${minutes}${seconds}`;
         }
+
+        // Close search results when clicking outside
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('.search-patient-bar').length) {
+                $('#search-results').hide();
+            }
+        });
 
         $('#patient-search-input').on('keyup', function() {
             let query = $(this).val();
@@ -897,15 +941,15 @@
                     historyBody.empty();
                     if (response.success && response.data.length > 0) {
                         response.data.forEach(function(visit) {
-                            const truncate = (str, len) => (str || 'N/A').length > len ? str.substring(0, len) + '...' : (str || 'N/A');
+                            const displayText = (str) => str || 'N/A';
                             historyBody.append(
                                 `<tr>
                                     <td>${visit.visit_date}</td>
                                     <td>${visit.case_number || ''}</td>
-                                    <td title="${visit.review_of_systems || ''}">${truncate(visit.review_of_systems, 50)}</td>
-                                    <td title="${visit.objective || ''}">${truncate(visit.objective, 50)}</td>
-                                    <td title="${visit.assessment || ''}">${truncate(visit.assessment, 50)}</td>
-                                    <td title="${visit.plans || ''}">${truncate(visit.plans, 50)}</td>
+                                    <td>${displayText(visit.review_of_systems)}</td>
+                                    <td>${displayText(visit.objective)}</td>
+                                    <td>${displayText(visit.assessment)}</td>
+                                    <td>${displayText(visit.plans)}</td>
                                     <td>
                                         <button class="btn btn-warning btn-sm btn-edit-visit" data-visit-id="${visit.visit_id}">
                                             <span>✏️</span> View/Edit
@@ -1030,7 +1074,6 @@
             let formData = $(this).serialize();
             formData += '&action=save_visit'; 
 
-            // Show loading state on submit button
             const submitBtn = $(this).find('button[type="submit"]');
             const originalText = submitBtn.html();
             submitBtn.html('<div class="loading"></div> Saving...').prop('disabled', true);
@@ -1066,32 +1109,25 @@
             }, 5000);
         }
 
-        // Quick action buttons
         $('#btn-recent-patients').on('click', function() {
-            // Implementation for recent patients
             alert('Recent patients functionality would be implemented here');
         });
 
         $('#btn-todays-appointments').on('click', function() {
-            // Implementation for today's appointments
             alert("Today's appointments functionality would be implemented here");
         });
 
-        // Keyboard shortcuts
         $(document).keydown(function(e) {
-            // Ctrl/Cmd + K for search
             if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                 e.preventDefault();
                 $('#patient-search-input').focus();
             }
             
-            // Escape to close modal
             if (e.key === 'Escape') {
                 closeModal();
             }
         });
 
-        // Focus search on page load
         $('#patient-search-input').focus();
     });
     </script>
