@@ -1,321 +1,183 @@
+<?php
+/* File: index.php */
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient S.O.A.P. Management System</title>
-    <!-- Include jQuery -->
+    <title>Patient S.O.A.P. Management</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
-        :root {
-            --primary: #1a73e8;
-            --primary-dark: #0d47a1;
-            --primary-light: #e8f0fe;
-            --secondary: #34a853;
-            --secondary-light: #e6f4ea;
-            --accent: #fbbc04;
-            --text-primary: #202124;
-            --text-secondary: #5f6368;
-            --text-light: #ffffff;
-            --background: #f8f9fa;
-            --surface: #ffffff;
-            --border: #dadce0;
-            --error: #d93025;
-            --error-light: #fce8e6;
-            --success: #34a853;
-            --success-light: #e6f4ea;
-            --warning: #f9ab00;
-            --warning-light: #fef7e0;
-            --shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-            --shadow-hover: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
-            --radius: 8px;
-            --radius-sm: 4px;
-            --transition: all 0.2s ease-in-out;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background-color: var(--background);
-            color: var(--text-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
             margin: 0;
-            padding: 0;
-            line-height: 1.5;
+            padding: 20px;
         }
-
         .container {
-            max-width: 1400px;
+            max-width: 1400px; 
             margin: 0 auto;
-            background: var(--surface);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             overflow: hidden;
         }
-
         header {
-            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-            color: var(--text-light);
+            background-color: #007bff;
+            color: white;
             padding: 20px 30px;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid #ddd;
         }
-
         header h1 {
             margin: 0;
-            font-size: 1.8rem;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-        }
-
-        header h1::before {
-            content: "🩺";
-            margin-right: 12px;
             font-size: 1.5em;
         }
-
         .search-patient {
             padding: 30px;
-            border-bottom: 1px solid var(--border);
-            background-color: var(--surface);
+            border-bottom: 1px solid #eee;
         }
-
-        .search-patient h2 {
-            margin-top: 0;
-            color: var(--text-primary);
-            font-weight: 500;
-            font-size: 1.4rem;
-            margin-bottom: 20px;
-        }
-
         .search-patient-bar {
             display: flex;
             gap: 10px;
-            position: relative;
         }
-
         .search-patient-bar input[type="text"] {
             flex-grow: 1;
-            padding: 14px 16px;
-            font-size: 1rem;
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            transition: var(--transition);
-            background-color: var(--surface);
+            padding: 12px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 6px;
         }
-
-        .search-patient-bar input[type="text"]:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px var(--primary-light);
-        }
-
         #search-results {
             list-style-type: none;
             padding: 0;
             margin: 10px 0 0 0;
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            max-height: 240px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            max-height: 200px;
             overflow-y: auto;
-            background-color: var(--surface);
-            box-shadow: var(--shadow);
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            z-index: 10;
-            display: none;
         }
-
         #search-results li {
-            padding: 14px 16px;
+            padding: 12px;
             cursor: pointer;
-            border-bottom: 1px solid var(--border);
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
+            border-bottom: 1px solid #eee;
         }
-
         #search-results li:last-child {
             border-bottom: none;
         }
-
         #search-results li:hover {
-            background-color: var(--primary-light);
+            background-color: #f0f0f0;
         }
-
-        #search-results li::before {
-            content: "👤";
-            margin-right: 10px;
-            font-size: 1.2em;
-        }
-
         .patient-workspace {
-            display: none;
+            display: none; 
             padding: 30px;
         }
-
         .patient-details-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 24px;
+            background: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 6px;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 24px;
-            box-shadow: var(--shadow);
         }
-
         .patient-details-card h2 {
             margin: 0;
-            font-size: 1.5rem;
-            color: var(--primary);
-            font-weight: 500;
+            font-size: 1.4em;
+            color: #007bff;
         }
-
         .patient-details-card p {
-            margin: 8px 0 0 0;
-            color: var(--text-secondary);
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            margin: 5px 0 0 0;
+            color: #555;
         }
-
-        .patient-details-card p span {
-            background-color: var(--primary-light);
-            padding: 4px 8px;
-            border-radius: var(--radius-sm);
-            font-size: 0.85rem;
-        }
-
         .btn {
-            padding: 12px 24px;
-            font-size: 1rem;
+            padding: 12px 20px;
+            font-size: 1em;
             border: none;
-            border-radius: var(--radius);
+            border-radius: 6px;
             cursor: pointer;
             text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: var(--transition);
-            font-weight: 500;
+            display: inline-block;
         }
-
         .btn-primary {
-            background-color: var(--primary);
-            color: var(--text-light);
+            background-color: #007bff;
+            color: white;
         }
-
         .btn-primary:hover {
-            background-color: var(--primary-dark);
-            box-shadow: var(--shadow-hover);
+            background-color: #0056b3;
         }
-
         .btn-secondary {
-            background-color: var(--surface);
-            color: var(--text-secondary);
-            border: 1px solid var(--border);
+            background-color: #6c757d;
+            color: white;
         }
-
         .btn-secondary:hover {
-            background-color: #f1f3f4;
+            background-color: #5a6268;
         }
-
         .btn-warning {
-            background-color: var(--warning);
-            color: var(--text-primary);
-            padding: 8px 16px;
-            font-size: 0.9rem;
+            background-color: #ffc107;
+            color: #212529;
+            padding: 8px 12px;
+            font-size: 0.9em;
         }
-
         .btn-warning:hover {
-            background-color: #e6a700;
-        }
-
-        .btn-success {
-            background-color: var(--success);
-            color: var(--text-light);
-        }
-
-        .btn-success:hover {
-            background-color: #2e8b47;
+            background-color: #e0a800;
         }
 
         .visits-history {
             margin-top: 30px;
-            overflow-x: auto;
+            overflow-x: auto; 
         }
-
         .visits-history h3 {
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 12px;
-            margin-bottom: 20px;
-            font-weight: 500;
-            color: var(--text-primary);
-            font-size: 1.3rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
         }
-
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
             table-layout: fixed;
-            box-shadow: var(--shadow);
-            border-radius: var(--radius);
-            overflow: hidden;
         }
-
+        
+        /* --- *** MODIFIED CSS RULE *** --- */
         th, td {
             text-align: left;
-            padding: 16px;
-            border-bottom: 1px solid var(--border);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 200px;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            white-space: normal; /* Allow text wrapping */
+            word-wrap: break-word; /* Break long words */
+            max-width: 200px; /* S.O.A.P columns */
+            vertical-align: top; /* Align text to top */
         }
-
-        th:first-child, td:first-child {
-            width: 120px;
+        
+        th:first-child, td:first-child { 
+            width: 120px; /* Visit Date */
         }
-
-        th:last-child, td:last-child {
-            width: 120px;
+        th:last-child, td:last-child { 
+            width: 120px; /* Actions */
             white-space: normal;
             text-align: center;
+            vertical-align: middle;
         }
-
-        th:nth-child(2), td:nth-child(2) {
-            width: 100px;
+        th:nth-child(2), td:nth-child(2) { 
+            width: 100px; /* Case # */
         }
-
+        /* --- *** END OF MODIFIED CSS *** --- */
+        
         th {
-            background-color: var(--primary-light);
-            color: var(--primary-dark);
-            font-weight: 500;
-            position: sticky;
-            top: 0;
-        }
-
-        tr {
-            transition: var(--transition);
-        }
-
-        tr:hover {
             background-color: #f8f9fa;
         }
-
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        /* This hover rule is no longer needed as wrapping is default */
+        /*
         td:hover {
             white-space: normal;
             overflow: visible;
-            background-color: #f1f3f4;
         }
+        */
 
         /* --- Modal (Popup) Styles --- */
         .modal-overlay {
@@ -328,145 +190,104 @@
             height: 100%;
             overflow: auto;
             background-color: rgba(0,0,0,0.5);
-            backdrop-filter: blur(2px);
         }
-
+        
         .modal-content {
-            background-color: var(--surface);
+            background-color: #fefefe;
             margin: 3% auto;
-            padding: 0;
-            border-radius: var(--radius);
-            width: 95%;
-            max-width: 1400px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            padding: 20px;
+            border: 1px solid #888;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 1300px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
             position: relative;
-            display: flex;
-            flex-direction: column;
-            max-height: 90vh;
         }
 
         .modal-header {
-            padding: 20px 30px;
-            border-bottom: 1px solid var(--border);
+            padding: 10px 20px;
+            border-bottom: 1px solid #eee;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: var(--primary-light);
         }
-
         .modal-header h2 {
             margin: 0;
-            color: var(--primary-dark);
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
-
-        .modal-header h2::before {
-            content: "📋";
-            font-size: 1.3em;
-        }
-
         .modal-close {
-            color: var(--text-secondary);
+            color: #aaa;
             font-size: 28px;
             font-weight: bold;
             cursor: pointer;
-            transition: var(--transition);
         }
-
         .modal-close:hover,
         .modal-close:focus {
-            color: var(--text-primary);
+            color: black;
         }
-
         .modal-body {
-            padding: 30px;
+            padding: 20px;
+            max-height: 75vh;
             overflow-y: auto;
-            flex: 1;
         }
-
         .modal-footer {
-            padding: 20px 30px;
-            border-top: 1px solid var(--border);
+            padding: 20px;
+            border-top: 1px solid #eee;
             text-align: right;
-            display: flex;
-            justify-content: flex-end;
-            gap: 12px;
         }
-
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
-
         .form-group label {
             display: block;
-            font-weight: 500;
-            margin-bottom: 8px;
-            color: var(--text-primary);
+            font-weight: bold;
+            margin-bottom: 5px;
         }
-
         .form-control {
             width: 100%;
-            padding: 12px 14px;
-            font-size: 1rem;
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            box-sizing: border-box;
-            transition: var(--transition);
-            font-family: inherit;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box; 
         }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px var(--primary-light);
-        }
-
+        
         input[readonly].form-control {
-            background-color: #f8f9fa;
+            background-color: #e9ecef;
             cursor: not-allowed;
-            color: var(--text-secondary);
         }
-
+        
         textarea.form-control {
             min-height: 120px;
             resize: vertical;
         }
-
         .form-row {
             display: flex;
             gap: 20px;
         }
-
         .form-row .form-group {
             flex: 1;
         }
-
         #status-message {
-            padding: 16px;
+            padding: 15px;
             margin-bottom: 20px;
-            border-radius: var(--radius);
+            border-radius: 6px;
             display: none;
         }
-
         #status-message.success {
-            background-color: var(--success-light);
-            color: var(--success);
+            background-color: #d4edda;
+            color: #155724;
             border: 1px solid #c3e6cb;
         }
-
         #status-message.error {
-            background-color: var(--error-light);
-            color: var(--error);
+            background-color: #f8d7da;
+            color: #721c24;
             border: 1px solid #f5c6cb;
         }
 
         /* --- CSS FOR 2-COLUMN MODAL --- */
         .modal-split-layout {
             display: flex;
-            gap: 30px;
+            gap: 20px;
         }
 
         .new-entry-column {
@@ -478,9 +299,8 @@
             display: none;
             flex: 1;
             background: #f8f9fa;
-            border-left: 1px solid var(--border);
-            padding-left: 30px;
-            border-radius: 0 var(--radius) var(--radius) 0;
+            border-left: 1px solid #eee;
+            padding-left: 20px;
         }
 
         .modal-split-view .previous-visit-column {
@@ -489,172 +309,30 @@
 
         .previous-visit-column h4 {
             margin-top: 0;
-            color: var(--primary);
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 12px;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .previous-visit-column h4::before {
-            content: "🕐";
-            font-size: 1.2em;
+            color: #007bff;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
         }
 
         .previous-visit-column .data-block {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            padding: 14px;
-            border-radius: var(--radius);
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 6px;
             min-height: 50px;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            font-size: 0.95rem;
-            color: var(--text-primary);
-            line-height: 1.5;
+            white-space: pre-wrap; 
+            word-wrap: break-word; 
+            font-size: 0.9em;
+            color: #333;
         }
 
-        .section-header {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-bottom: 16px;
-            color: var(--primary);
-        }
-
-        .section-header::before {
-            font-size: 1.2em;
-        }
-
-        .s-section::before {
-            content: "💬";
-        }
-
-        .o-section::before {
-            content: "🔍";
-        }
-
-        .a-section::before {
-            content: "📊";
-        }
-
-        .p-section::before {
-            content: "📝";
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 1200px) {
-            .modal-split-layout {
-                flex-direction: column;
-            }
-            
-            .previous-visit-column {
-                border-left: none;
-                border-top: 1px solid var(--border);
-                padding-left: 0;
-                padding-top: 20px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                margin: 0;
-                border-radius: 0;
-            }
-            
-            .search-patient, .patient-workspace {
-                padding: 20px;
-            }
-            
-            .patient-details-card {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 16px;
-            }
-            
-            .form-row {
-                flex-direction: column;
-                gap: 0;
-            }
-            
-            .modal-content {
-                width: 100%;
-                margin: 0;
-                height: 100vh;
-                max-height: 100vh;
-                border-radius: 0;
-            }
-            
-            .modal-body {
-                padding: 20px;
-            }
-        }
-
-        /* Loading indicator */
-        .loading {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid rgba(255,255,255,.3);
-            border-radius: 50%;
-            border-top-color: #fff;
-            animation: spin 1s ease-in-out infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Quick action buttons */
-        .quick-actions {
-            display: flex;
-            gap: 12px;
-            margin-top: 20px;
-        }
-
-        .quick-action-btn {
-            padding: 10px 16px;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9rem;
-        }
-
-        .quick-action-btn:hover {
-            background: var(--primary-light);
-            border-color: var(--primary);
-        }
-
-        /* Status indicators */
-        .status-indicator {
-            display: inline-block;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            margin-right: 8px;
-        }
-
-        .status-active {
-            background-color: var(--success);
-        }
-
-        .status-inactive {
-            background-color: var(--text-secondary);
-        }
     </style>
 </head>
 <body>
 
     <div class="container">
         <header>
-            <h1>Patient S.O.A.P. Management System</h1>
+            <h1>Patient S.O.A.P. Management</h1>
         </header>
 
         <section class="search-patient">
@@ -663,15 +341,6 @@
                 <input type="text" id="patient-search-input" placeholder="Search by Last Name, First Name, or Patient Code...">
             </div>
             <ul id="search-results"></ul>
-            
-            <div class="quick-actions">
-                <button class="quick-action-btn" id="btn-recent-patients">
-                    <span>🕐</span> Recent Patients
-                </button>
-                <button class="quick-action-btn" id="btn-todays-appointments">
-                    <span>📅</span> Today's Appointments
-                </button>
-            </div>
         </section>
 
         <section class="patient-workspace" id="patient-workspace">
@@ -680,9 +349,7 @@
                     <h2 id="patient-name"></h2>
                     <p id="patient-info"></p>
                 </div>
-                <button class="btn btn-primary" id="btn-new-visit">
-                    <span>➕</span> Add New Visit
-                </button>
+                <button class="btn btn-primary" id="btn-new-visit">Add New Visit</button>
             </div>
 
             <div class="visits-history">
@@ -730,27 +397,22 @@
                                     <input type="text" class="form-control" id="case_number" name="case_number" readonly>
                                 </div>
                             </div>
-                            
-                            <div class="section-header s-section">Subjective (Review of Systems)</div>
                             <div class="form-group">
-                                <textarea class="form-control" id="review_of_systems" name="review_of_systems" rows="4" placeholder="Patient's complaints, symptoms, medical history..."></textarea>
+                                <label for="review_of_systems">Subjective (Review of Systems)</label>
+                                <textarea class="form-control" id="review_of_systems" name="review_of_systems" rows="4"></textarea>
                             </div>
-                            
-                            <div class="section-header o-section">Objective</div>
                             <div class="form-group">
-                                <textarea class="form-control" id="objective" name="objective" rows="4" placeholder="Physical exam findings, lab results, vital signs..."></textarea>
+                                <label for="objective">Objective</label>
+                                <textarea class="form-control" id="objective" name="objective" rows="4"></textarea>
                             </div>
-                            
-                            <div class="section-header a-section">Assessment</div>
                             <div class="form-group">
-                                <textarea class="form-control" id="assessment" name="assessment" rows="4" placeholder="Diagnosis, differential diagnosis, clinical impression..."></textarea>
+                                <label for="assessment">Assessment</label>
+                                <textarea class="form-control" id="assessment" name="assessment" rows="4"></textarea>
                             </div>
-                            
-                            <div class="section-header p-section">Plans</div>
                             <div class="form-group">
-                                <textarea class="form-control" id="plans" name="plans" rows="4" placeholder="Treatment plan, medications, referrals, follow-up..."></textarea>
+                                <label for="plans">Plans</label>
+                                <textarea class="form-control" id="plans" name="plans" rows="4"></textarea>
                             </div>
-                            
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="next_visit">Next Visit Date</label>
@@ -758,7 +420,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="notes">Other Notes</label>
-                                    <input type="text" class="form-control" id="notes" name="notes" placeholder="Additional clinical notes...">
+                                    <input type="text" class="form-control" id="notes" name="notes">
                                 </div>
                             </div>
                         </div>
@@ -791,16 +453,16 @@
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" id="modal-cancel-btn">Cancel</button>
-                    <button type="submit" class="btn btn-primary">
-                        <span>💾</span> Save Visit
-                    </button>
+                    <button type="submit" class="btn btn-primary">Save Visit</button>
                 </div>
             </form>
         </div>
     </div>
 
+
     <script>
     $(document).ready(function() {
+
         let currentPatientId = null;
         
         function generateCaseNumber() {
@@ -820,10 +482,6 @@
                 $('#search-results').empty().hide();
                 return;
             }
-            
-            // Show loading indicator
-            $('#search-results').html('<li><div class="loading"></div> Searching...</li>').show();
-            
             $.ajax({
                 url: 'ajax_handler.php',
                 type: 'POST',
@@ -846,9 +504,6 @@
                         resultsList.append('<li>No patients found.</li>');
                         resultsList.show();
                     }
-                },
-                error: function() {
-                    $('#search-results').html('<li>Error searching patients. Please try again.</li>').show();
                 }
             });
         });
@@ -874,11 +529,7 @@
                     if (response.success) {
                         let patient = response.data;
                         $('#patient-name').text(`${patient.first_name} ${patient.middle_name || ''} ${patient.last_name}`);
-                        $('#patient-info').html(`
-                            Patient Code: <span>${patient.patient_code}</span> | 
-                            Patient ID: <span>${patient.patient_id}</span> |
-                            <span class="status-indicator status-active"></span>Active
-                        `);
+                        $('#patient-info').text(`Patient Code: ${patient.patient_code} | Patient ID: ${patient.patient_id}`);
                         $('#patient-workspace').slideDown();
                     }
                 }
@@ -886,6 +537,7 @@
             loadVisitHistory(patientId);
         }
 
+        // --- *** MODIFIED JAVASCRIPT FUNCTION *** ---
         function loadVisitHistory(patientId) {
             $.ajax({
                 url: 'ajax_handler.php',
@@ -897,18 +549,20 @@
                     historyBody.empty();
                     if (response.success && response.data.length > 0) {
                         response.data.forEach(function(visit) {
-                            const truncate = (str, len) => (str || 'N/A').length > len ? str.substring(0, len) + '...' : (str || 'N/A');
+                            // Removed the 'truncate' function
+                            
+                            // Appending the full text now
                             historyBody.append(
                                 `<tr>
                                     <td>${visit.visit_date}</td>
                                     <td>${visit.case_number || ''}</td>
-                                    <td title="${visit.review_of_systems || ''}">${truncate(visit.review_of_systems, 50)}</td>
-                                    <td title="${visit.objective || ''}">${truncate(visit.objective, 50)}</td>
-                                    <td title="${visit.assessment || ''}">${truncate(visit.assessment, 50)}</td>
-                                    <td title="${visit.plans || ''}">${truncate(visit.plans, 50)}</td>
+                                    <td>${visit.review_of_systems || 'N/A'}</td>
+                                    <td>${visit.objective || 'N/A'}</td>
+                                    <td>${visit.assessment || 'N/A'}</td>
+                                    <td>${visit.plans || 'N/A'}</td>
                                     <td>
                                         <button class="btn btn-warning btn-sm btn-edit-visit" data-visit-id="${visit.visit_id}">
-                                            <span>✏️</span> View/Edit
+                                            View/Edit
                                         </button>
                                     </td>
                                 </tr>`
@@ -924,15 +578,13 @@
                 }
             });
         }
+        // --- *** END OF MODIFIED JAVASCRIPT *** ---
 
         function openModal() {
             $('#soap-modal').fadeIn(200);
-            $('body').css('overflow', 'hidden');
         }
-        
         function closeModal() {
             $('#soap-modal').fadeOut(200);
-            $('body').css('overflow', 'auto');
             $('#soap-form')[0].reset(); 
             $('#modal-title').text('Add New Visit');
             $('#visit_id').val(''); 
@@ -1030,30 +682,22 @@
             let formData = $(this).serialize();
             formData += '&action=save_visit'; 
 
-            // Show loading state on submit button
-            const submitBtn = $(this).find('button[type="submit"]');
-            const originalText = submitBtn.html();
-            submitBtn.html('<div class="loading"></div> Saving...').prop('disabled', true);
-
             $.ajax({
                 url: 'ajax_handler.php',
                 type: 'POST',
                 data: formData,
                 dataType: 'json',
                 success: function(response) {
-                    submitBtn.html(originalText).prop('disabled', false);
-                    
                     if (response.success) {
                         closeModal();
                         showStatusMessage(response.message, 'success');
                         loadVisitHistory(currentPatientId);
                     } else {
-                        showStatusMessage('Error: ' + response.message, 'error');
+                        alert('Error: ' + response.message);
                     }
                 },
                 error: function() {
-                    submitBtn.html(originalText).prop('disabled', false);
-                    showStatusMessage('An unknown error occurred. Please try again.', 'error');
+                    alert('An unknown error occurred. Please try again.');
                 }
             });
         });
@@ -1065,34 +709,6 @@
                 statusBox.slideUp();
             }, 5000);
         }
-
-        // Quick action buttons
-        $('#btn-recent-patients').on('click', function() {
-            // Implementation for recent patients
-            alert('Recent patients functionality would be implemented here');
-        });
-
-        $('#btn-todays-appointments').on('click', function() {
-            // Implementation for today's appointments
-            alert("Today's appointments functionality would be implemented here");
-        });
-
-        // Keyboard shortcuts
-        $(document).keydown(function(e) {
-            // Ctrl/Cmd + K for search
-            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-                e.preventDefault();
-                $('#patient-search-input').focus();
-            }
-            
-            // Escape to close modal
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        });
-
-        // Focus search on page load
-        $('#patient-search-input').focus();
     });
     </script>
 
