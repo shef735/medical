@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Bootstrap-5 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- custom-styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+</head>
+<body class="popreveal">
+    <main class="overflow-hidden">
+        <div class="wrapper">
+            <form id="steps" class="show-section" method="post" novalidate>
+
+                <!-- step-1 -->
+                <section class="steps">
+                    <header>
+                        <h2>
+                            Personality Survey Quiz
+                        </h2>
+                    </header>
+                    <div class="step-inner container">
+
+                        <!-- step number -->
+                        <div class="step-num"><span>Question 1</span></div>
+                        <article class="quiz-text">
+                            <h3 class="main-heading">Start Quiz</h3>
+                            <p class="p-text">
+                                User interface design.One Awesome Flat Ui Kit in Psd format. The pack 
+                                Quiz App is a mobile UI kit created using Sketch and Photoshop.
+                            </p>
+                        </article>
+
+                        <!-- form-->
+                        <fieldset class="form" id="step1">
+                            <div class="row">
+                                <div class="col-md-6 ps-3 pe-3 tab-100">
+                                    <div class="radio-field op-a">
+                                        <input type="radio" name="op1" value="Participants will compete against">
+                                        <label>Participants will compete against</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ps-3 pe-3 tab-100">
+                                    <div class="radio-field  op-b delay-100ms">
+                                        <input type="radio" name="op1" value="Looking for some tougher trivia">
+                                        <label>Looking for some tougher trivia</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ps-3 pe-3 tab-100">
+                                    <div class="radio-field op-c delay-200ms">
+                                        <input type="radio" name="op1" value="Interactive Presentations">
+                                        <label>Interactive Presentations</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ps-3 pe-3 tab-100">
+                                    <div class="radio-field  op-d delay-300ms">
+                                        <input type="radio" name="op1" value="Email Markering">
+                                        <label>Email Markering</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    
+                    <footer>
+                        <div class="container ps-3 pe-3">
+                            <div class="next_prev">
+                                <div class="bar-inner">
+                                    <span class="bar-text">0% complete. keep it up!</span>
+                                    <div class="bar-move"></div>
+                                </div>
+                                <button class="next" type="button" id="step1btn"><span>Next Question</span></button>
+                            </div>
+                        </div>
+                    </footer>
+                </section>
+
+                <!-- step 2 -->
+                <section class="steps">
+                    <header>
+                        <h2>
+                            Personality Survey Quiz
+                        </h2>
+                    </header>
+                    <div class="step-inner container">
+
+                        <!-- step number -->
+                        <div class="step-num"><span>Question 2</span></div>
+                        <article class="step2 quiz-text">
+                            <h3 class="main-heading">Thankyou! Tell us what you do ?</h3>
+                        </article>
+
+                        <!--form -->
+                        <fieldset class="form" id="step2">
+                            <div class="row">
+                                <div class="col-md-6 ps-3 pe-3">
+                                    <div class="check-field">
+                                        <input type="checkbox" name="op2" value="Audio Services">
+                                        <label>Audio Services</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ps-3 pe-3">
+                                    <div class="check-field delay-100ms">
+                                        <input type="checkbox" name="op2" value="Audio Services">
+                                        <label>Audio Services</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ps-3 pe-3">
+                                    <div class="check-field delay-200ms">
+                                        <input type="checkbox" name="op2" value="Audio Services">
+                                        <label>Audio Services</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ps-3 pe-3">
+                                    <div class="check-field delay-300ms">
+                                        <input type="checkbox" name="op2" value="Audio Services">
+                                        <label>Audio Services</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ps-3 pe-3">
+                                    <div class="check-field delay-400ms">
+                                        <input type="checkbox" name="op2" value="Audio Services">
+                                        <label>Audio Services</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ps-3 pe-3">
+                                    <div class="check-field delay-500ms">
+                                        <input type="checkbox" name="op2" value="Audio Services">
+                                        <label>Audio Services</label>
+                                    </div>
+                                </div>
+                                <div class="skip me-3">
+                                    I didn't find my type of business
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                    <footer>
+                        <div class="container ps-3 pe-3">
+                            <div class="next_prev">
+                                <button class="prev" type="button"><span>Previous Question</span></button>
+                                <div class="bar-inner">
+                                    <span class="bar-text">25% complete. keep it up!</span>
+                                    <div class="w-25 bar-move"></div>
+                                </div>
+                                <button class="next" type="button" id="step2btn"><span>Next Question</span></button>
+                            </div>
+                        </div>
+                    </footer>
+                </section>
+
+                <!-- step 3 -->
+                <section class="steps">
+
+                    <header>
+                        <h2>
+                            Personality Survey Quiz
+                        </h2>
+                    </header>
+
+                    <div class="step-inner container">
+
+                        <!-- step number-->
+                        <div class="step-num"><span>Question 3</span></div>
+                        <article class="step2 quiz-text">
+                            <h3 class="main-heading">Thankyou! Tell us what you do ?</h3>
+                        </article>
+
+                        <!-- form-->
+                        <fieldset class="form" id="step3">
+                            <div class="row">
+                                <div class="col-md-12 ps-3 pe-3">
+                                    <div class="radio-field-2">
+                                        <input type="radio" name="op3" value="User interface design.One Awesome Flat Ui Kit in Psd format. The pack ... Quiz App is a mobile UI kit created using Sketch">
+                                        <label>User interface design.One Awesome Flat Ui Kit in Psd format. The pack ... Quiz App is a mobile UI kit created using Sketch</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 ps-3 pe-3">
+                                    <div class="radio-field-2 delay-100ms">
+                                        <input type="radio" name="op3" value="User interface design.One Awesome Flat Ui Kit in Psd format. The pack ... Quiz App is a mobile UI kit created using Sketch">
+                                        <label>User interface design.One Awesome Flat Ui Kit in Psd format. The pack ... Quiz App is a mobile UI kit created using Sketch</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 ps-3 pe-3">
+                                    <div class="radio-field-2 delay-200ms">
+                                        <input type="radio" name="op3" value="User interface design.One Awesome Flat Ui Kit in Psd format. The pack ... Quiz App is a mobile UI kit created using Sketch">
+                                        <label>User interface design.One Awesome Flat Ui Kit in Psd format. The pack ... Quiz App is a mobile UI kit created using Sketch</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+                    </div>
+                    
+                    <footer>
+                        <div class="container ps-3 pe-3">
+                            <div class="next_prev">
+                                <button class="prev" type="button"><span>Previous Question</span></button>
+                                <div class="bar-inner">
+                                    <span class="bar-text">50% complete. keep it up!</span>
+                                    <div class="w-50 bar-move"></div>
+                                </div>
+                                <button class="next" type="button" id="step3btn"><span>Next Question</span></button>
+                            </div>
+                        </div>
+                    </footer>
+                </section>
+
+                <!-- step 4 -->
+                <section class="steps">
+
+                    <header>
+                        <h2>
+                            Personality Survey Quiz
+                        </h2>
+                    </header>
+                    <div class="step-inner container">
+
+                        <!-- step number -->
+                        <div class="step-num"><span>Question 4</span></div>
+                        <article class="step2 quiz-text">
+                            <h3 class="main-heading">Start Quiz</h3>
+                        </article>
+
+                        <!-- form -->
+                        <fieldset class="form" id="step4">
+                            <div class="row">
+                                <div class="col-md-4 ps-3 pe-3 lap-50">
+                                    <div class="radio-field-3">
+                                        <div class="radio-field-3-inner">
+                                            <img src="assets/images/step4_images/img1.jpg" alt="image-1">
+                                        </div>
+                                        <input type="radio" name="op4">
+                                        <label>
+                                            Personality Survey Quiz
+                                            <span>User interface design.One Awesome Flat Ui Kit</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ps-3 pe-3 lap-50">
+                                    <div class="radio-field-3 delay-100ms">
+                                        <div class="radio-field-3-inner">
+                                            <img src="assets/images/step4_images/img2.jpg" alt="image-2">
+                                        </div>
+                                        <input type="radio" name="op4">
+                                        <label>
+                                            Personality Survey Quiz
+                                            <span>User interface design.One Awesome Flat Ui Kit</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ps-3 pe-3 lap-50">
+                                    <div class="radio-field-3 delay-200ms">
+                                        <div class="radio-field-3-inner">
+                                            <img src="assets/images/step4_images/img3.jpg" alt="image-3">
+                                        </div>
+                                        <input type="radio" name="op4">
+                                        <label>
+                                            Personality Survey Quiz
+                                            <span>User interface design.One Awesome Flat Ui Kit</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ps-3 pe-3 lap-50">
+                                    <div class="radio-field-3 delay-300ms">
+                                        <div class="radio-field-3-inner">
+                                            <img src="assets/images/step4_images/img4.jpg" alt="image-4">
+                                        </div>
+                                        <input type="radio" name="op4">
+                                        <label>
+                                            Personality Survey Quiz
+                                            <span>User interface design.One Awesome Flat Ui Kit</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ps-3 pe-3 lap-50">
+                                    <div class="radio-field-3 delay-400ms">
+                                        <div class="radio-field-3-inner">
+                                            <img src="assets/images/step4_images/img5.jpg" alt="image-5">
+                                        </div>
+                                        <input type="radio" name="op4">
+                                        <label>
+                                            Personality Survey Quiz
+                                            <span>User interface design.One Awesome Flat Ui Kit</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 ps-3 pe-3 lap-50">
+                                    <div class="radio-field-3 delay-500ms">
+                                        <div class="radio-field-3-inner">
+                                            <img src="assets/images/step4_images/img6.jpg" alt="image-6">
+                                        </div>
+                                        <input type="radio" name="op4">
+                                        <label>
+                                            Personality Survey Quiz
+                                            <span>User interface design.One Awesome Flat Ui Kit</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+
+                    <footer>
+                        <div class="container ps-3 pe-3">
+                            <div class="next_prev">
+                                <button class="prev" type="button"><span>Previous Question</span></button>
+                                <div class="bar-inner">
+                                    <span class="bar-text">75% complete. keep it up!</span>
+                                    <div class="w-75 bar-move"></div>
+                                </div>
+                                <button class="apply" type="button" id="sub"><span>Submit!</span></button>
+                            </div>
+                        </div>
+                    </footer>
+                </section>
+
+            </form>
+
+
+        </div>
+        <div class="image-f d-none">
+            <img src="assets/images/image-f.png" alt="image">
+        </div>
+    </main>
+
+
+
+
+    
+    <div id="error">
+
+    </div>
+
+
+    <!-- Bootstrap-5 -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- My js -->
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>

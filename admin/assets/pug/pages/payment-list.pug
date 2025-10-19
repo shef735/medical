@@ -1,0 +1,295 @@
+-var datatable = true;
+-var datepicker = true ;
+-var select2 = true;
+doctype html
+html(lang="en")
+  include ../components/headerfile
+
+  
+
+  body
+
+    +header
+
+    .themebody-wrap
+
+      // breadcrumb start
+      +codexbreadcrumb('Datatable','application')
+      // breadcrumb end
+
+      // theme body start
+      .theme-body        
+        .container-fluid       
+          .row
+            .col-12
+              .card   
+                .card-body  
+                    a.btn.btn-primary.float-end.mb-15(href='javascript:void(0);' data-bs-toggle='modal' data-bs-target='#paymentmodal') Add New Payment               
+                    table.payment-tbl.table
+                        thead
+                          tr
+                            th Bill No
+                            th Patient Name
+                            th Doctor Name
+                            th Bill Date
+                            th Payment Method
+                            th Status
+                            th Amout
+                            th Action
+                        tbody
+                          tr
+                            td 01
+                            td Ashton Cox
+                            td Dr. Anna Mull
+                            td 28/12/2022
+                            td Cash
+                            td 
+                              span.badge.badge-success Paid
+                            td $150
+                            td                               
+                              a(href='edit-patient.html')
+                                i.w-18(data-feather='edit')
+                              a.text-danger.ml-8(href='javascript:void(0);')
+                                i.w-18(data-feather='trash-2')
+                          tr
+                            td 02
+                            td Brielle Williamson
+                            td Dr. Hal Appeno
+                            td 25/10/2022
+                            td Cheque
+                            td 
+                              span.badge.badge-warning Panding
+                            td $200
+                            td                               
+                              a(href='edit-patient.html')
+                                i.w-18(data-feather='edit')
+                              a.text-danger.ml-8(href='javascript:void(0);')
+                                i.w-18(data-feather='trash-2')
+                          tr
+                            td 03
+                            td Cedric Kelly
+                            td Dr. Pat Agonia
+                            td 11/05/2022
+                            td Credit Card
+                            td 
+                              span.badge.badge-success Paid
+                            td $350
+                            td                               
+                              a(href='edit-patient.html')
+                                i.w-18(data-feather='edit')
+                              a.text-danger.ml-8(href='javascript:void(0);')
+                                i.w-18(data-feather='trash-2')
+                          tr
+                            td 04
+                            td Charde Marshall
+                            td Dr. Paul Molive
+                            td 03/01/2023
+                            td Debit Card
+                            td 
+                              span.badge.badge-danger Unpaid
+                            td $280
+                            td                               
+                              a(href='edit-patient.html')
+                                i.w-18(data-feather='edit')
+                              a.text-danger.ml-8(href='javascript:void(0);')
+                                i.w-18(data-feather='trash-2')
+                          tr
+                            td 05
+                            td Dai Rios
+                            td Dr. Polly Tech
+                            td 28/12/2022
+                            td Net Bancking
+                            td 
+                              span.badge.badge-danger Unpaid
+                            td $150
+                            td                               
+                              a(href='edit-patient.html')
+                                i.w-18(data-feather='edit')
+                              a.text-danger.ml-8(href='javascript:void(0);')
+                                i.w-18(data-feather='trash-2')
+                          tr
+                            td 06
+                            td Garrett Winters
+                            td Dr. Poppa Cherry
+                            td 30/07/2022
+                            td Insurence
+                            td 
+                              span.badge.badge-warning Panding
+                            td $260
+                            td                               
+                              a(href='edit-patient.html')
+                                i.w-18(data-feather='edit')
+                              a.text-danger.ml-8(href='javascript:void(0);')
+                                i.w-18(data-feather='trash-2')
+                          tr
+                            td 07
+                            td Gloria Little
+                            td Dr. Saul T. Balls
+                            td 20/09/2022
+                            td Cash
+                            td 
+                              span.badge.badge-warning Panding
+                            td $80
+                            td                               
+                              a(href='edit-patient.html')
+                                i.w-18(data-feather='edit')
+                              a.text-danger.ml-8(href='javascript:void(0);')
+                                i.w-18(data-feather='trash-2')
+                          tr
+                            td 08
+                            td Jena Gaines
+                            td Dr. Terry Aki
+                            td 28/09/2022
+                            td Chaque
+                            td 
+                              span.badge.badge-danger Unpaid
+                            td $500
+                            td                               
+                              a(href='edit-patient.html')
+                                i.w-18(data-feather='edit')
+                              a.text-danger.ml-8(href='javascript:void(0);')
+                                i.w-18(data-feather='trash-2')
+                          tr
+                            td 09
+                            td Paul Byrd
+                            td Dr. Tiger Nixon
+                            td 20/06/2022
+                            td Credit Card
+                            td 
+                              span.badge.badge-success Paid
+                            td $620
+                            td                               
+                              a(href='edit-patient.html')
+                                i.w-18(data-feather='edit')
+                              a.text-danger.ml-8(href='javascript:void(0);')
+                                i.w-18(data-feather='trash-2')
+                          tr
+                            td 10
+                            td Rhona Davidson
+                            td Dr.William Stephin
+                            td 16/03/2022
+                            td Debit Card
+                            td 
+                              span.badge.badge-success Paid
+                            td $802
+                            td                               
+                              a(href='edit-patient.html')
+                                i.w-18(data-feather='edit')
+                              a.text-danger.ml-8(href='javascript:void(0);')
+                                i.w-18(data-feather='trash-2')
+                          tr
+                            td 11
+                            td Tiger Nixon
+                            td Dr.Angelica Ramos
+                            td 18/08/2022
+                            td Net Banking
+                            td 
+                              span.badge.badge-success Paid
+                            td $480
+                            td                               
+                              a(href='edit-patient.html')
+                                i.w-18(data-feather='edit')
+                              a.text-danger.ml-8(href='javascript:void(0);')
+                                i.w-18(data-feather='trash-2')
+                          tr
+                            td 12
+                            td Ashton Cox
+                            td Dr. Anna Mull
+                            td 28/12/2022
+                            td Cash
+                            td 
+                              span.badge.badge-success Paid
+                            td $150
+                            td                               
+                              a(href='edit-patient.html')
+                                i.w-18(data-feather='edit')
+                              a.text-danger.ml-8(href='javascript:void(0);')
+                                i.w-18(data-feather='trash-2')
+                          tr
+                            td 13
+                            td Brielle Williamson
+                            td Dr. Hal Appeno
+                            td 25/10/2022
+                            td Cheque
+                            td 
+                              span.badge.badge-warning Panding
+                            td $200
+                            td                               
+                              a(href='edit-patient.html')
+                                i.w-18(data-feather='edit')
+                              a.text-danger.ml-8(href='javascript:void(0);')
+                                i.w-18(data-feather='trash-2')
+                          tr
+                            td 14
+                            td Cedric Kelly
+                            td Dr. Pat Agonia
+                            td 11/05/2022
+                            td Credit Card
+                            td 
+                              span.badge.badge-success Paid
+                            td $350
+                            td                               
+                              a(href='edit-patient.html')
+                                i.w-18(data-feather='edit')
+                              a.text-danger.ml-8(href='javascript:void(0);')
+                                i.w-18(data-feather='trash-2')
+                // Doctor Modal Start
+                #paymentmodal.modal.fade
+                  .modal-dialog.modal-dialog-centered
+                    .modal-content
+                      .modal-header
+                        h5.modal-title Add New Payment               
+                      .modal-body
+                        form
+                          .row
+                            .form-group.col-md-6
+                              .form-label First name             
+                              input(class="form-control" type="text" placeholder="First Name")
+                            .form-group.col-md-6
+                              .form-label last name             
+                              input(class="form-control" type="text" placeholder="Last Name")
+                            .form-group.col-md-6
+                              .form-label Bill No
+                              input(class="form-control" type="text" placeholder="Enter Bill Number")
+                            .form-group.col-md-6
+                              .form-label Bill Date                            
+                              input(class="datepicker-here form-control" type="text" value="" data-date-format="dd/mm/yyyy" data-language="en" placeholder="Bill Date")
+                            .form-group.col-md-6
+                              .form-label Doctor Name
+                              input(class="form-control" type="text" placeholder="Enter Doctor Name")
+                            .form-group.col-md-6
+                              .form-label Admit Date             
+                              input(class="datepicker-here form-control" type="text" value="" data-date-format="dd/mm/yyyy" data-language="en" placeholder="Enter Admit Date")
+                            .form-group.col-md-6
+                              .form-label Discharge Date             
+                              input(class="datepicker-here form-control" type="text" value="" data-date-format="dd/mm/yyyy" data-language="en" placeholder="Enter Discharge Date")
+                            .form-group.col-md-6
+                              .form-label Payment Method
+                              select.form-select.hidesearch(name="Payment[]")
+                                option(value="") Select Payment Method
+                                option(value="Cash") Cash
+                                option(value="Cheque") Cheque
+                                option(value="CreditCard") Credit Card
+                                option(value="DebitCard") Debit Card
+                                option(value="NetBancking") Net Bancking
+                                option(value="Insurence") Insurence                         
+                            .form-group.col-md-6
+                              .form-label Payment Status
+                              select.form-select.hidesearch(name="PaymentStatus[]")
+                                option(value="") Select Payment Status
+                                option(value="Paid") Paid
+                                option(value="Unpaid") Unpaid                         
+                                option(value="Partial") Partial
+                      .modal-footer
+                        button.btn.btn-primary(type='button') Save
+                        button.btn.btn-danger(type='button' data-bs-dismiss='modal') Close
+                // Doctor Modal Start
+      // theme body end
+
+
+
+    // footer start
+    +footer
+    // footer end
+    +footerfile         
+    

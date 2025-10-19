@@ -1,0 +1,729 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* variables */
+:root
+{
+    --text-color: rgb(26, 25, 25);
+    /* --secondary-color: rgb(0, 94, 253); */
+    --field-text-color: rgb(19, 19, 19);
+    --field-place-color: rgb(101, 101, 101);
+    --field-color: rgb(230, 230, 230);
+    
+}
+body
+{
+    font-family: "Jost";
+    width: 100%;
+    position: relative;
+    height: auto;
+}
+
+main
+{
+    padding: 50px 70px;
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    min-height: 100vh;
+
+}
+.inner
+{
+    position: relative;
+    height: 100%;
+    min-height: 500px;
+}
+
+header, footer
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    flex-wrap: wrap;
+}
+footer
+{
+
+}
+.logo
+{
+    display: flex;
+    align-items: center;
+    height: auto;
+    position: relative;
+    z-index: 10;
+}
+.logo-icon
+{
+    width: auto;
+}
+.logo-icon img
+{
+    width: 100%;
+}
+.logo-text
+{
+    font-size: 37px;
+    color: var(--field-text-color);
+    font-weight: bold;
+    margin-left: 3px;
+}
+.bar-end h3
+{
+    font-size: 18px;
+    color: var(--text-color);
+    font-weight: bold;   
+}
+.bar-end h3 i
+{
+    margin-right: 12px;
+}
+.bar-end h3 span
+{
+    font-weight: 400;
+}
+
+.links
+{
+    list-style: none;
+    padding: 0;
+}
+.links a
+{
+    text-decoration: none;
+    margin-right: 40px;
+}
+.links li
+{
+    display: inline-block;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 17px;
+    font-weight: 500;
+   
+}
+
+  
+.progress-counter
+{
+    width: 300px;
+    height: 13px;
+    background-color: rgb(250,250,250);
+    position: relative;
+    border-radius: 50px;
+}
+.progress-pin
+{
+    position: absolute;
+    top: -33px;
+    z-index: 20;
+    left: -15px;
+    margin-left: 0%;
+    transition: 0.4s;
+    font-size: 10px;
+    font-family: "Oswald";
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 25px;
+    text-align: center;
+    height: 25px;
+    width: 25px;
+}
+.progress-pin::after
+{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50% 50% 50% 0;
+    background-color: rgb(246, 135, 44);
+    transform: rotate(-45deg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+}
+.counter-inner
+{
+    width: 0;
+    background-color: var(--primary-color);
+    height: inherit;
+    border-radius: inherit;
+    transition: 0.4s;
+}
+
+.steps
+{
+    border-radius: 30px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 7px 65px 0px rgba(0, 0, 0, 0.07);
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    padding: 60px;
+    display: grid;
+    align-content: center;
+    position: relative;
+}
+.wrapper
+{
+    width: 53%;
+    margin: 0 auto;
+    display: grid;
+    height: 100%;
+    align-content: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+article .main-heading
+{
+  font-size: 35px;
+  color: var(--text-color);
+  font-weight: bold;
+  line-height: 2;
+}
+article .main-text
+{
+    font-size: 18px;
+    font-family: "Roboto";
+    color: var(--field-place-color);
+    line-height: 1.5;
+    width: 70%;
+}
+.form-inner
+{
+    position: relative;
+}
+.right-map
+{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.steps-inner
+{
+    margin-top: 50px;
+}
+.radio-field
+{
+    width: 100%;
+    height: 255px;
+    text-align: center;
+    position: relative;
+    display: grid;
+    place-content: center;
+    margin-bottom: 20px;
+}
+.radio-field input
+{
+    -webkit-appearance: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 7px 65px 0px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+    border: solid 2px transparent;
+    transition: 0.4s ease;
+
+}
+.radio-field input:checked
+{  
+    border-color: var(--secondary-color);
+    box-shadow: none;
+}
+.radio-field img, .radio-field label
+{
+    position: relative;
+    z-index: 100;
+    display: block;
+    pointer-events: none;
+}
+.radio-field img
+{
+    border: solid 1px rgb(166,198,255);
+    border-radius: 12px;
+    width: auto;
+    margin: 0 auto;
+}
+.radio-field label
+{
+    font-size: 22px;
+    color: var(--text-color);
+    line-height: 3;
+    font-weight: bold;
+}
+#step1 .next-prev
+{
+    justify-content: center;
+}
+.next-prev
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+}
+.next-prev button
+{
+    background-color: var(--secondary-color);
+    box-shadow: 0px 7px 65px 0px rgba(0, 0, 0, 0.07);
+    padding: 0 20px;
+    height: 53px;
+    border-radius: 50px;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    transition: 0.4s ease;
+    text-transform: uppercase;
+    border: solid 2px transparent;
+}
+.next-prev .prev
+{
+    background-color: rgb(234, 234, 234);
+    color: rgb(42, 42, 42);
+}
+.next-prev button i
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 0.4s ease;
+}
+.next-prev .next:hover i, .next-prev .apply:hover i
+{
+    transform: translateX(10px);
+}
+.next-prev .prev:hover i
+{
+    transform: translateX(-10px);
+}
+
+/* step2 */
+
+.input-field, .select-field
+{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.input-field label, .radio-box label
+{
+    font-size: 16px;
+    color: var(--field-text-color);
+    line-height: 1.8;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+.input-field label i, .radio-box label i
+{
+    margin-left: 10px;
+}
+
+.select-field select
+{
+    -webkit-appearance: none;
+    position: relative;
+    cursor: pointer;
+}
+.select-field select+span::after
+{
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 14px;
+    color: rgb(96,99,108);
+    border-left: solid 2px var(--field-color);
+    position: absolute;
+    right: 20px;
+    top: 46%;
+    pointer-events: none;
+    width: 30px;
+    text-align: right;
+}
+.input-field input, .select-field select, .input-field textarea
+{
+    border: solid 2px var(--field-color);
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 60px;
+    font-size: 14px;
+    color: var(--field-place-color);
+    padding: 0 20px;
+    transition: 0.4s ease;
+    margin-bottom: 30px;
+}
+.input-field .textarea
+{
+    min-height: 150px;
+    padding-top: 20px;
+}
+  .input-field input:focus, .select-field select:focus, .input-field textarea:focus
+  {
+    box-shadow: 0px 7px 65px 0px rgba(0, 0, 0, 0.07);
+    border-color: var(--secondary-color);
+    outline: none;
+  }
+.field-c
+{
+    display: flex;
+    border: solid 2px var(--field-color);
+    border-radius: 5px;
+    height: 60px;
+    transition: 0.4s ease;
+    margin-bottom: 30px;
+
+}
+.field-c .second
+{
+    -webkit-appearance: none;
+    border-radius: 5px;
+    background-color: rgb(236, 240, 249);
+    min-width: 59px;
+    height: 100%;
+    border: 0;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: rgb(101, 101, 101);
+    font-weight: 500;
+    position: relative;
+    outline: solid 2px rgb(236, 240, 249);
+}
+.field-c .text
+{
+    font-size: 20px;
+    color: var(--field-place-color);
+    line-height: 60px;
+}
+.field-c input
+{
+    border: 0;
+    margin-bottom: 0;
+    height: 56px;
+}
+.focused .second
+{
+    outline-color: var(--secondary-color);
+}
+.field-c .second:focus
+{
+    outline-color: var(--secondary-color);
+    box-shadow: 0px 7px 65px 0px rgba(0, 0, 0, 0.07);
+}
+.field-c:focus-within
+{
+    border-color: var(--secondary-color);
+    box-shadow: 0px 7px 65px 0px rgba(0, 0, 0, 0.07);
+    border-color: var(--secondary-color);
+    outline: none;
+}
+.radio-single
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.radio-single input
+{
+    -webkit-appearance: none;
+    border-radius: 50%;
+    background-color: var(--field-color);
+    width: 22px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+}
+.radio-single input:checked::before
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 20%;
+    background-color: var(--secondary-color);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+
+}
+.radio-single span
+{
+    font-size: 16px;
+    color: var(--field-place-color);
+    margin-left: 8px;
+}
+.info-text
+{
+    border: solid 2px rgb(215, 230, 252);
+    border-radius: 5px;
+    background-color: rgb(243, 247, 255);
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    font-size: 14px;
+    font-family: "Roboto";
+    color: rgb(10, 63, 153);
+    line-height: 1.4;
+    font-weight: 500;
+    display: flex; 
+    margin-top: 20px;
+}
+.info-text i
+{
+    font-size: 20px;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    margin-right: 20px;
+}
+#customForm
+{
+    height: auto;
+    position: relative;
+}
+#customForm #remove
+{
+    position: absolute;
+    width: 31px;
+    background-color: rgb(255, 255, 255);
+    height: 31px;
+    border-radius: 50%;
+    border: solid 2px var(--text-color);
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    right: -30px;
+    bottom: 45px;
+      
+}
+#accordion
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.add-button button
+{
+    font-size: 14px;
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 0;
+    background-color: transparent;
+}
+.add-button button::before
+{
+    content: "\f068";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 12px;
+    display: inline-block;
+}
+.collapsed::before
+{
+    content: "\2b" !important;
+}
+.accordion-inner
+{
+    margin-top: 20px;
+}
+.accordion-inner button
+{
+    border: solid 2px rgb(215, 230, 252);
+    border-radius: 5px;
+    background-color: rgb(243, 247, 255);
+    color: rgb(10, 63, 153);
+    font-weight: 500;
+    padding: 10px 20px;
+    min-height: 50px;
+}
+.accordion-inner button::before
+{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.thankyou-page .logo
+{
+    justify-content: center;
+    margin-top: 60px;
+}
+.thankyou-page .logo-icon
+{
+    width: 55px;
+    margin-right: 10px;
+}
+.thankyou-page .logo .logo-icon img
+{
+    width: 100%;
+}
+.thankyou-page .logo-text
+{
+    font-size: 65px;
+}
+.thankyou-page .main-inner
+{
+    background-image: url(../images/thankyou-bg.png) !important;
+    background-color: var(--text-color-hover);
+
+}
+.thankyou-page article
+{
+    text-align: center;
+    margin-top: 80px;
+}
+.thankyou-page article h1
+{
+        font-size: 75px;
+        font-weight: bold;
+        text-transform: uppercase; 
+}
+.thankyou-page article h1 span
+{
+    display: block;
+    font-size: 80px;
+    font-weight: 900;
+    color: var(--primary-color);
+}
+.thankyou-page article span
+{
+    font-size: 20px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+.thankyou-page article p
+{
+    font-size: 18px;
+    font-family: "Myriad Pro";
+    color: var(--secondary--text-color);
+    margin: 0 auto;
+    margin-top: 45px;
+    width: 39%;
+}
+.social-media
+{
+    text-align: center;
+    margin: 40px auto;
+    background-color: var(--text-color-hover);
+    width: 30%;
+    padding: 6px 10px;
+}
+.social-media a
+{
+    border: solid 1px rgb(244, 244, 244);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--secondary--text-color);
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+}
+.social-media a i
+{
+    margin-right: 10px;
+    font-size: 20px;
+}
+.back-home
+{
+    width: 188px;
+    height: 63px;
+    margin: 0 auto;
+}
+.back-home a
+{
+    background-color: var(--primary-color);
+    border-radius: 50px;
+    color: var(--text-color-hover);
+    width: 100%;
+    display: block;
+    line-height: 63px;
+    text-align: center;
+    text-decoration: none;
+    height: 100%;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border: 0;
+
+}
+
+
+
+
+
+
+
+#sub img
+{
+    width: 60px;
+}
+
+.highlight
+{
+    border-top: solid 3px var(--primary-color) !important;
+    border-bottom: solid 3px var(--primary-color) !important;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#error
+{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 20;
+}
+
+
+.invalid
+{
+  border: solid 2px #ff4444 !important;
+  position: relative;
+}

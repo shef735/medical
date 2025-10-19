@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Bootstrap-5 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- custom-styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+</head>
+<body>
+    <main>
+        <div class="inner">
+            <header>
+                <div class="logo">
+                    <div class="logo-icon">
+                        <img src="assets/images/logo.png" alt="BeRifma">
+                    </div>
+                    <div class="logo-text">
+                        Trimba
+                    </div>
+                </div>
+                <div class="bar-end">
+                    <h3><i class="fa-solid fa-square-phone-flip"></i>Need Help? <span>Call an Expert  +93892384</span></h3>
+                </div>
+            </header>
+            <div class="container">
+                <div class="wrapper">
+
+                    <!-- form -->
+                    <form id="steps" class="show-section" method="post" enctype="multipart/form-data">
+
+                        <!-- step1  -->
+                        <section class="steps">
+                            <article>
+                                <div class="main-heading">
+                                    Choose the state
+                                </div>
+                                <div class="main-text">
+                                    Toptal is an exclusive network of the world's top 
+                                    talent in business, design, and technology. 
+                                </div>
+                            </article>
+
+                            <!-- step-1 form  -->
+                            <div id="step1" class="form-inner">
+                                <div class="steps-inner lightSpeedIn">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="radio-field">
+                                                <img src="assets/images/step1-1.png" alt="">
+                                                <label>Seo Optimization</label>
+                                                <input name="service" checked type="radio" value="Seo Optimization">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="radio-field">
+                                                <img src="assets/images/step1-1.png" alt="">
+                                                <label>Web Development</label>
+                                                <input name="service" type="radio" value="Web Development">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="next-prev">
+                                        <button type="button" id="step1btn" class="next">next<i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-map">
+                                <img src="assets/images/right.png" alt="">
+                            </div>
+                        </section>
+
+                        <!-- step2 -->
+                        <section class="steps">
+                            <article>
+                                <div class="main-heading">
+                                    About you
+                                </div>
+                                <div class="main-text">
+                                    Toptal is an exclusive network
+                                </div>
+                            </article>
+
+                            <!-- step-2 form -->
+                            <div id="step2" class="form-inner">
+                                <div class="steps-inner lightSpeedIn">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input-field">
+                                                <label>
+                                                    First Name
+                                                </label>
+                                                <input required type="text" name="first-name" id="firstName" placeholder="Jonnthan">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-field">
+                                                <label>
+                                                    Last Name
+                                                </label>
+                                                <input required type="text" name="last-name" id="lastName" placeholder="Jonnthan">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-field">
+                                                <label for="phone">
+                                                    Phone
+                                                </label>
+                                                <div class="field-c">
+                                                    <select class="second" name="contrycode" id="contrycode">
+                                                        <option value="44" Selected>+44</option>
+                                                        <option value="1">+1</option>
+                                                        <option value="213">+213</option>
+                                                        <option value="376">+376</option>
+                                                        <option value="244">+244</option>
+                                                        <option value="1264">+1264</option>
+                                                        <option value="1268">+1268</option>
+                                                        <option value="92">+92</option>
+                                                    </select>
+                                                    <input type="text" name="phone" id="phone" placeholder="1234">
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-field">
+                                                <label>
+                                                    Email
+                                                </label>
+                                                <input required type="text" name="mail" id="mail-email" placeholder="Email">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="radio-box">
+                                                <label>
+                                                    Do you Have SSN or ITIN?<i class="fa-solid fa-circle-info"></i>
+                                                </label>
+                                                <div class="radio-single">
+                                                    <input type="radio" name="ssn" value="Yes" checked>
+                                                    <span>Yes</span>
+                                                </div>
+                                                <div class="radio-single">
+                                                    <input type="radio" name="ssn" value="No">
+                                                    <span>No</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-field">
+                                                <label for="ssn-num">
+                                                    Enter SSN or ITIN number<i class="fa-solid fa-circle-info"></i>
+                                                </label>
+                                                <input type="text" name="ssn-num" id="ssn-num" placeholder="XXX-XXX-XXX">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="info-text">
+                                                <i class="fa-solid fa-book"></i>
+                                                These are the standard values for number of shares and per value in 
+                                                many top tier companies choose to get started
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="next-prev">
+                                        <button type="button" class="prev"><i class="fa-solid fa-arrow-left"></i>Previous step</button>
+                                        <button type="button" id="step2btn" class="next">next<i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-map">
+                                <img src="assets/images/right.png" alt="">
+                            </div>
+                        </section>
+
+                        <!-- step3 -->
+                        <section class="steps">
+                            <article>
+                                <div class="main-heading">
+                                    Mailling Address
+                                </div>
+                                <div class="main-text">
+                                    Toptal is an exclusive network
+                                </div>
+                            </article>
+
+                            <!-- step-3 form -->
+                            <div id="step3" class="form-inner">
+                                <div class="steps-inner lightSpeedIn">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="input-field select-field">
+                                                <label>
+                                                    Country
+                                                </label>
+                                                <select name="country-select" id="countryselect">
+                                                    <option value="Pakistan">Pakistan</option>
+                                                    <option value="Bangladesh">Bangladesh</option>
+                                                    <option value="India">India</option>
+                                                </select>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-field">
+                                                <label for="state">
+                                                    State
+                                                </label>
+                                                <input type="text" name="state" id="state" placeholder="Jonnthan">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="input-field">
+                                                <label for="address">
+                                                    Street Address
+                                                </label>
+                                                <input type="text" name="address" id="address" placeholder="Address">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-field">
+                                                <label for="city">
+                                                    City
+                                                </label>
+                                                <input type="text" name="city" id="city" placeholder="City">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-field">
+                                                <label for="pincode">
+                                                    Pin Code
+                                                </label>
+                                                <input type="text" name="pincode" id="pincode" placeholder="Code">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="info-text">
+                                                <i class="fa-solid fa-book"></i>
+                                                These are the standard values for number of shares and per value
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="next-prev">
+                                        <button type="button" class="prev"><i class="fa-solid fa-arrow-left"></i>Previous step</button>
+                                        <button type="button" id="step3btn" class="next">next<i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-map">
+                                <img src="assets/images/right.png" alt="">
+                            </div>
+                        </section>
+
+                        <!-- step4 -->
+                        <section class="steps">
+                            <article>
+                                <div class="main-heading">
+                                    Board of Directors
+                                </div>
+                                <div class="main-text">
+                                    Details about your company directos, include all of  your director name here
+                                </div>
+                            </article>
+
+                            <!-- step-4 form -->
+                            <div id="step4" class="form-inner">
+                                <div class="steps-inner lightSpeedIn">
+                                    <fieldset id="customForm" class="row">
+                                        <button type="button" id="remove">X</button>
+                                        <div id="fieldnum1" class="col-md-6">
+                                            <div class="input-field">                            
+                                                <label for="textfield1">Name</label>
+                                                <input required type="text" name="textfield1" id="textfield1" placeholder="textfield1">
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                    <div id="accordion">
+                                        <div class="add-button">
+                                            <button type="button" data-bs-toggle="collapse" data-bs-target="#showbtn" aria-expanded="false" class="collapsed">
+                                                Add directors
+                                            </button>
+                                            <div id="showbtn" class="accordion-inner accordion-collapse collapse" data-bs-parent="#accordion">
+                                                <div class="accordion-body">
+                                                    <button type="button" id="TextField">Add Text Field</button>
+                                                    <button type="button" id="selectFeild">Add Select Feild</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="info-text">
+                                            <i class="fa-solid fa-book"></i>
+                                            These are the standard values for number of shares and per value
+                                        </div>
+                                    </div>
+                                    <div class="next-prev">
+                                        <button type="button" class="prev"><i class="fa-solid fa-arrow-left"></i>Previous step</button>
+                                        <button type="button" id="step4btn" class="next">next<i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-map">
+                                <img src="assets/images/right.png" alt="">
+                            </div>
+                        </section>
+
+                        <!-- step5  -->
+                        <section class="steps">
+                            <article>
+                                <div class="main-heading">
+                                    About your Company
+                                </div>
+                                <div class="main-text">
+                                    Details about your company directos, include
+                                </div>
+                            </article>
+
+                            <!-- step-5 form -->
+                            <div id="step5" class="form-inner">
+                                <div class="steps-inner lightSpeedIn">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="input-field">
+                                                <label for="othercompany">
+                                                    Company Name<i class="fa-solid fa-circle-info"></i>
+                                                </label>
+                                                <input required type="text" name="othercompany" id="othercompany" placeholder="Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="input-field select-field">
+                                                <label for="subject">
+                                                    Company Subject
+                                                </label>
+                                                <select name="subject" id="subject">
+                                                    <option value="Help?">Help</option>
+                                                    <option value="Contact">Contact</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="input-field">
+                                                <label for="description">
+                                                    Business Description
+                                                </label>
+                                                <textarea class="textarea" name="description" id="description" placeholder="Business Description"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="info-text">
+                                                <i class="fa-solid fa-book"></i>
+                                                These are the standard values for number of shares and per value
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="next-prev">
+                                        <button type="button" class="prev"><i class="fa-solid fa-arrow-left"></i>Previous step</button>
+                                        <button type="button" id="step5btn" class="next">next<i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-map">
+                                <img src="assets/images/right.png" alt="">
+                            </div>
+                        </section>
+
+                        <!-- step6 --> 
+                        <section class="steps">
+                            <article>
+                                <div class="main-heading">
+                                    About your Company
+                                </div>
+                                <div class="main-text">
+                                    Details about your company directos, include
+                                </div>
+                            </article>
+
+                            <!-- step-6 form -->
+                            <div id="step6" class="form-inner">
+                                <div class="steps-inner lightSpeedIn">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="input-field select-field">
+                                                <label for="corporation">
+                                                    Type of Corporation<i class="fa-solid fa-circle-info"></i>
+                                                </label>
+                                                <select name="corporation" id="corporation">
+                                                    <option value="Help?">Help</option>
+                                                    <option value="Contact">Contact</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                                <span></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="input-field">
+                                                <label for="bussinesscmpny">
+                                                    Company Subject
+                                                </label>
+                                                <input type="text" name="bussinesscmpny" id="bussinesscmpny" placeholder="Name">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-field">
+                                                <label for="shares">
+                                                    Number of shares
+                                                </label>
+                                                <input type="text" name="shares" id="shares" placeholder="90,000">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-field">
+                                                <label for="share_value">
+                                                    Per Value
+                                                </label>
+                                                <div class="field-c">
+                                                    <div class="second text">
+                                                        <i class="fa-solid fa-dollar-sign"></i>
+                                                    </div>
+                                                    <input type="text" name="share_value" id="share_value" placeholder="95,000">
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="info-text">
+                                                <i class="fa-solid fa-book"></i>
+                                                These are the standard values for number of shares and per value
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="next-prev">
+                                        <button type="button" class="prev"><i class="fa-solid fa-arrow-left"></i>Previous step</button>
+                                        <button id="sub" type="button" class="apply">Send<i class="fa-solid fa-arrow-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-map">
+                                <img src="assets/images/right.png" alt="">
+                            </div>
+                        </section>
+
+                    </form>
+                </div>
+            </div>
+            <footer>
+                <ul class="links">
+                    <li><a href="#">Trems of Service</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Insurance Licenses</a></li>
+                </ul>
+                <div class="progress-counter">
+                    <div class="progress-pin">0%</div>
+                    <div class="counter-inner">
+                        
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+    
+    <div id="error">
+
+    </div>
+
+
+    <!-- Bootstrap-5 -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- My js -->
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+-var datepicker = true ;
+-var select2 = true;
+doctype html
+html(lang="en")
+  
+  include ../components/headerfile
+
+  body
+    
+    +header
+
+    .themebody-wrap
+    
+      // theme body start
+      .theme-body(data-simplebar)
+        .container-fluid
+          .row         
+            .col-md-12
+              .card
+                .card-header
+                  h4 Personal Information
+                .card-body 
+                  form
+                    .row
+                      .form-group.col-md-4
+                        .form-label First Name             
+                        input(class="form-control" type="text" value="Elizabeth")
+                      .form-group.col-md-4
+                        .form-label last name             
+                        input(class="form-control" type="text" value="Blackwell")
+                      .form-group.col-md-4
+                        .form-label Date of Birth                                     
+                        input(class="datepicker-here form-control" type="text" value="12/05/1990" data-date-format="dd/mm/yyyy" data-language="en")
+                      .form-group.col-md-4
+                        .form-label Gender             
+                        select.form-select
+                          option(value="Gender") Select Gender
+                          option(value="Male" selected) Male
+                          option(value="Female") Female
+                      .form-group.col-md-4
+                        .form-label Profile Image             
+                        input(class="form-control" type="file")
+                      .form-group.col-md-4
+                        .form-label Education
+                        input(class="form-control" type="text" value="M.B.B.S")
+                      .form-group.col-md-4
+                        .form-label Designation              
+                        input(class="form-control" type="text" value="Physician")
+                      .form-group.col-md-4
+                        .form-label Department               
+                        select.form-select.hidesearch(name="Department[]")
+                          option(value="Audiologists") Audiologists
+                          option(value="Cardiologists") Cardiologists
+                          option(value="Endocrinologist") Endocrinologist
+                          option(value="Oncologists" selected) Oncologists
+                          option(value="Neurology") Neurology
+                          option(value="Orthopedics") Orthopedics
+                          option(value="Gynaecology") Gynaecology
+                          option(value="Microbiology") Microbiology                         
+                      .form-group.col-md-4
+                        .form-label Website URL             
+                        input(class="form-control" type="url" value="http://www.example.com")
+                      .form-group.mb-0                      
+                        a.btn.btn-sm.btn-primary(href="javascript:void(0);") Save
+                        a.btn.btn-sm.btn-danger.ml-8(href="javascript:void(0);") Cancle
+            .col-md-6
+              .card
+                .card-header
+                  h4 Doctor Account Info
+                .card-body 
+                  form
+                    .form-group
+                      .form-label Email             
+                      input(class="form-control" type="text" value="example@email.com")
+                    .form-group
+                      .form-label Phone             
+                      input(class="form-control" type="tel" value="+1 50 456XXX")
+                    .form-group
+                      .form-label Password
+                      input(class="form-control" type="password" value="Example@pass")
+                    .form-group
+                      .form-label Confirm Password             
+                      input(class="form-control" type="password" value="Example@pass")
+                    .form-group.mb-0                     
+                      a.btn.btn-sm.btn-primary(href="javascript:void(0);") Save
+                      a.btn.btn-sm.btn-danger.ml-8(href="javascript:void(0);") Cancle
+            .col-md-6
+              .card
+                .card-header
+                  h4 Doctor Social Media Info
+                .card-body 
+                  form
+                    .form-group
+                      .form-label Facebook URL             
+                      input(class="form-control" type="url" value="http://www.facebook.com/")
+                    .form-group
+                      .form-label Twitter URL             
+                      input(class="form-control" type="url" value="http://www.twitter.com/")
+                    .form-group
+                      .form-label Instagram URL             
+                      input(class="form-control" type="url" value="http://www.instagram.com/")
+                    .form-group
+                      .form-label Google Plus URL
+                      input(class="form-control" type="url" value="http://www.plus.google.com")
+                    .form-group.mb-0                     
+                      a.btn.btn-sm.btn-primary(href="javascript:void(0);") Save
+                      a.btn.btn-sm.btn-danger.ml-8(href="javascript:void(0);") Cancle
+      // theme body end
+    
+    // footer start
+    +footer
+    // footer end
+
+    +footerfile   

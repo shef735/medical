@@ -1,0 +1,292 @@
+-var datatable = true;
+-var datepicker = true;
+doctype html
+html(lang="en")
+
+  include ../components/headerfile
+  
+  body    
+    +header
+
+
+    .themebody-wrap
+
+      // breadcrumb start
+      +codexbreadcrumb('Datatable Advance','application')
+      // breadcrumb end
+
+      // theme body start
+      .theme-body.codex-chat
+        .container-fluid
+          .row
+            .col-12
+              .card   
+                .card-body
+                  a.btn.btn-primary.float-end.mb-15(href='javascript:void(0);' data-bs-toggle='modal' data-bs-target='#adddoctormodal') 
+                   i.ti-plus.fw-700.mr-10
+                   | Add Doctor
+                  table#doctorslist-tbl.doctorslist-tbl.table(style='width:100%;')
+                    thead
+                      tr
+                        th Name
+                        th Department
+                        th Specialization
+                        th Degree
+                        th Mobile
+                        th Email
+                        th Joining Date
+                        th Action
+                    tbody
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/1.jpg' alt='')
+                            span.ml-10 Dr. Tiger Nixon
+                        td Otolaryngology
+                        td infertility
+                        td M.B.B.S,M.S
+                        td +1 50 456589
+                        td example@email.com
+                        td 04/25/2023
+                        td
+                          a(href='edit-doctor.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/2.jpg' alt='')
+                            span.ml-10 Dr. Anna Mull
+                        td Cardiologists
+                        td Prostate
+                        td M.B.B.S
+                        td +1 25 962689
+                        td example@email.com
+                        td 05/21/2023
+                        td
+                          a(href='edit-doctor.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')                         
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/3.jpg' alt='')
+                            span.ml-10 Dr. Paul Molive
+                        td Heart Surgeons
+                        td infertility
+                        td M.B.B.S,M.S
+                        td +1 30 654589
+                        td example@email.com
+                        td 10/12/2023
+                        td
+                          a(href='edit-doctor.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/4.jpg' alt='')
+                            span.ml-10 Dr. Terry Aki
+                        td Medicine Specialists
+                        td Kidney
+                        td M.B.B.S
+                        td +1 55 894565
+                        td example@email.com
+                        td 12/02/2023
+                        td
+                          a(href='edit-doctor.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/5.jpg' alt='')
+                            span.ml-10 Dr. Poppa Cherry
+                        td Family Physicians
+                        td cancer
+                        td M.B.B.S,M.S
+                        td +1 45 506589
+                        td example@email.com
+                        td 05/19/2023
+                        td
+                          a(href='edit-doctor.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/6.jpg' alt='')
+                            span.ml-10 Dr. Saul T. Balls
+                        td Gynaecology
+                        td infertility
+                        td M.B.B.S,M.S
+                        td +1 50 456589
+                        td example@email.com
+                        td 04/25/2023
+                        td
+                          a(href='edit-doctor.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/7.jpg' alt='')
+                            span.ml-10 Dr. Hal Appeno
+                        td Eye Special
+                        td Dental 
+                        td M.B.B.S,M.S
+                        td +1 66 282089
+                        td example@email.com
+                        td 03/29/2023
+                        td
+                          a(href='edit-doctor.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/8.jpg' alt='')
+                            span.ml-10 Dr. Polly Tech
+                        td Medicine Specialists
+                        td Radiology
+                        td M.B.B.S
+                        td +1 22 252889
+                        td example@email.com
+                        td 08/17/2023
+                        td
+                          a(href='edit-doctor.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/9.jpg' alt='')
+                            span.ml-10 Dr. Pat Agonia
+                        td Therapy Special
+                        td infertility
+                        td M.B.B.S,M.S
+                        td +1 50 456589
+                        td example@email.com
+                        td 04/25/2023
+                        td
+                          a(href='edit-doctor.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                    tr
+                      td
+                        .d-flex.align-items-center
+                          img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/10.jpg' alt='')
+                          span.ml-10  Dr.William Stephin
+                      td Gynocolgy
+                      td Prostate
+                      td M.B.B.S,M.S
+                      td +1 50 456589
+                      td example@email.com
+                      td 04/25/2023
+                      td
+                        a(href='edit-doctor.html')
+                          i.w-18(data-feather='edit')
+                        a.text-danger.ml-8(href='javascript:void(0);')
+                          i.w-18(data-feather='trash-2')
+                    tr
+                      td
+                        .d-flex.align-items-center
+                          img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/11.jpg' alt='')
+                          span.ml-10 Dr.Angelica Ramos
+                      td Urology
+                      td Ear, Nose
+                      td M.B.B.S
+                      td +1 50 456589
+                      td example@email.com
+                      td 04/25/2023
+                      td
+                        a(href='edit-doctor.html')
+                          i.w-18(data-feather='edit')
+                        a.text-danger.ml-8(href='javascript:void(0);')
+                          i.w-18(data-feather='trash-2')
+                    tr
+                      td
+                        .d-flex.align-items-center
+                          img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/12.jpg' alt='')
+                          span.ml-10 Dr.Sarah Smith
+                      td Dentist
+                      td Dental 
+                      td M.B.B.S,M.S
+                      td +1 50 456589
+                      td example@email.com
+                      td 04/25/2023
+                      td
+                        a(href='edit-doctor.html')
+                          i.w-18(data-feather='edit')
+                        a.text-danger.ml-8(href='javascript:void(0);')
+                          i.w-18(data-feather='trash-2')
+                    tr
+                      td
+                        .d-flex.align-items-center
+                          img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/13.jpg' alt='')
+                          span.ml-10 Cristina Groves
+                      td Otolaryngology
+                      td Infertility 
+                      td M.B.B.S,M.S
+                      td +1 50 456589
+                      td example@email.com
+                      td 04/25/2023
+                      td
+                        a(href='edit-doctor.html')
+                          i.w-18(data-feather='edit')
+                        a.text-danger.ml-8(href='javascript:void(0);')
+                          i.w-18(data-feather='trash-2')
+
+
+                // Doctor Modal Start
+                #adddoctormodal.modal.fade
+                  .modal-dialog.modal-dialog-centered
+                    .modal-content
+                      .modal-header
+                        h5.modal-title Add New Doctor               
+                      .modal-body
+                        form
+                          .row
+                            .form-group.col-md-6
+                              label.form-label Name
+                              input.form-control(type='text' placeholder='Enter Doctor Name')
+                            .form-group.col-md-6
+                              label.form-label Department
+                              input.form-control(type='text' required='' placeholder='Department')
+                            .form-group.col-md-6
+                              label.form-label Specialization
+                              input.form-control(type='text' required='' placeholder='Specialization')
+                            .form-group.col-md-6
+                              label.form-label Degree
+                              input.form-control(type='text' required='' placeholder='Degree')
+                            .form-group.col-md-6
+                              label.form-label Mobile
+                              input.form-control(type='text' required='' placeholder='Mobile Number')
+                            .form-group.col-md-6
+                              label.form-label Email
+                              input.form-control(type='text' required='' placeholder='Email Id')
+                            .form-group.col-md-6
+                              .form-label Joining Date                                     
+                              input.datepicker-here.form-control(type='text' placeholder='DD/MM/YYYY' data-date-format='dd/mm/yyyy' data-language='en')
+                      .modal-footer
+                        button.btn.btn-primary(type='button') Save
+                        button.btn.btn-danger(type='button' data-bs-dismiss='modal') Close
+                // Doctor Modal Start
+
+      // theme body end
+
+
+    // footer start
+    +footer
+    // footer end
+
+    +footerfile         

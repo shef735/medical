@@ -1,0 +1,105 @@
+doctype html
+html(lang="en")
+
+  include ../components/headerfile
+  
+  body
+
+    +header
+
+
+    .themebody-wrap
+
+      // breadcrumb start
+      +codexbreadcrumb('faq','pages')
+      // breadcrumb end
+
+      // theme body start
+      .theme-body
+        .container-fluid.codex-faq
+          .row         
+            .col-md-12
+              .card.faq-searchwrap
+                .card-body
+                  div
+                    h1 how can we help you?
+                    .input-group             
+                      input(type="text" class="form-control" placeholder="find your question")
+                      .input-group-text.bg-primary.border-0
+                        i.fa.fa-search
+            .col-md-6
+              .card               
+                .card-body
+                  #install-que.codex-accordion.accordion.accordion-flush
+                    .accordion-item                 
+                      a.cdx-collapse(href="javascript:void(0);" data-bs-toggle='collapse' data-bs-target='#cdx-collapce1' )
+                        | Is SeekMed app available for all platforms?
+                      #cdx-collapce1.collapse.show(data-bs-parent='#install-que')
+                        .accordion-body
+                          p.text-light ‘Lorem ipsum dolor sit amet, consectetur adipisici elit…’ (complete text) is dummy text that is not meant to mean anything. It is used as a placeholder in magazine layouts, for example, in order to give an impression of the finished document. The text is intentionally unintelligible so that the viewer is not distracted by the content. The language is not real Latin and even the first word ‘Lorem’ does not exist. It is said that the lorem ipsum.
+                    .accordion-item                 
+                      a.cdx-collapse.collapsed(href="javascript:void(0);" data-bs-toggle='collapse' data-bs-target='#cdx-collapce2' )
+                        | What is the registration process for doctors?
+                      #cdx-collapce2.collapse(data-bs-parent='#install-que')
+                        .accordion-body
+                          p.text-light ‘Lorem ipsum dolor sit amet, consectetur adipisici elit…’ (complete text) is dummy text that is not meant to mean anything. It is used as a placeholder in magazine layouts, for example, in order to give an impression of the finished document. The text is intentionally unintelligible so that the viewer is not distracted by the content. The language is not real Latin and even the first word ‘Lorem’ does not exist. It is said that the lorem ipsum.
+                    .accordion-item                 
+                      a.cdx-collapse.collapsed(href="javascript:void(0);" data-bs-toggle='collapse' data-bs-target='#cdx-collapce3' )
+                        | I’ve seen other apps that serve similar purpose. What makes yours any different?
+                      #cdx-collapce3.collapse(data-bs-parent='#install-que')
+                        .accordion-body
+                          p.text-light ‘Lorem ipsum dolor sit amet, consectetur adipisici elit…’ (complete text) is dummy text that is not meant to mean anything. It is used as a placeholder in magazine layouts, for example, in order to give an impression of the finished document. The text is intentionally unintelligible so that the viewer is not distracted by the content. The language is not real Latin and even the first word ‘Lorem’ does not exist. It is said that the lorem ipsum.
+                    .accordion-item                 
+                      a.cdx-collapse.collapsed(href="javascript:void(0);" data-bs-toggle='collapse' data-bs-target='#cdx-collapce4' )
+                        | How do I get an appointment for video consultation?
+                      #cdx-collapce4.collapse(data-bs-parent='#install-que')
+                        .accordion-body
+                          p.text-light ‘Lorem ipsum dolor sit amet, consectetur adipisici elit…’ (complete text) is dummy text that is not meant to mean anything. It is used as a placeholder in magazine layouts, for example, in order to give an impression of the finished document. The text is intentionally unintelligible so that the viewer is not distracted by the content. The language is not real Latin and even the first word ‘Lorem’ does not exist. It is said that the lorem ipsum.
+                    .accordion-item                 
+                      a.cdx-collapse.collapsed(href="javascript:void(0);" data-bs-toggle='collapse' data-bs-target='#cdx-collapce5' )
+                        | I'm looking for a surgical procedure done in India. How can SeekMed help?
+                      #cdx-collapce5.collapse(data-bs-parent='#install-que')
+                        .accordion-body
+                          p.text-light ‘Lorem ipsum dolor sit amet, consectetur adipisici elit…’ (complete text) is dummy text that is not meant to mean anything. It is used as a placeholder in magazine layouts, for example, in order to give an impression of the finished document. The text is intentionally unintelligible so that the viewer is not distracted by the content. The language is not real Latin and even the first word ‘Lorem’ does not exist. It is said that the lorem ipsum.
+            .col-md-6
+              .card                
+                .card-body
+                  #product-que.codex-accordion.accordion.accordion-flush
+                    .accordion-item                 
+                      a.cdx-collapse(href="javascript:void(0);" data-bs-toggle='collapse' data-bs-target='#cdx-collapce6' )
+                        | Who are the consulting doctors?
+                      #cdx-collapce6.collapse.show(data-bs-parent='#product-que')
+                        .accordion-body
+                          p.text-light ‘Lorem ipsum dolor sit amet, consectetur adipisici elit…’ (complete text) is dummy text that is not meant to mean anything. It is used as a placeholder in magazine layouts, for example, in order to give an impression of the finished document. The text is intentionally unintelligible so that the viewer is not distracted by the content. The language is not real Latin and even the first word ‘Lorem’ does not exist. It is said that the lorem ipsum.
+                    .accordion-item                 
+                      a.cdx-collapse.collapsed(href="javascript:void(0);" data-bs-toggle='collapse' data-bs-target='#cdx-collapce7' )
+                        | Will the doctor be able to resolve my issue?
+                      #cdx-collapce7.collapse(data-bs-parent='#product-que')
+                        .accordion-body
+                          p.text-light ‘Lorem ipsum dolor sit amet, consectetur adipisici elit…’ (complete text) is dummy text that is not meant to mean anything. It is used as a placeholder in magazine layouts, for example, in order to give an impression of the finished document. The text is intentionally unintelligible so that the viewer is not distracted by the content. The language is not real Latin and even the first word ‘Lorem’ does not exist. It is said that the lorem ipsum.
+                    .accordion-item                 
+                      a.cdx-collapse.collapsed(href="javascript:void(0);" data-bs-toggle='collapse' data-bs-target='#cdx-collapce8' )
+                        | Is my consultation private with my doctor?
+                      #cdx-collapce8.collapse(data-bs-parent='#product-que')
+                        .accordion-body
+                          p.text-light ‘Lorem ipsum dolor sit amet, consectetur adipisici elit…’ (complete text) is dummy text that is not meant to mean anything. It is used as a placeholder in magazine layouts, for example, in order to give an impression of the finished document. The text is intentionally unintelligible so that the viewer is not distracted by the content. The language is not real Latin and even the first word ‘Lorem’ does not exist. It is said that the lorem ipsum.
+                    .accordion-item                 
+                      a.cdx-collapse.collapsed(href="javascript:void(0);" data-bs-toggle='collapse' data-bs-target='#cdx-collapce9' )
+                        | For how long is the consultation valid?
+                      #cdx-collapce9.collapse(data-bs-parent='#product-que')
+                        .accordion-body
+                          p.text-light ‘Lorem ipsum dolor sit amet, consectetur adipisici elit…’ (complete text) is dummy text that is not meant to mean anything. It is used as a placeholder in magazine layouts, for example, in order to give an impression of the finished document. The text is intentionally unintelligible so that the viewer is not distracted by the content. The language is not real Latin and even the first word ‘Lorem’ does not exist. It is said that the lorem ipsum.
+                    .accordion-item                 
+                      a.cdx-collapse.collapsed(href="javascript:void(0);" data-bs-toggle='collapse' data-bs-target='#cdx-collapce10' )
+                        | Do you have a refund policy?
+                      #cdx-collapce10.collapse(data-bs-parent='#product-que')
+                        .accordion-body
+                          p.text-light ‘Lorem ipsum dolor sit amet, consectetur adipisici elit…’ (complete text) is dummy text that is not meant to mean anything. It is used as a placeholder in magazine layouts, for example, in order to give an impression of the finished document. The text is intentionally unintelligible so that the viewer is not distracted by the content. The language is not real Latin and even the first word ‘Lorem’ does not exist. It is said that the lorem ipsum.
+      // theme body end
+
+    // footer start
+    +footer
+    // footer end   
+
+
+    +footerfile            

@@ -1,0 +1,137 @@
+/*L-desktop*/
+
+@media (min-device-width:  1600px)
+{
+    
+}
+
+/*L-laptops*/
+@media(max-width: 1440px)
+{
+
+    
+
+    
+}
+
+/*laptops/tablets*/
+@media(max-width: 1024px)
+{
+    .main-heading
+    {
+        font-size: 30px;
+        height: 150px;
+    }
+    .pole-form form
+    {
+        width: 55%;
+    }
+
+}
+
+
+/*tablets*/
+@media(max-width: 768px)
+{
+
+    .main-heading
+    {
+        font-size: 25px;
+        height: 120px;
+    }
+    .pole-form form
+    {
+        width: 80%;
+    }
+    .revealfield
+    {
+        height: 55px;
+        line-height: 53px;
+    }
+    .radiofield label
+    {
+        font-size: 20px;
+    }
+    .radiofield input[type=radio]::before
+    {
+        width: 30px;
+        height: 30px;
+        line-height: 28px;
+        top: 24%;
+    }
+    .next_prev
+    {
+        position: static;
+        margin-top: 30px;
+    }
+    .vote_count
+    {
+        width: 100%;
+    }
+
+
+
+
+
+}
+
+
+/*Smart phone*/
+@media(max-width: 576px)
+{
+    main
+    {
+        padding: 30px 0 30px 0;
+    }
+    .main-heading
+    {
+        font-size: 20px;
+        height: 100px;
+        margin: 30px;
+        width: 90%;
+    }
+    .pole-form
+    {
+        padding: 30px;
+    }
+    .pole-form form
+    {
+        width: 90%;
+    }
+    .revealfield
+    {
+        height: 55px;
+        line-height: 53px;
+    }
+    .radiofield label
+    {
+        font-size: 20px;
+    }
+    .radiofield input[type=radio]::before
+    {
+        width: 30px;
+        height: 30px;
+        line-height: 28px;
+        top: 24%;
+    }
+    .next_prev
+    {
+        position: static;
+        margin-top: 30px;
+    }
+    .vote_count
+    {
+        width: 100%;
+    }
+    footer
+    {
+        width: 100%;
+        margin: 0;
+        margin-left: 30px;
+    }
+
+
+    
+}
+
+

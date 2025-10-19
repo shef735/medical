@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Lilita+One&display=swap');
+
+
+/*custom font*/ 
+@font-face
+{
+	font-family: Mistral;
+	src: url(../fonts/MISTRAL.TTF);
+}
+body
+{
+    font-family: "Lilita One";
+    background-image: url(../images/bg.jpg);
+    min-height: 100vh;
+    display: grid;
+    background-size: cover;
+    width: 100%;
+}
+a
+{
+    color: auto;
+    text-decoration: none;
+}
+.coming-soon
+{
+    height: 100%;
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    align-content: center;
+    padding: 50px 80px;
+}
+.coming-soon::before
+{
+    content: "";
+    background-color: rgb(28, 28, 28);
+    width: 125%;
+    height: 100%;
+    position: absolute;
+    top: 50px;
+    left: -370px;
+    border-radius: 100px;
+    transform: rotate(300deg);
+    z-index: 1;
+}
+.coming-soon::after
+{
+    content: "";
+    background-image: linear-gradient( 315deg, rgb(255,67,75) 0%, rgb(255,167,35) 100%);
+    width: 125%;
+    height: 100%;
+    position: absolute;
+    top: 40px;
+    left: -350px;
+    border-radius: 100px;
+    transform: rotate(300deg);
+    z-index: 0;
+}
+.coming-soon *
+{
+    position: relative;
+    z-index: 100;
+}
+.coming-soon-title
+{
+    background-image: linear-gradient( 270deg, rgb(255,67,75) 0%, rgb(255,167,35) 100%);
+    box-shadow: 0px 17px 50px 0px rgba(0, 0, 0, 0.29);
+    height: 100px;
+    width: 70%;
+    text-align: center;
+    clip-path: polygon(0 0, 98% 2%, 100% 100%, 2% 98%);
+}
+.coming-soon-title h1
+{
+    font-size: 76px;
+    color: rgb(255, 255, 255);
+}
+
+
+.tag
+{
+    font-size: 50px;
+    font-family: "Mistral";
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-left: 25px;
+    text-shadow: rgb(255, 75, 72) 2px 0px 0px, rgb(255, 75, 72) 1.75517px 0.958851px 0px, rgb(255, 75, 72) 1.0806px 1.68294px 0px, rgb(255, 75, 72) 0.141474px 1.99499px 0px, rgb(255, 75, 72) -0.832294px 1.81859px 0px, rgb(255, 75, 72) -1.60229px 1.19694px 0px, rgb(255, 75, 72) -1.97998px 0.28224px 0px, rgb(255, 75, 72) -1.87291px -0.701566px 0px, rgb(255, 75, 72) -1.30729px -1.5136px 0px, rgb(255, 75, 72) -0.421592px -1.95506px 0px, rgb(255, 75, 72) 0.567324px -1.91785px 0px, rgb(255, 75, 72) 1.41734px -1.41108px 0px, rgb(255, 75, 72) 1.92034px -0.558831px 0px;
+}
+  
+
+
+#countdown
+{
+    display: flex;
+    width: auto;
+    height: auto;
+    margin-top: 40px;
+
+      
+}
+.load
+{
+    font-size: 45px !important;
+    text-transform: uppercase;
+    background-image: linear-gradient( 270deg, rgb(255,67,75) 0%, rgb(255,167,35) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+}
+#countdown .timer
+{
+    padding-right: 15px;
+    text-align: center;
+}
+  
+#countdown .timer-inner
+{
+    border: solid 3px rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    width: 119px;
+    height: 119px;
+    background-color: transparent;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   
+}
+.timer-inner .timer-text
+{
+    font-size: 45px;
+    text-transform: uppercase;
+    background-image: linear-gradient( 270deg, rgb(255,67,75) 0%, rgb(255,167,35) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#countdown span 
+{
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px;
+    display: block;
+}
+
+.social-icons 
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+    justify-content: end;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+}
+.icons-inner
+{
+    width: 100%;
+    text-align: end;
+}
+.social-icons i
+{
+    color: rgb(255, 255, 255);
+    font-size: 27px;
+    margin-left: 20px;
+    text-align: end;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+    text-align: center;
+
+}
+.contact
+{
+  font-size: 16px;
+  font-family: "Comfortaa";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
+.contact span
+{
+    position: relative;
+    z-index: 1;
+}
+.contact span::before
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: linear-gradient( 270deg, rgb(255,67,75) 0%, rgb(255,167,35) 100%);
+    height: 8px;
+    border-radius: 50px;
+    z-index: -1;
+}
+
+.social-icons .fa-square-facebook:hover
+{
+    color: rgba(57, 87, 155, 1);
+}
+.social-icons .fa-twitter:hover, .fa-linkedin-in:hover
+{
+    color: rgba(80, 171, 242, 1);
+}
+
+.social-icons .fa-basketball:hover
+{
+    color: rgba(236, 73, 137,1);
+}

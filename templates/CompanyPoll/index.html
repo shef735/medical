@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Poll</title>
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Bootstrap-5 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- custom-styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+</head>
+<body>
+
+
+
+    <main class="overflow-hidden formstep">
+        <div class="container">
+            <div class="wrapper">
+                <div class="pole">
+                    <div class="pole-inner">
+                        <div class="main-heading">
+                            Do you Think This is a Good  Design For poll?
+                        </div>
+
+                        <!-- form -->
+                        <form class="show-section" id="steps" method="post">
+
+                            
+
+                            <!-- step 1 -->
+                            <fieldset class="fields" id="step1">
+                                <div class="radiofield">
+                                    <input type="radio" name="opt1" value="MayBe, in the right context">
+                                    <label>MayBe, in the right context</label>
+                                </div>
+                                <div class="radiofield delay-100ms">
+                                    <input type="radio" name="opt1" value="MayBe, in the left context">
+                                    <label>MayBe, in the left context</label>
+                                </div>
+                                <div class="radiofield delay-200ms">
+                                    <input type="radio" name="opt1" value="MayBe, in the center context">
+                                    <label>MayBe, in the center context</label>
+                                </div>
+
+                                <!-- step 3 button -->
+                                <div class="next-prev">
+                                    <button type="button" id="sub" class="next">
+                                        <span>Submit</span>
+                                    </button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- thankyou section -->
+    <main class="overflow-hidden thankyoupage">
+        <div class="container">
+            <div class="wrapper">
+                <div class="pole">
+                    <div class="pole-inner">
+                        <div class="main-heading">
+                            Do you Think This is a Good  Design For poll?
+                        </div>
+                        <form method="post">
+                            <div class="result opt1result">
+                                <span>MayBe, in the right context</span>
+                                <p class="optioncount">30%</p>
+                                <div class="resultbefore"></div>
+                            </div>
+                            <div class="result opt2result">
+                                <span>MayBe, in the left context</span>
+                                <p class="optioncount">23%</p>
+                                <div class="resultbefore"></div>
+                            </div>
+                            <div class="result opt3result">
+                                <span>MayBe, in the center context</span>
+                                <p class="optioncount">47%</p>
+                                <div class="resultbefore"></div>
+                            </div>
+                        </form>
+                        <div class="next-prev">
+                            <button id="goback" type="button">
+                                <span>Undo?</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    
+    <div id="error">
+
+    </div>
+
+
+    <!-- Bootstrap-5 -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- My js -->
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>

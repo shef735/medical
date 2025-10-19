@@ -1,0 +1,269 @@
+/*L-desktop*/
+
+@media (min-device-width:  1600px)
+{
+
+}
+
+/*L-laptops*/
+@media (max-width: 1440px)
+{
+
+    .main-heading
+    {
+        font-size: 58px;
+    }
+    .left-section-text
+    {
+        font-size: 18px;
+    }
+    .steps .steps-inner
+    {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    .job-single
+    {
+        height: 125px;
+    }
+    .experience label
+    {
+        margin-left: 5px;
+    }
+
+    
+}
+
+/*laptops/tablets*/
+@media (max-width: 1024px)
+{
+    .left-section
+    {
+        order: 2;
+    }
+    .tab-50
+    {
+        width: 50%;
+    }
+    .tab-100
+    {
+        width: 100%;
+    }
+
+    .logo
+    {
+        margin-left: 50px;
+    }
+    .main-heading
+    {
+        font-size: 40px;
+    }
+    .left-section-text
+    {
+        font-size: 15px;
+    }
+
+    .steps .steps-inner
+    {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .right-section-inner .wrapper
+    {
+        width: 80%;
+    }
+    .steps-inner .main-heading
+    {
+        font-size: 35px;
+    }
+    .job-single
+    {
+        height: 100px;
+    }
+    .job-single label
+    {
+        font-size: 9px;
+    }
+    .experience label
+    {
+        margin-left: 5px;
+    }
+    .step-custom .steps-inner .scroll-form
+    {
+        padding-right: 6px;
+    }
+    .step-custom .steps-inner .main-heading
+    {
+        padding-right: 6px;
+    }
+    .text_input label
+    {
+        font-size: 12px;
+    }
+    .text_input input
+    {
+        font-size: 12px;
+    }
+    .gender
+    {
+        margin-bottom: 15px;
+    }
+    .experience input
+    {
+        width: 100%;
+    }
+    .experience
+    {
+        text-align: center;
+    }
+    .experience label
+    {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    .step-custom .next-prev
+    {
+        margin-right: 20px;
+    }
+    .supported-file
+    {
+        font-size: 10px;
+    }
+    .agree-terms label
+    {
+        font-size: 10px;
+    }
+}
+
+
+/*tablets*/
+@media (max-width: 768px)
+{
+
+    .tab-50
+    {
+        width: 50%;
+    }
+    .tab-100
+    {
+        width: 100%;
+    }
+    .tab-sm-100
+    {
+        width: 100%;
+    }
+    .tab-sm-50
+    {
+        width: 50%;
+    }
+    .right-section-inner .wrapper
+    {
+        width: 70%;
+    }
+    .right-section::before
+    {
+        top: auto;
+    }
+    .step-counter
+    {
+        margin-top: 40px;
+    }
+    .right-section svg
+    {
+        top: auto;
+    }
+    .job-single img
+    {
+        width: 40px;
+    }
+
+}
+
+
+/*Smart phone*/
+@media (max-width: 576px)
+{
+
+    .right-section svg
+    {
+        top: auto;
+    }
+    .logo
+    {
+        margin-left: 25px;
+    }
+    .left-section-inner
+    {
+    width: 100%;
+    }
+    .right-section-inner
+    {
+    width: 100%;
+    padding-top: 30px;
+    }
+    .right-section-inner .wrapper
+    {
+        width: 100%;
+        margin-top: 25px;
+    }
+    .main-heading
+    {
+        font-size: 30px;
+    }
+    .left-section-text
+    {
+        font-size: 12px;
+    }
+    .left-section-inner .wrapper
+    {
+        width: 80%;
+        margin: 0 auto;
+    }
+    .step-counter
+    {
+        margin: auto;
+    }
+    .steps
+    {
+        border-radius: 0;
+    }
+    .steps-inner .main-heading
+    {
+        font-size: 28px;
+    }
+    .step-custom .steps-inner .main-heading
+    {
+        padding-right: 6px;
+    }
+    .gender
+    {
+        margin-bottom: 15px;
+    }
+    .step-custom .steps-inner .scroll-form
+    {
+        padding-right: 6px;
+    }
+    .steps .steps-inner
+    {
+        padding: 70px 20px 50px 20px;
+    }
+    .agree-terms label
+    {
+        font-size: 12px;
+    }
+    .left-section
+    {
+        order: 2;
+    }
+    .step-counter
+    {
+        margin-top: 40px;
+    }
+    .hide
+    {
+        display: none;
+    }
+
+}
+
+

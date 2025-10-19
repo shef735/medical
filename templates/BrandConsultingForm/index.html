@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand Consulting Form</title>
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Bootstrap-5 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- custom-styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+</head>
+<body>
+    <main>
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="assets/images/logo.png" alt="BeRifma">
+            </div>
+            <div class="logo-text">
+                Trimba
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="c-order tab-sm-100 col-md-6">
+
+                        <!-- side -->
+                        <div class="left">
+                            <article class="side-text">
+                                <h2>Let's Scale your brand, Together</h2>
+                                <p>Get a <span>start@userthemes.com</span></p>
+                            </article>
+                            <div class="left-img">
+                                <img src="assets/images/left-bg.gif" alt="BeRifma">
+                            </div>
+                            <ul class="links">
+                                <li><a href="#">Trems of Service</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Insurance Licenses</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-sm-100 offset-md-1 col-md-5">
+                        <div class="right">
+
+                            <!-- form -->
+                            <form id="steps" method="post" enctype="multipart/form-data">
+
+                                <!-- step 1 -->
+                                <div id="step1" class="form-inner lightSpeedIn">
+                                    <div class="input-field">
+                                        <label><i class="fa-regular fa-user"></i>Name <span>*</span></label>
+                                        <input required type="text" name="name" id="mail-name" placeholder="Type Name">
+                                        <span></span>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="company"><i class="fa-regular fa-paper-plane"></i>Company <span>*</span></label>
+                                        <input required type="text" name="company" id="company" placeholder="Type company name">
+                                        <span></span>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="phone"><i class="fa-solid fa-phone"></i>Phone <span>*</span></label>
+                                        <input type="text" name="phone" id="phone" placeholder="Type Phone Number">
+                                        <span></span>
+                                    </div>
+                                    <div class="input-field">
+                                        <label><i class="fa-regular fa-envelope"></i>Email Address <span>*</span></label>
+                                        <input required type="text" name="mail" id="mail-email" placeholder="Type email address">
+                                        <span></span>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="message"><i class="fa-solid fa-message"></i>How can we help <span>*</span></label>
+                                        <input type="text" name="message" id="message" placeholder="A brief Description here">
+                                        <span></span>
+                                    </div>
+                                    <div class="check-field">
+                                        <label><i class="fa-regular fa-user"></i>Services <span>*</span></label>
+                                        <div class="row">
+                                            <div class="tab-100 col-md-6">
+                                                <div class="check-single">
+                                                    <input type="checkbox" name="service" value="paid media" checked>
+                                                    <label>Paid Media</label>
+                                                </div>
+                                                <div class="check-single">
+                                                    <input type="checkbox" name="service" value="Digital experience">
+                                                    <label>Digital experience</label>
+                                                </div>
+                                                <div class="check-single">
+                                                    <input type="checkbox" name="service" value="Email">
+                                                    <label>Email</label>
+                                                </div>
+                                            </div>
+                                            <div class="tab-100 col-md-6">
+                                                <div class="check-single">
+                                                    <input type="checkbox" name="service" value="Content Creation">
+                                                    <label>Content Creation</label>
+                                                </div>
+                                                <div class="check-single">
+                                                    <input type="checkbox" name="service" value="Strategy & Consulting">
+                                                    <label>Strategy & Consulting</label>
+                                                </div>
+                                                <div class="check-single">
+                                                    <input type="checkbox" name="service" value="Other">
+                                                    <label>Other</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- step Button -->
+                                <div class="submit">
+                                    <button type="button" id="sub">Send Message<span><i class="fa-solid fa-thumbs-up"></i></span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="left-shape">
+            <img src="assets/images/top-left.png" alt="">
+        </div>
+        <div class="right-shape">
+            <img src="assets/images/top-right.png" alt="">
+        </div>
+
+    </main>
+
+
+
+
+
+
+
+    
+    <div id="error">
+
+    </div>
+
+
+    <!-- Bootstrap-5 -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- My js -->
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>

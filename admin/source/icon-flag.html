@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+    <meta name="keywords" content="admin template, html 5 admin template , medixo admin , dashboard template, bootstrap 5 admin template, responsive admin template">
+    <title>Medixo - Medical & Hospital Admin Template</title>
+    <!-- shortcut icon-->
+    <link rel="shortcut icon" href="../assets/images/logo/icon-logo.png" type="image/x-icon">
+    <!-- Fonts css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <!-- Font awesome -->
+    <link href="../assets/css/vendor/font-awesome.css" rel="stylesheet">
+    <link href="../assets/css/vendor/themify-icons.css" rel="stylesheet">
+    <link href="../assets/css/vendor/icoicon.css" rel="stylesheet">
+    <!-- Scrollbar-->
+    <link href="../assets/css/vendor/simplebar.css" rel="stylesheet">
+    <!-- Bootstrap css-->
+    <link href="../assets/css/vendor/bootstrap.css" rel="stylesheet">
+    <!-- Custom css-->
+    <link href="../assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+      <!-- Loader Start-->
+        <div class="codex-loader">
+          <div class="loader-item">
+            <svg class="spinner-pulse" version="1.2" height="210" width="550" xmlns="http://www.w3.org/2000/svg" viewport="0 0 60 60" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <path class="spinnersub-pulse" fill="none" stroke-width="3" stroke-linejoin="round" d="M0,90L250,90Q257,60 262,87T267,95 270,88 273,92t6,35 7,-60T290,127 297,107s2,-11 10,-10 1,1 8,-10T319,95c6,4 8,-6 10,-17s2,10 9,11h210"></path>
+            </svg>
+          </div>
+        </div>
+      <!-- Loader End-->
+      <!-- Header Start-->
+      <header class="codex-header">
+        <div class="flex-between">
+          <div class="header-left d-flex align-items-center">
+            <div class="sidebar-action navicon-wrap"><i data-feather="menu"></i></div>
+            <div class="navsearch-bar">
+              <div class="input-group">
+                <input class="form-control" type="text" value="" placeholder="Search Here....."><span class="input-group-text"><i data-feather="search"></i></span>
+              </div>
+            </div>
+          </div>
+          <div class="header-right">
+            <ul class="nav-iconlist">
+              <li>
+                <div class="navicon-wrap btn-windowfull"><i data-feather="maximize"></i></div>
+              </li>
+              <li>
+                <div class="action-toggle navicon-wrap"><i data-feather="bell"></i>
+                  <div class="noti-count"></div>
+                </div>
+                <div class="hover-dropdown navnotification-drop">
+                  <div class="drop-header">
+                    <h6>notification<span>05           </span></h6>
+                  </div>
+                  <ul class="scroll-primary" data-simplebar>
+                    <li>
+                      <div class="media">
+                        <div class="badgeavtar bg-success">A</div>
+                        <div class="media-body ml-10">
+                          <h6>Successful Paid Invoice #1579</h6><span class="text-light">20 mins ago</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="badgeavtar bg-warning"> <i class="fa fa-clock-o"></i></div>
+                        <div class="media-body ml-10">
+                          <h6>Confirmed Dr Aleni Joshep visit</h6><span class="text-light">2 hours ago</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="badgeavtar bg-info"> <i class="fa fa-times"></i></div>
+                        <div class="media-body ml-10">
+                          <h6>Cancel Appointment at 5:00 PM</h6><span class="text-light">2 hours ago</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="badgeavtar bg-success">A</div>
+                        <div class="media-body ml-10">
+                          <h6>Successful Paid Invoice #1215</h6><span class="text-light">3 hours ago</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="badgeavtar bg-secondary"><i class="fa fa-check"></i></div>
+                        <div class="media-body ml-10">
+                          <h6>Great Speed Notify of 2.5 LTC</h6><span class="text-light">4 hours ago</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="drop-footer"><a href="javascript:void(0)">See All Notification</a></div>
+                </div>
+              </li>
+              <li>
+                <div class="navicon-wrap"><i data-feather="mail"></i>
+                  <div class="noti-count"></div>
+                </div>
+                <div class="hover-dropdown navmail-drop">
+                  <div class="drop-header">
+                    <h6>Mail<span>08           </span></h6>
+                  </div>
+                  <ul class="scroll-primary" data-simplebar>
+                    <li>
+                      <div class="media">
+                        <div class="avtar-wrap"><img class="img-fluid" src="../assets/images/avtar/2.jpg" alt=""></div>
+                        <div class="media-body ml-10">
+                          <h6>Anna Mull<span class="text-light ml-10 fs-10">- 20 mins ago</span></h6><span class="text-light">Successful Paid Invoice #1579</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="avtar-wrap"><img class="img-fluid" src="../assets/images/avtar/3.jpg" alt=""></div>
+                        <div class="media-body ml-10">
+                          <h6>Hal Appeno<span class="text-light ml-10 fs-10">- 30 mins ago</span></h6><span class="text-light">Successful Paid Invoice #1579</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="avtar-wrap"><img class="img-fluid" src="../assets/images/avtar/4.jpg" alt=""></div>
+                        <div class="media-body ml-10">
+                          <h6>Paul Molive<span class="text-light ml-10 fs-10">- 45 mins ago</span></h6><span class="text-light">Successful Paid Invoice #1579</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="avtar-wrap"><img class="img-fluid" src="../assets/images/avtar/5.jpg" alt=""></div>
+                        <div class="media-body ml-10">
+                          <h6>Saul T. Balls<span class="text-light ml-10 fs-10">- 50 mins ago</span></h6><span class="text-light">Successful Paid Invoice #1579</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="avtar-wrap"><img class="img-fluid" src="../assets/images/avtar/6.jpg" alt=""></div>
+                        <div class="media-body ml-10">
+                          <h6>Anna Mull<span class="text-light ml-10 fs-10">- 1 hour ago</span></h6><span class="text-light">Successful Paid Invoice #1579</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="avtar-wrap"><img class="img-fluid" src="../assets/images/avtar/7.jpg" alt=""></div>
+                        <div class="media-body ml-10">
+                          <h6>William Stephin<span class="text-light ml-10 fs-10">- 2 hour ago</span></h6><span class="text-light">Successful Paid Invoice #1579</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="drop-footer"><a href="javascript:void(0)">See All Messages</a></div>
+                </div>
+              </li>
+              <li class="nav-profile"><a class="action-toggle" href="javascript:void(0)">
+                  <div class="media">
+                    <div class="user-icon"><img class="img-fluid rounded-50" src="../assets/images/avtar/admin.jpg" alt="logo"></div>
+                  </div></a>
+                <div class="hover-dropdown navprofile-drop">
+                  <ul>
+                    <li><a href="support.html"><i class="ti-help-alt"></i>help</a></li>
+                    <li><a href="javascript:void(0)"> <i class="ti-settings"></i>setting</a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out"></i>log out</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- sidebar start-->
+      <div class="codex-sidebar">
+        <div class="logo-gridwrap"><a class="lightlogo" href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png" alt="sidebar-lightlogo"></a>
+          <div class="sidebar-action"><i data-feather="menu"></i></div>
+        </div>
+        <div class="icon-logo"><a class="lightlogo" href="index.html"><img class="img-fluid" src="../assets/images/logo/icon-logo.png" alt="sidebar-lightlogo"></a></div>
+        <ul class="codex-menu custom-scroll" data-simplebar>
+          <li class="cdxmenu-title">
+            <h5>main</h5>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-home"></i></div><span>dashboard   </span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="index.html">Hospital Dashboard</a></li>
+              <li><a href="doctor-dashboard.html">Doctor Dashboard</a></li>
+              <li><a href="patient-dashboard.html">Patient Dashboard</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-doctor-alt"></i></div><span>doctors</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="all-doctors.html">all doctors</a></li>
+              <li><a href="add-doctor.html">add doctor</a></li>
+              <li><a href="edit-doctor.html">edit doctor       </a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-paralysis-disability"></i></div><span>patients</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="all-patients.html">all patients</a></li>
+              <li><a href="add-patient.html">add patient</a></li>
+              <li><a href="edit-patient.html">edit patient       </a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-ui-calendar"></i></div><span>Appointments</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="doctor-schedule.html">Doctor schedule</a></li>
+              <li><a href="add-appointment.html">add appointment</a></li>
+              <li><a href="edit-appointment.html">edit appointment</a></li>
+              <li><a href="appointment-list.html">view all appointment</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-bill"></i></div><span>billing</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="payment-list.html">payment</a></li>
+              <li><a href="add-payment.html">add payment</a></li>
+              <li><a href="patient-invoice.html">patient invoice</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="event-management.html">
+              <div class="icon-item"><i class="icofont-list"></i></div><span>Event Management</span></a></li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-key"></i></div><span>Access Pages</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="login.html">login</a></li>
+              <li><a href="register.html">register</a></li>
+              <li><a href="forgot-password.html">forgot password</a></li>
+              <li><a href="new-password.html">reset password</a></li>
+              <li><a href="verify-email.html">verify email</a></li>
+              <li><a href="verify-pin.html">verify pin</a></li>
+              <li><a href="error-page.html">404</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-support"></i></div><span>support</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="faq.html">faq</a></li>
+              <li><a href="support.html">help center</a></li>
+            </ul>
+          </li>
+          <li class="cdxmenu-title">
+            <h5>user interface</h5>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-layers"></i></div><span>Table</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="basic-table.html">table</a></li>
+              <li><a href="data-table.html">data table</a></li>
+              <li><a href="data-table-ajax.html">ajax datatable</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-site-map"></i></div><span>Forms</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="element-input.html">form element</a></li>
+              <li><a href="element-checkbox-radio.html">checkbox & radio</a></li>
+              <li><a href="element-datepicker.html">datepicker</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-pie-chart"></i></div><span>Charts</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="chart-apex.html">apex chart</a></li>
+              <li class="menu-item"><a href="chart-echarts.html">echarts</a></li>
+              <li class="menu-item"><a href="chart-morris.html">morris charts</a></li>
+              <li class="menu-item"><a href="chart-chartsjs.html">charts js</a></li>
+              <li class="menu-item"><a href="chart-sparkline.html">sparkline charts</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-database"></i></div><span>Advance element</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="timeline-one.html">timeline one</a></li>
+              <li><a href="timeline-two.html">timeline two</a></li>
+              <li><a href="pricing.html">pricing tables</a></li>
+              <li><a href="element-select2.html">select 2</a></li>
+              <li><a href="element-switch.html">switch</a></li>
+              <li><a href="element-dropzone.html">dropzone</a></li>
+              <li><a href="element-rangeslider.html">range slider</a></li>
+              <li><a href="bootstrap-notify.html">bootstrap notify</a></li>
+              <li><a href="element-sweetalert2.html">sweetalert2</a></li>
+              <li><a href="element-scrollbar.html">scrollbar</a></li>
+              <li><a href="element-lightbox.html">light box</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-layout"></i></div><span>Componet</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="element-typography.html">typography</a></li>
+              <li><a href="element-color.html">color</a></li>
+              <li><a href="element-themeclass.html">helper class</a></li>
+              <li><a href="element-alert.html">Alert </a></li>
+              <li><a href="element-avtar.html">Avtar</a></li>
+              <li><a href="element-button.html">Button </a></li>
+              <li><a href="element-grid.html">grid</a></li>
+              <li><a href="element-dropdown.html">Dropdown</a></li>
+              <li><a href="element-breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="element-collapse.html">Collapse</a></li>
+              <li><a href="element-accordion.html">Accordion</a></li>
+              <li><a href="element-badge.html">badge</a></li>
+              <li><a href="element-modal.html">modal</a></li>
+              <li><a href="element-tab.html">tabs</a></li>
+              <li><a href="element-popover.html">popover</a></li>
+              <li><a href="element-tooltip.html">tooltip</a></li>
+              <li><a href="element-card.html">card</a></li>
+              <li><a href="element-progressbar.html">progress bar</a></li>
+              <li><a href="element-pagination.html">pagination</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-star-shape"></i></div><span>Icons</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="icon-fontawesome.html">Font Awesome</a></li>
+              <li><a href="icon-themify.html">Themify</a></li>
+              <li><a href="icon-feather.html">Feather</a></li>
+              <li><a href="icon-iconfont.html">icon font</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="sidebarpro-sec"><img class="img-fluid" src="../assets/images/pro-sec.png" alt="">
+          <h6>Best Experianced Helth<br>Care  Doctor</h6><a class="btn btn-primary btn-sm" href="javascript:void(0);">Chek Now</a>
+        </div>
+      </div>
+      <!-- sidebar end-->
+      <!-- Header End-->
+    <div class="themebody-wrap">
+      <!-- breadcrumb start-->
+        <div class="codex-breadcrumb">
+          <div class="container-fluid">
+            <div class="breadcrumb-contain">
+              <div class="left-breadcrumb">
+                <ul class="breadcrumb mb-0">
+                  <li class="breadcrumb-item"><a href="index.html">
+                      <h1>Dashboard</h1></a></li>
+                  <li class="breadcrumb-item"><a href="javascript:void(0);">icons</a></li>
+                  <li class="breadcrumb-item active"><a href="javascript:void(0);">Feather Icons</a></li>
+                </ul>
+              </div>
+              <div class="right-breadcrumb">
+                <ul>
+                  <li>
+                    <div class="bread-wrap"><i class="fa fa-clock-o"></i></div><span class="liveTime"></span>
+                  </li>
+                  <li>
+                    <div class="bread-wrap"><i class="fa fa-calendar"></i></div><span class="getDate"></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- breadcrumb end-->
+      <!-- theme body start-->
+      <div class="theme-body">
+        <div class="container-fluid profile-page">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row cdx-row">
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-in"></i></div>India Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ad"></i></div>Andorra Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ae"></i></div>United Arab Emirates Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-af"></i></div>Afghanistan Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ag"></i></div>Antigua and Barbuda Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ai"></i></div>Anguilla Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-al"></i></div>Albania Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-am"></i></div>Armenia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ao"></i></div>Angola Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ar"></i></div>Argentina Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-as"></i></div>American Samoa Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-at"></i></div>Austria Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-au"></i></div>Australia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-aw"></i></div>Aruba Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ax"></i></div>Aland Islands Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-az"></i></div>Azerbaijan Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ba"></i></div>Bosnia and Herzegovina Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-bb"></i></div>Barbados Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-bd"></i></div>Bangladesh Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-be"></i></div>Belgium Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-bf"></i></div>Burkina Faso Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-bg"></i></div>Bulgaria Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-bh"></i></div>Bahrain Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-bi"></i></div>Burundi Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-bj"></i></div>Benin Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-bl"></i></div>Saint Barth&eacute;lemy Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-bm"></i></div>Bermuda Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-bn"></i></div>Brunei Darussalam Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-bo"></i></div>Bolivia (Plurinational State of) Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-bq"></i></div>Bonaire, Sint Eustatius and Saba Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-br"></i></div>Brazil Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-bs"></i></div>Bahamas Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-bt"></i></div>Bhutan Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-bw"></i></div>Botswana Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-by"></i></div>Belarus Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-bz"></i></div>Belize Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ca"></i></div>Canada Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-cc"></i></div>Cocos (Keeling) Islands Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-cd"></i></div>Democratic Republic of the Congo Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-cf"></i></div>Central African Republic Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-cg"></i></div>Republic of the Congo Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ch"></i></div>Switzerland Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ci"></i></div>C&ocirc;te d&apos;Ivoire Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ck"></i></div>Cook Islands Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-cl"></i></div>Chile Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-cm"></i></div>Cameroon Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-cn"></i></div>China Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-co"></i></div>Colombia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-cr"></i></div>Costa Rica Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-cu"></i></div>Rozo Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-cv"></i></div>Cabo Verde Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-cw"></i></div>Cura&ccedil;ao Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-cx"></i></div>Christmas Island Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-cy"></i></div>Cyprus Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-cz"></i></div>Czech Republic Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-de"></i></div>Germany Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-dj"></i></div>Djibouti Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-dk"></i></div>Denmark Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-dm"></i></div>Dominica Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-do"></i></div>Dominican Republic Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-dz"></i></div>Algeria Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ec"></i></div>Ecuador Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ee"></i></div>Estonia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-eg"></i></div>Egypt Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-eh"></i></div>Western Sahara Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-er"></i></div>Eritrea Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-es"></i></div>Spain Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-et"></i></div>Ethiopia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-fi"></i></div>Finland Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-fj"></i></div>Fiji Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-fk"></i></div>Falkland Islands Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-fm"></i></div>Federated States of Micronesia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-fo"></i></div>Faroe Islands Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-fr"></i></div>France Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ga"></i></div>Gabon Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gb"></i></div>United Kingdom Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gd"></i></div>Grenada Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ge"></i></div>Georgia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gf"></i></div>French Guiana Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gg"></i></div>Guernsey Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gh"></i></div>Ghana Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gi"></i></div>Gibraltar Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gl"></i></div>Greenland Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gm"></i></div>Gambia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gn"></i></div>Guinea Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gp"></i></div>Guadeloupe Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gq"></i></div>Equatorial Guinea Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gr"></i></div>Greece Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gs"></i></div>South Georgia and the South Sandwich Islands Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gt"></i></div>Guatemala Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gu"></i></div>Guam Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gw"></i></div>Guinea-Bissau Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-gy"></i></div>Guyana Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-hk"></i></div>Hong Kong Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-hn"></i></div>Honduras Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-hr"></i></div>Croatia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ht"></i></div>Haiti Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-hu"></i></div>Hungary Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-id"></i></div>Indonesia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ie"></i></div>Ireland Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-il"></i></div>Israel Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-im"></i></div>Isle of Man Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-io"></i></div>British Indian Ocean Territory Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-iq"></i></div>Iraq Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ir"></i></div>Iran (Islamic Republic of) Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-is"></i></div>Iceland Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-it"></i></div>Italy Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-je"></i></div>Jersey Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-jm"></i></div>Jamaica Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-jo"></i></div>Jordan Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-jp"></i></div>Japan Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ke"></i></div>Kenya Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-kg"></i></div>Kyrgyzstan Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-kh"></i></div>Cambodia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ki"></i></div>Kiribati Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-km"></i></div>Comoros Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-kn"></i></div>Saint Kitts and Nevis Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-kp"></i></div>North Korea Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-kr"></i></div>South Korea Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-kw"></i></div>Kuwait Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ky"></i></div>Cayman Islands Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-kz"></i></div>Kazakhstan Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-la"></i></div>Laos Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-lb"></i></div>Lebanon Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-lc"></i></div>Saint Lucia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-li"></i></div>Liechtenstein Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-lk"></i></div>Sri Lanka Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-lr"></i></div>Liberia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ls"></i></div>Lesotho Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-lt"></i></div>Lithuania Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-lu"></i></div>Luxembourg Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-lv"></i></div>Latvia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ly"></i></div>Libya Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ma"></i></div>Morocco Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mc"></i></div>Monaco Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-md"></i></div>Moldova Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-me"></i></div>Montenegro Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mf"></i></div>Saint Martin Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mg"></i></div>Madagascar Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mh"></i></div>Marshall Islands Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mk"></i></div>Former Yugoslav Republic of Macedonia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ml"></i></div>Mali Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mm"></i></div>Myanmar Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mn"></i></div>Mongolia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mo"></i></div>Macau Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mp"></i></div>Northern Mariana Islands Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mq"></i></div>Martinique Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mr"></i></div>Mauritania Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ms"></i></div>Montserrat Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mt"></i></div>Malta Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mu"></i></div>Mauritius Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mv"></i></div>Maldives Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mw"></i></div>Malawi Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mx"></i></div>Mexico Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-my"></i></div>Malaysia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-mz"></i></div>Mozambique Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-na"></i></div>Namibia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-nc"></i></div>New Caledonia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ne"></i></div>Niger Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-nf"></i></div>Norfolk Island Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ng"></i></div>Nigeria Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ni"></i></div>Nicaragua Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-nl"></i></div>Netherlands Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-no"></i></div>Norway Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-np"></i></div>Nepal Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-nr"></i></div>Nauru Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-nu"></i></div>Niue Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-nz"></i></div>New Zealand Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-om"></i></div>Oman Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-pa"></i></div>Panama Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-pe"></i></div>Peru Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-pf"></i></div>French Polynesia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-pg"></i></div>Papua New Guinea Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ph"></i></div>Philippines Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-pk"></i></div>Pakistan Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-pl"></i></div>Poland Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-pm"></i></div>Saint Pierre and Miquelon Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-pn"></i></div>Pitcairn Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-pr"></i></div>Puerto Rico Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ps"></i></div>State of Palestine Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-pt"></i></div>Portugal Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-pw"></i></div>Palau Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-py"></i></div>Paraguay Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-qa"></i></div>Qatar Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-re"></i></div>R&eacute;union Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ro"></i></div>Romania Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-rs"></i></div>Serbia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ru"></i></div>Russia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-rw"></i></div>Rwanda Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-sa"></i></div>Saudi Arabia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-sb"></i></div>Solomon Islands Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-sc"></i></div>Seychelles Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-sd"></i></div>Sudan Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-se"></i></div>Sweden Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-sg"></i></div>Singapore Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-sh"></i></div>Saint Helena, Ascension and Tristan da Cunha Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-si"></i></div>Slovenia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-sj"></i></div>Svalbard and Jan Mayen Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-sk"></i></div>Slovakia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-sl"></i></div>Sierra Leone Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-sm"></i></div>San Marino Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-sn"></i></div>Senegal Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-so"></i></div>Somalia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-sr"></i></div>Suriname Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ss"></i></div>South Sudan Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-st"></i></div>Sao Tome and Principe Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-sv"></i></div>El Salvador Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-sx"></i></div>Sint Maarten Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-sy"></i></div>Syrian Arab Republic Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-sz"></i></div>Swaziland Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-tc"></i></div>Turks and Caicos Islands Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-td"></i></div>Chad Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-tf"></i></div>French Southern Territories Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-tg"></i></div>Togo Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-th"></i></div>Thailand Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-tj"></i></div>Tajikistan Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-tk"></i></div>Tokelau Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-tl"></i></div>Timor-Leste Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-tm"></i></div>Turkmenistan Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-tn"></i></div>Tunisia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-to"></i></div>Tonga Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-tr"></i></div>Turkey Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-tt"></i></div>Trinidad and Tobago Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-tv"></i></div>Tuvalu Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-tw"></i></div>Taiwan Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-tz"></i></div>Tanzania Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ua"></i></div>Ukraine Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ug"></i></div>Uganda Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-um"></i></div>United States Minor Outlying Islands Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-us"></i></div>United States of America Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-uy"></i></div>Uruguay Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-uz"></i></div>Uzbekistan Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-va"></i></div>Holy See Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-vc"></i></div>Saint Vincent and the Grenadines Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ve"></i></div>Venezuela (Bolivarian Republic of) Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-vg"></i></div>Virgin Islands (British) Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-vi"></i></div>Virgin Islands (U.S.) Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-vn"></i></div>Vietnam Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-vu"></i></div>Vanuatu Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-wf"></i></div>Wallis and Futuna Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ws"></i></div>Samoa Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-ye"></i></div>Yemen Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-yt"></i></div>Mayotte Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-za"></i></div>South Africa Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-zm"></i></div>Zambia Flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="flag-icon flag-icon-zw"></i></div>Zimbabwe Flag
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- theme body end-->
+    </div>
+    <!-- footer start -->
+      <footer class="codex-footer">
+        <p>Copyright 2022-23 © medixo All rights reserved.</p>
+      </footer>
+        <div class="scroll-top"><i class="fa fa-angle-double-up"></i></div>
+    <!-- footer end-->
+      <!-- main jquery-->
+      <script src="../assets/js/jquery-3.7.0.min.js"></script>
+      <!-- Feather iocns js-->
+      <script src="../assets/js/icons/feather-icon/feather.js"></script>
+      <!-- Bootstrap js-->
+      <script src="../assets/js/bootstrap.bundle.min.js"></script>
+      <script src="../assets/js/vendors/notify/bootstrap-notify.js"></script>
+      <script src="../assets/js/vendors/notify/bootstrap-customnotify.js"></script>
+      <!-- customizer-->
+      <script src="../assets/js/customizer.js"></script>
+      <!-- Scrollbar-->
+      <script src="../assets/js/vendors/simplebar.js"></script>
+      <!-- Custom script-->
+      <script src="../assets/js/custom-script.js"></script>
+  </body>
+</html>

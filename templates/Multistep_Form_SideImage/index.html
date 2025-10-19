@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!-- Bootstrap-5 -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- custom-styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+</head>
+<body>
+    <main class="overflow-hidden">
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="assets/images/logo.png" alt="BeRifma">
+            </div>
+            <div class="logo-text">
+                Trimba
+            </div>
+        </div>
+        <div class="step-type">
+            <div class="step-type-inner">
+                <div class="step-type-single active">
+                    <div class="circle"></div>
+                    <div class="step-text">
+                        start
+                    </div>
+                </div>
+                <div class="step-type-single">
+                    <div class="circle"></div>
+                    <div class="step-text">
+                        home
+                    </div>
+                </div>
+                <div class="step-type-single">
+                    <div class="circle"></div>
+                    <div class="step-text">
+                        owner
+                    </div>
+                </div>
+                <div class="step-type-single no-line">
+                    <div class="circle"></div>
+                    <div class="step-text">
+                        results
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="content-inner">
+
+                <form id="steps" class="show-section" method="post" enctype="multipart/form-data">
+
+                    <!-- step-1-->
+                    <section class="steps">
+                        <div class="row">
+                            <div class="hide-sidearea tab-sm-100 col-md-5">
+                                <div class="side-area">
+                                    <img src="assets/images/background/step1-bg.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tab-sm-100 col-md-7 position-relative">
+                                <div class="wrapper">
+                                    <article class="form-text">
+                                        <h2 class="main-heading">
+                                            What type of Residence is this?
+                                        </h2>
+                                        <p class="main-text">
+                                            Toptal is an exclusive network of the world's top talent in business, design, and technology. We provide access to top companies.
+                                        </p>
+                                    </article>
+
+                                    <!-- step-1 form-->
+                                    <div class="form" id="step1">
+                                        <div class="steps-inner lightSpeedIn">
+                                            <div class="radio-field">
+                                                <input type="radio" name="residence" value="Single Family Home">
+                                                <label>Single Family Home</label>
+                                            </div>
+                                            <div class="radio-field">
+                                                <input type="radio" name="residence" value="Condo">
+                                                <label>Condo</label>
+                                            </div>
+                                            <div class="radio-field">
+                                                <input type="radio" name="residence" value="Rental">
+                                                <label>Rental</label>
+                                            </div>
+                                            <div class="radio-field">
+                                                <input type="radio" name="residence" value="Mobile Home">
+                                                <label>Mobile Home</label>
+                                            </div>
+                                        </div>
+                                        <div class="next-prev">
+                                            <button class="next" id="step1btn" type="button">Next Step</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="steps-icon">
+                                    <img src="assets/images/step-icons/step1-icon.png" alt="Step 1">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- step 2 -->
+                    <section class="steps">
+                        <div class="row">
+                            <div class="tab-sm-100 col-md-5">
+                                <div class="side-area">
+                                    <img src="assets/images/background/step2-bg.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tab-sm-100 col-md-7 position-relative">
+                                <div class="wrapper">
+                                    <article class="form-text">
+                                        <h2 class="main-heading">
+                                            What type of Residence is this?
+                                        </h2>
+                                        <p class="main-text">
+                                            Toptal is an exclusive network of the world's top talent in business, design, and technology. We provide access to top companies.
+                                        </p>
+                                    </article>
+
+                                    <!-- step-2 form -->
+                                    <div class="form" id="step2">
+                                        <div class="steps-inner lightSpeedIn">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="text-field">
+                                                        <input required type="text" name="location" id="location" placeholder="Location">
+                                                        <i class="fa-solid fa-location-dot"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="select-field">
+                                                        <select name="min-price" id="minPrice">
+                                                            <option value="">Min Price</option>
+                                                            <option value="$100">$100</option>
+                                                            <option value="$200">$200</option>
+                                                            <option value="$300">$300</option>
+                                                        </select>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="select-field">
+                                                        <select name="max-price" id="maxPrice">
+                                                            <option value="">Max Price</option>
+                                                            <option value="$100">$300</option>
+                                                            <option value="$200">$400</option>
+                                                            <option value="$300">$500</option>
+                                                        </select>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="select-field">
+                                                        <select name="category" id="category">
+                                                            <option value="">Property Category</option>
+                                                            <option value="For Rent">For Rent</option>
+                                                            <option value="For Sale">For Sale</option>
+                                                        </select>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="select-field">
+                                                        <select name="BedRooms" id="BedRooms">
+                                                            <option value="">Bed Rooms</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                        </select>
+                                                        <span></span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="text-field p-custom">
+                                                        <input type="text" name="property-location" id="property_location" placeholder="Property Location">
+                                                    </div>
+                                                    <div class="radio-field-2">
+                                                        <div class="radio-single">
+                                                            <input checked type="radio" name="property" value="Buy">
+                                                            <label>Buy</label>
+                                                        </div>
+                                                        <div class="radio-single">
+                                                            <input type="radio" name="property" value="Rent">
+                                                            <label>Rent</label>
+                                                        </div>
+                                                        <div class="radio-single">
+                                                            <input type="radio" name="property" value="Sale">
+                                                            <label>Sale</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="next-prev">
+                                            <div class="inner">
+                                                <button class="prev" type="button">Previous</button>
+                                                <button class="next" id="step2btn" type="button">Next Step</button>
+                                            </div>
+                                            <button class="skip" type="button">Skip Step</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="steps-icon">
+                                    <img src="assets/images/step-icons/step1-icon.png" alt="Step 1">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- step 3-->
+                    <section class="steps">
+                        <div class="row">
+                            <div class="hide-sidearea tab-sm-100 col-md-5">
+                                <div class="side-area">
+                                    <img src="assets/images/background/step3-bg.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tab-sm-100 col-md-7 position-relative">
+                                <div class="wrapper">
+                                    <article class="form-text">
+                                        <h2 class="main-heading">
+                                            Do you need home insurance?
+                                        </h2>
+                                        <p class="main-text">
+                                            Toptal is an exclusive network of the world's top talent in business, design, and technology. We provide access to top companies.
+                                        </p>
+                                    </article>
+
+                                    <!-- step-3 form-->
+                                    <div class="form" id="step3">
+                                        <div class="steps-inner lightSpeedIn">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="bottom-line">
+                                                        <div class="text-field">
+                                                            <input required type="text" name="zip" id="zip" placeholder="Enter Zip">
+                                                            <i class="fa-solid fa-location-dot"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="field-heading">
+                                                        <i class="fa-solid fa-meteor"></i>
+                                                        Select a Product to Get a Quote
+                                                    </div>
+                                                    <div class="radio-select">
+                                                        <div class="radio-heading">
+                                                            Select a Product 
+                                                        </div>
+                                                        <div class="radio-select-inner">
+                                                            <div class="tab-50 radio-select-single">
+                                                                <input name="product" type="radio" checked value="fire and Smoke">
+                                                                <label>Fire and Smoke</label>
+                                                            </div>
+                                                            <div class="tab-50 radio-select-single">
+                                                                <input name="product" type="radio" value="Lightning strikes">
+                                                                <label>Lightning strikes</label>
+                                                            </div>
+                                                            <div class="tab-50 radio-select-single">
+                                                                <input name="product" type="radio" value="Explosions">
+                                                                <label>Explosions</label>
+                                                            </div>
+                                                            <div class="tab-50 radio-select-single">
+                                                                <input name="product" type="radio" value="Falling objects">
+                                                                <label>Falling objects</label>
+                                                            </div>
+                                                            <div class="tab-50 radio-select-single">
+                                                                <input name="product" type="radio" value="Water damage">
+                                                                <label>Water damage</label>
+                                                            </div>
+                                                            <div class="tab-50 radio-select-single">
+                                                                <input name="product" type="radio" value="Windstorms & hail">
+                                                                <label>Windstorms & hail</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="next-prev">
+                                            <div class="inner">
+                                                <button class="prev" type="button">Previous</button>
+                                                <button class="next" id="step3btn" type="button">Next Step</button>
+                                            </div>
+                                            <button class="skip" type="button">Skip Step</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="steps-icon">
+                                    <img src="assets/images/step-icons/step3-icon.png" alt="Step 3">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- step 4-->
+                    <section class="steps">
+                        <div class="row">
+                            <div class="hide-sidearea tab-sm-100 col-md-5">
+                                <div class="side-area">
+                                    <img src="assets/images/background/step4-bg.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tab-sm-100 col-md-7 position-relative">
+                                <div class="wrapper">
+                                    <article class="form-text">
+                                        <h2 class="main-heading">
+                                            Family Detail
+                                        </h2>
+                                        <p class="main-text">
+                                            Toptal is an exclusive network of the world's top talent in business, design, and technology. We provide access to top companies.
+                                        </p>
+                                    </article>
+
+                                    <!-- step-4 form -->
+                                    <div class="form" id="step4">
+                                        <div class="steps-inner lightSpeedIn">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="bottom-line">
+                                                        <div class="text-field">
+                                                            <input required type="text" name="father" id="father" placeholder="Father Name">
+                                                            <i class="fa-solid fa-user"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="text-field">
+                                                        <input type="text" name="mother" id="mother" placeholder="Mother Name">
+                                                        <i class="fa-solid fa-person-dress"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="residence">
+                                                    <div class="field-heading">
+                                                        They Live in?
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-4">
+                                                            <div class="residence-single">
+                                                                <img src="assets/images/residence/new-house.png" alt="">
+                                                                <label>Home</label>
+                                                                <input checked type="radio" name="residence-p" value="Home">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="residence-single">
+                                                                <img src="assets/images/residence/condominium.png" alt="">
+                                                                <label>Apartment</label>
+                                                                <input type="radio" name="residence-p" value="Apartment">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4">
+                                                            <div class="residence-single">
+                                                                <img src="assets/images/residence/paper-plane.png" alt="">
+                                                                <label>Other</label>
+                                                                <input type="radio" name="residence-p" value="Other">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="next-prev">
+                                            <div class="inner">
+                                                <button class="prev" type="button">Previous</button>
+                                                <button class="next" id="step4btn" type="button">Next Step</button>
+                                            </div>
+                                            <button class="skip" type="button">Skip Step</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="steps-icon">
+                                    <img src="assets/images/step-icons/step4-icon.png" alt="Step 3">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- step 5 -->
+                    <section class="steps">
+                        <div class="row">
+                            <div class="hide-sidearea tab-sm-100 col-md-5">
+                                <div class="side-area">
+                                    <img src="assets/images/background/step5-bg.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="tab-sm-100 col-md-7 position-relative">
+                                <div class="wrapper">
+                                    <article class="form-text">
+                                        <h2 class="main-heading">
+                                            Need About your Information
+                                        </h2>
+                                        <p class="main-text">
+                                            Toptal is an exclusive network of the world's top talent in business, design, and technology. We provide access to top companies.
+                                        </p>
+                                    </article>
+
+                                    <!-- step-5 form -->
+                                    <div class="form" id="step5">
+                                        <div class="steps-inner lightSpeedIn">
+                                            <div class="row mb-4">
+                                                <div class="col-md-4 mb-sm-3">
+                                                    <div class="profile">
+                                                        <img class="profile-img" id="proifle" src="assets/images/sample.png" alt="">
+                                                        <label for="image">
+                                                            <img src="assets/images/edit.png" alt="">
+                                                            <input type="file" name="image" id="image" accept="image/*">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="col-md-12">
+                                                        <div class="text-field mb-2">
+                                                            <input required type="text" name="name" id="mail-name" placeholder="Name">
+                                                            <i class="fa-solid fa-signature"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="text-field mb-0">
+                                                            <input required type="text" name="mail" id="mail-email" placeholder="Email">
+                                                            <i class="fa-solid fa-envelope"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="text-field">
+                                                        <input type="text" name="phone" id="phone" placeholder="Phone">
+                                                        <i class="fa-solid fa-phone"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="text-field">
+                                                        <input type="text" name="dob" id="dob" placeholder="Date of Birth" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'">
+                                                        <i class="fa-solid fa-calendar-days"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 mt-4">
+                                                    <label class="gender">Gender</label>
+                                                    <div class="radio-field-2">
+                                                        <div class="radio-single">
+                                                            <input type="radio" name="gender" value="Male">
+                                                            <label>Male</label>
+                                                        </div>
+                                                        <div class="radio-single">
+                                                            <input type="radio" name="property" value="Female">
+                                                            <label>Female</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mt-4">
+                                                    <div class="file">
+                                                        <label class="gender m-0" for="file">Please, Upload your Current Passport*</label>
+                                                        <span>Show me the requirments</span>
+                                                        <label class="file-inner" for="file">
+                                                            <span>
+                                                                Upload<i class="fa-solid fa-cloud-arrow-up"></i>
+                                                            </span>
+                                                            <input type="file" name="file" id="file">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="next-prev">
+                                            <button class="prev" type="button">Previous</button>
+                                            <button id="sub" class="apply" type="button">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="steps-icon">
+                                    <img src="assets/images/step-icons/step4-icon.png" alt="Step 4">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </form>
+                <div class="step-bar">
+                    <div class="step-bar-inner">
+                        <div class="step-bar-move">0%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+    
+    <div id="error">
+
+    </div>
+
+
+    <!-- Bootstrap-5 -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- My js -->
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>

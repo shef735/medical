@@ -1,0 +1,145 @@
+/*L-desktop*/
+
+@media (min-device-width:  1600px)
+{
+    
+}
+
+/*L-laptops*/
+@media(max-width: 1440px)
+{
+
+    
+
+    
+}
+
+/*laptops/tablets*/
+@media (max-width: 1024px)
+{
+
+    .pop-inner
+    {
+        width: 65%;
+    }
+    .pop-inner h1
+    {
+        font-size: 135px;
+    }
+    footer
+    {
+        width: 60%;
+    }
+}
+
+
+/*tablets*/
+@media(max-width: 768px)
+{
+    .pop-inner
+    {
+        width: 68%;
+    }
+    .pop-inner h1
+    {
+        font-size: 100px;
+    }
+    footer
+    {
+        width: 68%;
+    }
+    footer a
+    {
+        font-size: 35px;
+    }
+    form h4
+    {
+        font-size: 30px;
+    }
+    .subscribe button
+    {
+        font-size: 20px;
+    }
+    .cancel
+    {
+        width: 50px;
+        height: 50px;
+    }
+    .cancel i
+    {
+        font-size: 30px;
+    }
+
+    
+
+}
+
+
+/*Smart phone*/
+@media(max-width: 576px)
+{
+    .popup
+    {
+        width: 100%;
+    }
+    .pop-inner
+    {
+        width: 100%;
+        padding: 20px;
+    }
+    .popup
+    {
+        padding: 0;
+        margin: 0;
+    }
+    .pop-inner h1
+    {
+        font-size: 30px;
+        left: 0;
+    }
+    footer
+    {
+        width: 95%;
+    }
+    footer a
+    {
+        font-size: 25px;
+    }
+    .cancel
+    {
+        width: 40px;
+        height: 40px;
+        top: 5px;
+        right: 5px;
+    }
+    .cancel i
+    {
+        font-size: 20px;
+    }
+    .subscribe input
+    {
+        width: 100%;
+    }
+    .subscribe button
+    {
+        width: 100%;
+    }
+    .discount
+    {
+        font-size: 50px;
+    }
+    .discount span
+    {
+        font-size: 20px;
+    }
+    form h4
+    {
+        font-size: 25px;
+    }
+    .pop-inner h1 span
+    {
+        color: rgb(38,38,38);
+    }
+}
+
+

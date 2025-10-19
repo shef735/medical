@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+/*custom font*/ 
+@font-face
+{
+	font-family: GlacialIndifferenceBold;
+	src: url(../fonts/GlacialIndifference-Bold.otf);
+}
+body
+{
+    font-family: "Monoton";
+    min-height: 100vh;
+    width: 100%;
+}
+a
+{
+    color: auto;
+    text-decoration: none;
+}
+.coming-soon
+{
+    background-image: url(../images/overlay.jpg);
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.coming-soon-overlay
+{
+    background-image: url(../images/bg.png);
+    min-height: 100vh;
+    background-size: cover;
+}
+.wrapper
+{
+    width: 92%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+
+
+
+
+.coming-soon-inner
+{
+    display: grid;
+    place-content: center;
+    min-height: 800px;
+    width: 100%;
+    text-align: center;
+
+}
+.coming-soon-title
+{
+    border-bottom: solid 2px rgba(255, 255, 255, 0.8);
+    margin-bottom: 70px;
+}
+.coming-soon-title h1
+{
+    font-size: 84px;
+    color: rgb(255, 255, 255);
+    line-height: 1;
+      
+}
+#countdown
+{
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    width: auto;
+    display: flex;
+    min-height: 160px;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-bottom: 80px;
+
+    align-items: center;
+    border: solid 3px rgba(255,255,255, 0.5);
+    border-radius: 80px;
+    overflow: hidden;
+}
+  
+  
+#countdown .timer
+{
+    width: 25%;
+    height: auto;
+    line-height: normal;
+    border-left: solid 2px rgba(255, 255, 255, 0.25);
+}
+#countdown span
+{
+    display: block;
+    word-break: break-all;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "GlacialIndifferenceBold";
+    line-height: normal;
+}
+form
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+form label
+{
+    font-size: 26px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+}
+form input
+{
+    border: solid 4px rgb(255, 255, 255);
+    border-radius: 34px;
+    background-color: transparent;
+    height: 70px;
+    width: 50%;
+    margin: 0 20px 0 50px;
+    font-size: 13px;
+    font-family: "Open Sans";
+    color: rgb(255, 255, 255);
+    padding: 0 30px;
+      
+}
+form input:focus
+{
+    outline: none;
+}
+form input::placeholder
+{
+    color: rgb(255, 255, 255);
+}
+form button
+{
+    border-radius: 34px;
+    background-color: rgb(255, 255, 255);
+    padding: 0 40px;
+    height: 68px;
+    font-size: 13px;
+    font-family: "Open Sans";
+    color: rgb(25, 25, 25);
+    font-weight: 700;
+    text-transform: uppercase;
+    border: solid 2px transparent;
+
+}
+.social-icons 
+{
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: center;
+}
+.social-icons i
+{
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 50%;
+    opacity: 0.5;
+    width: 57px;
+    height: 56px;
+    margin-right: 20px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.502);
+    display: grid;
+    place-content: center;
+    transition: 0.4s;
+}
+.social-icons i:hover
+{
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+}
+.social-icons .fa-facebook-f:hover
+{
+    color: rgba(57, 87, 155, 1);
+}
+.social-icons .fa-twitter:hover
+{
+    color: rgba(80, 171, 242, 1);
+}
+.social-icons .fa-google-plus-g:hover
+{
+    color: rgba(228, 44, 38,1);
+}
+  
+.social-icons .fa-pinterest-p:hover
+{
+    color: rgba(255, 64, 0, 1);
+      
+}
+
+.social-icons .fa-basketball:hover
+{
+    color: rgba(236, 73, 137,1);
+}
+
+.social-icons .fa-google-plus-g:hover
+{
+    color: rgba(228, 44, 38,1);
+      
+}

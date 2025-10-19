@@ -1,0 +1,148 @@
+
+doctype html
+html(lang="en")  
+
+  include ../components/headerfile
+
+  
+
+  body
+
+    +header
+
+    .themebody-wrap
+
+      // breadcrumb start
+      +codexbreadcrumb('Invoice','Ecommerce')    
+      // breadcrumb end
+
+      // theme body start
+      .theme-body.codex-chat
+        .container-fluid
+          .row
+            .col-12
+              .card
+                .card-body.cdx-invoice
+                  #cdx-invoice
+                    .head-invoice
+                      .invoice-brand
+                        .codex-brand
+                          a.codexbrand-logo(href='Javascript:void(0);')
+                            img.img-fluid(src="../assets/images/logo/logo.png" alt="invoice-logo")
+                        ul.contact-list
+                          li 
+                            p
+                              | 795 Folsom Ave, Opp. Town Hall,                            
+                              br
+                              |  CA 54656
+                              br
+                              b P:
+                              |  +12345647859
+                      .invoice-user
+                        h5 Billed to:
+                        ul.detail-list
+                          li 
+                            | name :
+                            span Mark Wongar
+                          li 
+                            | Phone :
+                            span +123585844859                    
+                          li
+                            | Address : 
+                            span 368 mega get , medixo store
+                          li
+                            | invoice date : 
+                            span  21/3/2022
+                          li
+                            | invoice no : 
+                            span 21/3/2022                         
+                    .body-invoice
+                      .table-responsive
+                        table.table.table-bordered
+                          thead
+                            tr
+                              th No
+                              th Particulars
+                              th Charges
+                              th Discount
+                              th Amout 
+                          tbody
+                            tr
+                              td 01
+                              td Room Charges
+                              td $90
+                              td $10
+                              td $80
+                            tr
+                              td 02
+                              td Nursign
+                              td $150
+                              td $15
+                              td $135
+                            tr
+                              td 03
+                              td ICU
+                              td $90
+                              td 1
+                              td $180
+                            tr
+                              td 04
+                              td OT
+                              td $200
+                              td $20
+                              td $180
+                            tr
+                              td 05
+                              td Medicine & Consumables
+                              td $535
+                              td $35
+                              td $500
+                            tr
+                              td 06
+                              td Investigation 
+                              td $480
+                              td $50
+                              td $440
+                            tr
+                              td 07
+                              td Ambulance 
+                              td $700
+                              td $250
+                              td $450
+                            tr
+                              td 08
+                              td Miscellaneous 
+                              td $570
+                              td $170
+                              td $400
+                    .footer-invoice                 
+                        table.table
+                          tr
+                            td Sub Total
+                            td $1400
+                          tr
+                            td tax
+                            td $250
+                          tr
+                            td Discount
+                            td $250
+                          tr
+                            td total Bill amout
+                            td $1550                 
+                  .invoice-action
+                    a.btn.btn-primary(href="javascript:void(0);" onclick="myFunction()") print invoice
+                    a.btn.btn-secondary.ml-15(href="javascript:void(0);") download invoice
+      // theme body end
+
+
+    // footer start
+    +footer
+    // footer end
+    
+    +footerfile
+
+    script.
+     "use strict";
+      function myFunction() {
+          window.print();
+      }

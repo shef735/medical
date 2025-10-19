@@ -1,0 +1,88 @@
+//- loader start
+mixin loader
+  .codex-loader
+    .loader-item
+      svg.spinner-pulse(version='1.2' height='210' width='550' xmlns='http://www.w3.org/2000/svg' viewport='0 0 60 60' xmlns:xlink='http://www.w3.org/1999/xlink')
+        path.spinnersub-pulse(fill='none' stroke-width='3' stroke-linejoin='round' d='M0,90L250,90Q257,60 262,87T267,95 270,88 273,92t6,35 7,-60T290,127 297,107s2,-11 10,-10 1,1 8,-10T319,95c6,4 8,-6 10,-17s2,10 9,11h210')
+
+
+mixin taptotop
+  .scroll-top
+    i.fa.fa-angle-double-up
+
+//- codex-breadcrumb start
+mixin codexbreadcrumb(pagename,pagetype)
+  .codex-breadcrumb
+    .container-fluid
+      .breadcrumb-contain
+        .left-breadcrumb
+          ul.breadcrumb.mb-0
+            li.breadcrumb-item
+              a(href='index.html')
+                h1 Dashboard
+            li.breadcrumb-item
+              a(href='javascript:void(0);')= pagetype 
+            li.breadcrumb-item.active
+              a(href='javascript:void(0);')= pagename
+        .right-breadcrumb
+          ul
+            li
+              .bread-wrap
+                i.fa.fa-clock-o
+              span.liveTime
+            li
+              .bread-wrap
+                i.fa.fa-calendar
+              span.getDate
+//- codex-breadcrumb end
+
+//- Pricing table 
+mixin pricingsimple(type,value,list1,list2,list3,list4,list5)
+  .codex-pricingtbl
+    .price-header
+      h2= type
+      .price-value= value
+        span / month
+    ul.cdxprice-list
+      li
+        span= list1 
+        | Disk Space
+      li
+        span= list2
+        | Email Accounts
+      li
+        span= list3
+        | subdomailns
+      li
+        span= list4
+        | domains
+      li
+        span= list5
+        | bandwidth
+    a.btn.btn-primary(href='javascript:void(0);') Select Plan
+
+mixin pricingadvance(pricingcls,type,value,priceicon,list1,list2,list3,list4,list5,btncls)
+  .codex-pricingadvance(class= pricingcls)
+    .price-header
+      h3= type
+      .price-value= value
+        span / month
+    .price-icon
+      i(class= priceicon)
+    ul.cdxprice-list
+      li
+        span= list1 
+        | Disk Space
+      li
+        span= list2
+        | Email Accounts
+      li
+        span= list3
+        | subdomailns
+      li
+        span= list4
+        | domains
+      li
+        span= list5
+        | bandwidth
+    a.btn(href='javascript:void(0);' class= btncls) Select Plan
