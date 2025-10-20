@@ -249,6 +249,17 @@
             background-color: #2e8b47;
         }
 
+        .btn-info {
+            background-color: #17a2b8;
+            color: var(--text-light);
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+
+        .btn-info:hover {
+            background-color: #138496;
+        }
+
         .visits-history {
             margin-top: 30px;
             overflow-x: auto;
@@ -289,7 +300,7 @@
         }
 
         th:last-child, td:last-child {
-            width: 120px;
+            width: 150px;
             white-space: normal;
             text-align: center;
         }
@@ -396,7 +407,7 @@
             overflow-y: auto;
             flex: 1;
             min-height: 400px;
-            background-color: var(--surface); /* Ensure body has white background */
+            background-color: var(--surface);
         }
 
         .modal-footer {
@@ -407,7 +418,7 @@
             justify-content: flex-end;
             gap: 12px;
             flex-shrink: 0;
-            background-color: var(--surface); /* Ensure footer has white background */
+            background-color: var(--surface);
         }
 
         .form-group {
@@ -482,19 +493,19 @@
             display: flex;
             gap: 30px;
             min-height: 500px;
-            background-color: var(--surface); /* Ensure split layout has white background */
+            background-color: var(--surface);
         }
 
         .new-entry-column {
             flex: 1;
             min-width: 50%;
-            background-color: var(--surface); /* Ensure column has white background */
+            background-color: var(--surface);
         }
 
         .previous-visit-column {
             display: none;
             flex: 1;
-            background: #f8f9fa; /* Keep light gray for contrast */
+            background: #f8f9fa;
             border-left: 1px solid var(--border);
             padding-left: 30px;
             border-radius: 0 var(--radius) var(--radius) 0;
@@ -561,6 +572,109 @@
 
         .p-section::before {
             content: "📝";
+        }
+
+        /* FIXED PRINT STYLES */
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+            #print-modal, #print-modal * {
+                visibility: visible;
+            }
+            #print-modal {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: auto;
+                margin: 0;
+                padding: 0;
+                box-shadow: none;
+                border: none;
+                background: white;
+                z-index: 9999;
+            }
+            .modal-content {
+                box-shadow: none;
+                border: none;
+                margin: 0;
+                max-height: none;
+                min-height: auto;
+            }
+            .modal-header, .modal-footer {
+                display: none;
+            }
+            .modal-body {
+                padding: 20px;
+                overflow: visible;
+                height: auto;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-section {
+                page-break-inside: avoid;
+                margin-bottom: 20px;
+            }
+            .print-soap-content {
+                min-height: auto;
+                border: 1px solid #000;
+                padding: 15px;
+                margin-bottom: 10px;
+            }
+            /* Ensure proper page breaks */
+            .print-patient-info, 
+            .print-soap-section {
+                page-break-inside: avoid;
+                page-break-after: auto;
+            }
+            /* Set proper margins for printing */
+            @page {
+                margin: 1cm;
+            }
+            body {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .print-header {
+            text-align: center;
+            border-bottom: 2px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .print-patient-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: var(--radius);
+            margin-bottom: 30px;
+            border: 1px solid #000;
+        }
+
+        .print-soap-section {
+            margin-bottom: 25px;
+        }
+
+        .print-soap-section h4 {
+            background: var(--primary-light);
+            padding: 10px 15px;
+            margin: 0 0 10px 0;
+            border-radius: var(--radius-sm);
+            color: var(--primary-dark);
+            border: 1px solid #000;
+        }
+
+        .print-soap-content {
+            padding: 15px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            min-height: 100px;
+            white-space: pre-wrap;
+            line-height: 1.6;
+            background: white;
         }
 
         /* Quick action buttons */
@@ -690,15 +804,11 @@
 
     <div class="container">
         <header>
-           
-             <a style="float: right;" href="../index.php" class="btn btn-success" >
-                      Home
-                </a>
-
-                 <h1>Patient S.O.A.P. Management System</h1>
+            <a style="float: right;" href="../index.php" class="btn btn-success">
+                Home
+            </a>
+            <h1>Patient S.O.A.P. Management System</h1>
         </header>
-
-        
 
         <section class="search-patient">
             <h2>Find Patient</h2>
@@ -706,15 +816,6 @@
                 <input type="text" id="patient-search-input" placeholder="Search by Last Name, First Name, or Patient Code...">
                 <ul id="search-results"></ul>
             </div>
-            
-           <!-- <div class="quick-actions">
-                <button class="quick-action-btn" id="btn-recent-patients">
-                    <span>🕐</span> Recent Patients
-                </button>
-                <button class="quick-action-btn" id="btn-todays-appointments">
-                    <span>📅</span> Today's Appointments
-                </button>
-            </div> -->
         </section>
 
         <section class="patient-workspace" id="patient-workspace">
@@ -726,8 +827,6 @@
                 <button class="btn btn-primary" id="btn-new-visit">
                     <span>➕</span> Add New Visit
                 </button>
-
-               
             </div>
 
             <div class="visits-history">
@@ -751,6 +850,7 @@
         </section>
     </div>
 
+    <!-- SOAP Modal -->
     <div id="soap-modal" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-header">
@@ -771,7 +871,7 @@
                                     <input type="date" class="form-control" id="visit_date" name="visit_date" required>
                                 </div>
 
-                                   <div class="form-group">
+                                <div class="form-group">
                                     <label for="next_visit">Next Visit Date</label>
                                     <input type="date" class="form-control" id="next_visit" name="next_visit">
                                 </div>
@@ -803,27 +903,25 @@
                             </div>
                             
                             <div class="form-row" style="display: none;">
-                             
                                 <div class="form-group">
                                     <label for="notes">Other Notes</label>
                                     <input type="text" class="form-control" id="notes" name="notes" placeholder="Additional clinical notes...">
                                 </div>
                             </div>
                         
-                         <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" id="modal-cancel-btn">Cancel</button>
-                    <button type="submit" class="btn btn-primary">
-                        <span>💾</span> Save Visit
-                    </button>
-                </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" id="modal-cancel-btn">Cancel</button>
+                                <button type="submit" class="btn btn-primary">
+                                    <span>💾</span> Save Visit
+                                </button>
+                            </div>
                         </div>
 
                         <div class="previous-visit-column">
-                            <h4>Previous Visit Details /  <label id="prev_visit_date_label">Last Visit Date:</label> <input style="font-size: 20px; text-align:center;color: red" type="date" id="prev_visit_date" readonly></h4>
-                            <div class="form-group">
-                               
-                                
-                            </div>
+                            <h4>Previous Visit Details /  
+                                <label id="prev_visit_date_label">Last Visit Date:</label> 
+                                <input style="font-size: 20px; text-align:center;color: red" type="date" id="prev_visit_date" readonly>
+                            </h4>
                             <div class="form-group">
                                 <label>Subjective (S):</label>
                                 <p id="prev_review_of_systems" class="data-block">N/A</p>
@@ -843,16 +941,37 @@
                         </div>
                     </div>
                 </div>
-
-               
             </form>
         </div>
     </div>
 
+    <!-- Print Modal -->
+    <div id="print-modal" class="modal-overlay">
+        <div class="modal-content" style="max-width: 800px;">
+            <div class="modal-header">
+                <h2>Print S.O.A.P. Record</h2>
+                <span class="modal-close" id="print-modal-close-btn">&times;</span>
+            </div>
+            
+            <div class="modal-body">
+                <div id="print-content">
+                    <!-- Print content will be dynamically inserted here -->
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary no-print" id="print-cancel-btn">Close</button>
+                <button type="button" class="btn btn-primary no-print" id="print-btn">
+                    <span>🖨️</span> Print
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script>
-    // JavaScript code remains exactly the same as before
     $(document).ready(function() {
         let currentPatientId = null;
+        let currentPatientDetails = null;
         
         function generateCaseNumber() {
             const now = new Date();
@@ -879,7 +998,6 @@
                 return;
             }
             
-            // Show loading indicator
             $('#search-results').html('<li><div class="loading"></div> Searching...</li>').show();
             
             $.ajax({
@@ -930,11 +1048,11 @@
                 dataType: 'json',
                 success: function(response) {
                     if (response.success) {
-                        let patient = response.data;
-                        $('#patient-name').text(`${patient.first_name} ${patient.middle_name || ''} ${patient.last_name}`);
+                        currentPatientDetails = response.data;
+                        $('#patient-name').text(`${currentPatientDetails.first_name} ${currentPatientDetails.middle_name || ''} ${currentPatientDetails.last_name}`);
                         $('#patient-info').html(`
-                            Patient Code: <span>${patient.patient_code}</span> | 
-                            Patient ID: <span>${patient.patient_id}</span> |
+                            Patient Code: <span>${currentPatientDetails.patient_code}</span> | 
+                            Patient ID: <span>${currentPatientDetails.patient_id}</span> |
                             <span class="status-indicator status-active"></span>Active
                         `);
                         $('#patient-workspace').slideDown();
@@ -968,6 +1086,9 @@
                                         <button class="btn btn-warning btn-sm btn-edit-visit" data-visit-id="${visit.visit_id}">
                                             <span>✏️</span> Edit
                                         </button>
+                                        <button class="btn btn-info btn-sm btn-print-visit" data-visit-id="${visit.visit_id}">
+                                            <span>🖨️</span> Print
+                                        </button>
                                     </td>
                                 </tr>`
                             );
@@ -998,7 +1119,18 @@
             $('#soap-modal').removeClass('modal-split-view'); 
         }
 
+        function openPrintModal() {
+            $('#print-modal').fadeIn(200);
+            $('body').css('overflow', 'hidden');
+        }
+        
+        function closePrintModal() {
+            $('#print-modal').fadeOut(200);
+            $('body').css('overflow', 'auto');
+        }
+
         $('#modal-close-btn, #modal-cancel-btn').on('click', closeModal);
+        $('#print-modal-close-btn, #print-cancel-btn').on('click', closePrintModal);
 
         function clearPreviousVisitColumn() {
             $('#prev_visit_date').val('');
@@ -1083,6 +1215,105 @@
             });
         });
 
+        // Print functionality
+        $('#visit-history-tbody').on('click', '.btn-print-visit', function() {
+            let visitId = $(this).data('visit-id');
+            
+            $.ajax({
+                url: 'ajax_handler.php',
+                type: 'POST',
+                data: { action: 'get_visit_details', visit_id: visitId },
+                dataType: 'json',
+                success: function(response) {
+                    if (response.success) {
+                        let visit = response.data;
+                        generatePrintView(visit);
+                        openPrintModal();
+                    } else {
+                        showStatusMessage('Error: Could not load visit details for printing.', 'error');
+                    }
+                }
+            });
+        });
+
+        function generatePrintView(visit) {
+            const printContent = `
+                <div class="print-header">
+                    <h1>Medical S.O.A.P. Record</h1>
+                    <p><strong>Clinic Name</strong> | Printed on: ${new Date().toLocaleDateString()}</p>
+                </div>
+
+                <div class="print-patient-info">
+                    <h3>Patient Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <strong>Name:</strong> ${currentPatientDetails.first_name} ${currentPatientDetails.middle_name || ''} ${currentPatientDetails.last_name}
+                        </div>
+                        <div class="form-group">
+                            <strong>Patient Code:</strong> ${currentPatientDetails.patient_code}
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <strong>Visit Date:</strong> ${visit.visit_date}
+                        </div>
+                        <div class="form-group">
+                            <strong>Case Number:</strong> ${visit.case_number || 'N/A'}
+                        </div>
+                    </div>
+                    ${visit.next_visit ? `<div class="form-row"><div class="form-group"><strong>Next Visit:</strong> ${visit.next_visit}</div></div>` : ''}
+                </div>
+
+                <div class="print-soap-section">
+                    <h4>Subjective (S) - Patient's Complaints & Symptoms</h4>
+                    <div class="print-soap-content">${visit.review_of_systems || 'No subjective notes recorded.'}</div>
+                </div>
+
+                <div class="print-soap-section">
+                    <h4>Objective (O) - Clinical Findings & Observations</h4>
+                    <div class="print-soap-content">${visit.objective || 'No objective findings recorded.'}</div>
+                </div>
+
+                <div class="print-soap-section">
+                    <h4>Assessment (A) - Diagnosis & Clinical Impression</h4>
+                    <div class="print-soap-content">${visit.assessment || 'No assessment recorded.'}</div>
+                </div>
+
+                <div class="print-soap-section">
+                    <h4>Plan (P) - Treatment Plan & Follow-up</h4>
+                    <div class="print-soap-content">${visit.plans || 'No treatment plan recorded.'}</div>
+                </div>
+
+                ${visit.notes ? `
+                <div class="print-soap-section">
+                    <h4>Additional Notes</h4>
+                    <div class="print-soap-content">${visit.notes}</div>
+                </div>
+                ` : ''}
+
+                <div style="margin-top: 60px; padding-top: 20px; border-top: 2px solid #000;">
+                    <div class="form-row">
+                        <div class="form-group" style="flex: 1;">
+                            <strong>Physician's Signature:</strong><br><br>
+                            ________________________________<br>
+                            <em>Dr. Physician Name</em>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <strong>Date:</strong><br><br>
+                            ________________________________<br>
+                            <em>${new Date().toLocaleDateString()}</em>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            $('#print-content').html(printContent);
+        }
+
+        $('#print-btn').on('click', function() {
+            window.print();
+        });
+
         $('#soap-form').on('submit', function(e) {
             e.preventDefault(); 
             let formData = $(this).serialize();
@@ -1123,14 +1354,6 @@
             }, 5000);
         }
 
-        $('#btn-recent-patients').on('click', function() {
-            alert('Recent patients functionality would be implemented here');
-        });
-
-        $('#btn-todays-appointments').on('click', function() {
-            alert("Today's appointments functionality would be implemented here");
-        });
-
         $(document).keydown(function(e) {
             if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
                 e.preventDefault();
@@ -1139,6 +1362,7 @@
             
             if (e.key === 'Escape') {
                 closeModal();
+                closePrintModal();
             }
         });
 

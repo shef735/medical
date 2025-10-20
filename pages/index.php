@@ -6,6 +6,11 @@ ob_start();
 ?>
 
 <?php
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Make sure user is logged in
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php"); // Redirect to login page if not logged in
@@ -17,7 +22,7 @@ require_once 'config.php'; // Change this to your actual connection file
 
 // Fetch all possible menu items from the database
 $all_menus = [];
-$sql = "SELECT name, description, url, icon_class, menu_identifier FROM ".$my_tables."_plant_order.menus ORDER BY id";
+$sql = "SELECT name, description, url, icon_class, menu_identifier FROM ".$my_tables."_resources.menus ORDER BY id";
 $result = mysqli_query($conn, $sql);
 if ($result) {
     while ($row = mysqli_fetch_assoc($result)) {
@@ -25,8 +30,10 @@ if ($result) {
     }
 }
 
+ 
 // Get the user's access list from the session
 $user_access = isset($_SESSION['user_access']) ? $_SESSION['user_access'] : [];
+
 
 $header_company_code=0;
 $company_address = '';
@@ -116,15 +123,15 @@ $_SESSION['company_name']=$header_company_code.' - '.$company_name_full;
 
         .menu-container {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
             margin-bottom: 40px;
         }
 
         .menu-item {
             background-color: var(--card-color);
             border-radius: var(--border-radius);
-            padding: 20px;
+            padding: 25px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -148,16 +155,16 @@ $_SESSION['company_name']=$header_company_code.' - '.$company_name_full;
         }
 
         .icon-container {
-            width: 60px;
-            height: 60px;
-            border-radius: 16px;
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             background: linear-gradient(135deg, var(--primary-color), #5AC8FA);
             color: white;
-            font-size: 24px;
+            font-size: 32px;
         }
 
         .menu-item:nth-child(2) .icon-container {
@@ -215,14 +222,14 @@ $_SESSION['company_name']=$header_company_code.' - '.$company_name_full;
         }
 
         .menu-title {
-            font-size: 1.1rem;
+            font-size: 1.3rem;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         .menu-description {
             color: var(--subtext-color);
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             line-height: 1.4;
         }
 
@@ -296,7 +303,7 @@ $_SESSION['company_name']=$header_company_code.' - '.$company_name_full;
         @media (max-width: 768px) {
             .menu-container {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
+                gap: 20px;
             }
             
             .company-logo {
@@ -306,11 +313,22 @@ $_SESSION['company_name']=$header_company_code.' - '.$company_name_full;
             .subtitle {
                 font-size: 1rem;
             }
+            
+            .icon-container {
+                width: 70px;
+                height: 70px;
+                font-size: 28px;
+            }
+            
+            .menu-title {
+                font-size: 1.2rem;
+            }
         }
 
         @media (max-width: 480px) {
             .menu-container {
                 grid-template-columns: 1fr;
+                gap: 15px;
             }
             
             .company-logo {
@@ -324,6 +342,16 @@ $_SESSION['company_name']=$header_company_code.' - '.$company_name_full;
             .footer-nav-item {
                 width: 25%;
                 margin-bottom: 10px;
+            }
+            
+            .icon-container {
+                width: 65px;
+                height: 65px;
+                font-size: 26px;
+            }
+            
+            .menu-title {
+                font-size: 1.1rem;
             }
         }
 
