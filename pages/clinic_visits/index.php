@@ -1084,10 +1084,10 @@
                                     <td>${displayText(visit.plans)}</td>
                                     <td>
                                         <button class="btn btn-warning btn-sm btn-edit-visit" data-visit-id="${visit.visit_id}">
-                                            <span>✏️</span> Edit
-                                        </button>
+                                            <span>✏️</span> 
+                                        </button> 
                                         <button class="btn btn-info btn-sm btn-print-visit" data-visit-id="${visit.visit_id}">
-                                            <span>🖨️</span> Print
+                                            <span>🖨️</span>
                                         </button>
                                     </td>
                                 </tr>`
@@ -1285,7 +1285,7 @@
                 </div>
 
                 ${visit.notes ? `
-                <div class="print-soap-section">
+                <div class="print-soap-section" style="display:none">
                     <h4>Additional Notes</h4>
                     <div class="print-soap-content">${visit.notes}</div>
                 </div>

@@ -4,7 +4,10 @@ session_start();
 ob_start();
 }
 
-include ("../../../Connections/dbname.php"); 
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+include ("config.php"); 
 
 // --- This part for fetching logo is fine ---
 $logo_width=0;

@@ -33,12 +33,22 @@ $result = mysqli_query($conn, $sql);
 <body>
     <div class="container mt-5">
         <div class="card shadow-sm">
-            <div class="card-header d-flex justify-content-between align-items-center">
+
+
+           <div class="card-header d-flex justify-content-between align-items-center">
                 <h4 class="mb-0"><i class="fas fa-user-md"></i> Doctor Management</h4>
-                <a href="create.php" class="btn btn-light">
-                    <i class="fas fa-plus-circle"></i> Add New Doctor
-                </a>
+                <div class="d-flex gap-2">
+                    
+                    <a href="create.php" class="btn btn-light">
+                        <i class="fas fa-plus-circle"></i> Add New Doctor
+                    </a>
+
+                    <a href="../index.php" class="btn btn-success">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </div>
             </div>
+
             <div class="card-body">
                 <?php if (isset($_GET['msg'])): ?>
                     <div class="alert alert-success alert-dismissible fade show" role="alert">

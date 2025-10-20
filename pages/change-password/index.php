@@ -35,7 +35,11 @@ ob_start();
 
 <?php 
  
- 	include '../../../Connections/dbname.php';
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+ 	include 'config.php';
 	
 ?>
 
@@ -60,7 +64,7 @@ ob_start();
             </div>
         </div>
 
-  			<?php include "../../includes/footer.php" ?>
+  		 
 
 	</div>
 	<!--end wrapper-->
