@@ -690,8 +690,15 @@
 
     <div class="container">
         <header>
-            <h1>Patient S.O.A.P. Management System</h1>
+           
+             <a style="float: right;" href="../index.php" class="btn btn-success" >
+                      Home
+                </a>
+
+                 <h1>Patient S.O.A.P. Management System</h1>
         </header>
+
+        
 
         <section class="search-patient">
             <h2>Find Patient</h2>
@@ -700,14 +707,14 @@
                 <ul id="search-results"></ul>
             </div>
             
-            <div class="quick-actions">
+           <!-- <div class="quick-actions">
                 <button class="quick-action-btn" id="btn-recent-patients">
                     <span>🕐</span> Recent Patients
                 </button>
                 <button class="quick-action-btn" id="btn-todays-appointments">
                     <span>📅</span> Today's Appointments
                 </button>
-            </div>
+            </div> -->
         </section>
 
         <section class="patient-workspace" id="patient-workspace">
@@ -719,6 +726,8 @@
                 <button class="btn btn-primary" id="btn-new-visit">
                     <span>➕</span> Add New Visit
                 </button>
+
+               
             </div>
 
             <div class="visits-history">
@@ -761,7 +770,13 @@
                                     <label for="visit_date">Visit Date</label>
                                     <input type="date" class="form-control" id="visit_date" name="visit_date" required>
                                 </div>
-                                <div class="form-group">
+
+                                   <div class="form-group">
+                                    <label for="next_visit">Next Visit Date</label>
+                                    <input type="date" class="form-control" id="next_visit" name="next_visit">
+                                </div>
+
+                                <div class="form-group" style="display: none;">
                                     <label for="case_number">Case Number</label>
                                     <input type="text" class="form-control" id="case_number" name="case_number" readonly>
                                 </div>
@@ -787,23 +802,27 @@
                                 <textarea class="form-control" id="plans" name="plans" rows="4" placeholder="Treatment plan, medications, referrals, follow-up..."></textarea>
                             </div>
                             
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="next_visit">Next Visit Date</label>
-                                    <input type="date" class="form-control" id="next_visit" name="next_visit">
-                                </div>
+                            <div class="form-row" style="display: none;">
+                             
                                 <div class="form-group">
                                     <label for="notes">Other Notes</label>
                                     <input type="text" class="form-control" id="notes" name="notes" placeholder="Additional clinical notes...">
                                 </div>
                             </div>
+                        
+                         <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="modal-cancel-btn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">
+                        <span>💾</span> Save Visit
+                    </button>
+                </div>
                         </div>
 
                         <div class="previous-visit-column">
-                            <h4>Previous Visit Details</h4>
+                            <h4>Previous Visit Details /  <label id="prev_visit_date_label">Last Visit Date:</label> <input style="font-size: 20px; text-align:center;color: red" type="date" id="prev_visit_date" readonly></h4>
                             <div class="form-group">
-                                <label id="prev_visit_date_label">Last Visit Date:</label>
-                                <input type="date" class="form-control" id="prev_visit_date" readonly>
+                               
+                                
                             </div>
                             <div class="form-group">
                                 <label>Subjective (S):</label>
@@ -825,12 +844,7 @@
                     </div>
                 </div>
 
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" id="modal-cancel-btn">Cancel</button>
-                    <button type="submit" class="btn btn-primary">
-                        <span>💾</span> Save Visit
-                    </button>
-                </div>
+               
             </form>
         </div>
     </div>
@@ -952,7 +966,7 @@
                                     <td>${displayText(visit.plans)}</td>
                                     <td>
                                         <button class="btn btn-warning btn-sm btn-edit-visit" data-visit-id="${visit.visit_id}">
-                                            <span>✏️</span> View/Edit
+                                            <span>✏️</span> Edit
                                         </button>
                                     </td>
                                 </tr>`
