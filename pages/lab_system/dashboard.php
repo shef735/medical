@@ -246,9 +246,7 @@ $recent_patients = getAllPatients(100);
             <a href="template-list.php" class="quick-action-btn">
                 <i class="fas fa-flask"></i> Laboratory Tests
             </a>
-            <a href="patient_form.php" class="quick-action-btn">
-                <i class="fas fa-user-plus"></i> Add Patient
-            </a>
+         
             <a href="create_template.php" class="quick-action-btn">
                 <i class="fas fa-file-medical"></i> New Template
             </a>

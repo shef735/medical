@@ -4,6 +4,9 @@ session_start();
 ob_start();
 }
 
+
+
+$presentdate=date('Y-m-d');
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -439,7 +442,7 @@ function calculateAge($birthdate) {
                       date_of_birth=birthday";
                   $total_query = mysqli_query($db_connection,  $total_update_sql);
 
-                   $query = "SELECT * FROM ".$my_tables_use_check."_resources.patient_info ORDER BY id DESC"; 
+                   $query = "SELECT * FROM ".$my_tables_use_check."_resources.patient_info GROUP BY user_id ORDER BY id DESC "; 
    
                     $query = mysqli_query($db_connection, $query);
                      

@@ -74,7 +74,7 @@ function searchPatients($search_term) {
 
 function getAllPatients() {
     global $conn;
-    $sql = "SELECT * FROM ".$_SESSION['my_tables']."_resources.patient_info  ORDER BY last_name, first_name";
+    $sql = "SELECT * FROM ".$_SESSION['my_tables']."_resources.patient_info  GROUP BY user_id ORDER BY last_name, first_name";
     $result = mysqli_query($conn, $sql);
     
     $patients = [];

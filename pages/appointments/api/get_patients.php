@@ -19,7 +19,8 @@ $searchTerm = isset($_GET['q']) ? mysqli_real_escape_string($conn, $_GET['q']) :
 // SQL query to search for patients by first name or last name.
 // It returns the user_id as 'id' and the concatenated name as 'text'
 // which is the format required by Select2. It now also includes email and phone.
-$sql = "SELECT user_id as id, CONCAT(first_name, ' ', last_name) as text, email, phone FROM patient_info WHERE first_name LIKE '%$searchTerm%' OR last_name LIKE '%$searchTerm%' LIMIT 20";
+$sql = "SELECT user_id as id, CONCAT(first_name, ' ', last_name) as text, email, phone FROM patient_info 
+WHERE first_name LIKE '%$searchTerm%' OR last_name LIKE '%$searchTerm%'  GROUP BY user_id LIMIT 20";
 
 $result = mysqli_query($conn, $sql);
 

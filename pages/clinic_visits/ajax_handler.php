@@ -17,7 +17,7 @@ switch ($action) {
         
         $sql = "SELECT patient_id, patient_code, last_name, first_name 
                 FROM {$PATIENT_TABLE} 
-                WHERE last_name LIKE ? OR first_name LIKE ? OR patient_code LIKE ?";
+                WHERE last_name LIKE ? OR first_name LIKE ? OR patient_code LIKE ? GROUP BY patient_code";
         
         $stmt = mysqli_prepare($conn, $sql);
         mysqli_stmt_bind_param($stmt, "sss", $searchTerm, $searchTerm, $searchTerm);
