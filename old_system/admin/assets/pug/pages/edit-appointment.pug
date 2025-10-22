@@ -1,0 +1,120 @@
+-var datepicker = true ;
+-var select2 = true;
+doctype html
+html(lang="en")
+  
+  include ../components/headerfile
+
+  body
+    
+    +header
+
+    .themebody-wrap
+     
+      
+      // theme body start
+      .theme-body(data-simplebar).common-dash
+        .container-fluid
+          .row         
+            .col-md-12
+              .card
+                .card-header
+                  h4 Edit Appointment
+                .card-body 
+                  form
+                    .row
+                      .form-group.col-md-4
+                        .form-label Title               
+                        select.form-select.hidesearch(name="patienttitle[]")
+                          option(value="patientitle") Title
+                          option(value="Miss") Miss
+                          option(value="Mr." selected) Mr.
+                          option(value="Mrs.") Mrs.
+                      .form-group.col-md-4
+                        .form-label First Name             
+                        input(class="form-control" type="text" value="Sarah" placeholder="First Name")
+                      .form-group.col-md-4
+                        .form-label last name             
+                        input(class="form-control" type="text" value="Smith" placeholder="Last Name")
+                      .form-group.col-md-4
+                        .form-label Date of Birth                                     
+                        input(class="datepicker-here form-control" type="text" value="10/12/1999" data-date-format="dd/mm/yyyy" data-language="en" )
+                      .form-group.col-md-4
+                        .form-label Gender             
+                        select.form-select
+                          option(value="Gender") Select Gender
+                          option(value="Male") Male
+                          option(value="Female" selected) Female
+                      .form-group.col-md-4
+                        .form-label Department Name               
+                        select.form-select.hidesearch(name="Department[]")
+                          option(value="Audiologists") Audiologists
+                          option(value="Cardiologists") Cardiologists
+                          option(value="Endocrinologist" selected) Endocrinologist
+                          option(value="Oncologists") Oncologists
+                          option(value="Neurology") Neurology
+                          option(value="Orthopedics") Orthopedics
+                          option(value="Gynaecology") Gynaecology
+                          option(value="Microbiology") Microbiology
+                      .form-group.col-md-4
+                        .form-label Appointment With
+                        input(class="form-control" type="text" value="Dr. Hal Appeno" placeholder="Enter Doctor Name")
+                      .form-group.col-md-4
+                        .form-label Appointment Date                                 
+                        input(class="datepicker-here form-control" type="text" value="20/03/2023" data-date-format="dd/mm/yyyy" data-language="en" placeholder="Select Appointment Date")
+                      .form-group.col-md-4
+                        .form-label Appointment Time                                 
+                        input(class="form-control" type="time" value="09:45:00")
+                      .form-group.col-md-4
+                        .form-label Phone             
+                        input(class="form-control" value="+1 50 456XXX" type="text" placeholder="")
+                      .form-group.col-md-4
+                        .form-label Email             
+                        input(class="form-control" value="example@email.com" type="text" placeholder="")
+                      .form-group.col-md-4
+                        .form-label City
+                        select.form-select.hidesearch(name="bloodgroup[]" multiple)
+                          option(value="") Select City
+                          option(value="Tokyo") Tokyo
+                          option(value="Dubai" selected) Dubai
+                          option(value="Barcelona" selected) Barcelona
+                          option(value="Rome") Rome
+                          option(value="Singapore") Singapore
+                          option(value="Amsterdam") Amsterdam
+                          option(value="NewYork") New York   
+                      .form-group.col-md-4
+                        .form-label State
+                        select.form-select.hidesearch(name="State[]")
+                          option(value="") Select State
+                          option(value="Washington") Washington
+                          option(value="Minnesota" selected) Minnesota
+                          option(value="Utah") Utah
+                          option(value="Idaho") Idaho
+                      .form-group.col-md-4
+                        .form-label Country
+                        select.form-select.hidesearch(name="Country[]")
+                          option(value="") Select Country
+                          option(value="japan") japan
+                          option(value="india" selected) india
+                          option(value="uk") uk
+                          option(value="itly") itly
+                          option(value="usa") usa
+                      .form-group.col-md-4
+                        .form-label Postal/zip Code
+                        input(class="form-control" type="text" value="395008" placeholder="Enter Postal/zip Code")
+                      .form-group.col-md-6
+                        .form-label Address             
+                        textarea.form-control(placeholder="Enter Patient Address") 463 Avenida Doutor José Singer,6- Conjunto Residencial Humaitá, São Vicente, SP, Brasil
+                      .form-group.col-md-6
+                        .form-label Nots
+                        textarea.form-control(placeholder="Patient History") Nothing
+                      .form-group.text-end.mb-0                     
+                        a.btn.btn-sm.btn-primary(href="javascript:void(0);") Submit
+                        a.btn.btn-sm.btn-danger.ml-8(href="javascript:void(0);") Cancle
+      // theme body end
+    
+    // footer start
+    +footer
+    // footer end
+
+    +footerfile   

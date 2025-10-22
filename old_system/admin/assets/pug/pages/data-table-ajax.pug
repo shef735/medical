@@ -1,0 +1,38 @@
+-var datatable = true;
+doctype html
+html(lang="en")
+  include ../components/headerfile
+  body 
+    +header
+
+    .themebody-wrap
+
+      // breadcrumb start
+      +codexbreadcrumb('Datatable Ajax','application')
+      // breadcrumb end
+
+
+      // theme body start
+      .theme-body.codex-chat
+        
+        .container-fluid        
+          .row
+            .col-12
+              .card   
+                  .card-body
+                    table#datatbl-ajax.table(style='width:100%')
+                      thead
+                        tr
+                          th Name
+                          th Position
+                          th Office
+                          th Age
+                          th Start date
+                          th Salary                         
+      // theme body end
+
+    // footer start
+    +footer
+    // footer end
+    +footerfile         
+    

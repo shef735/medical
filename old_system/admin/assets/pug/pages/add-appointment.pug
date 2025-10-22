@@ -1,0 +1,120 @@
+-var datepicker = true ;
+-var select2 = true;
+doctype html
+html(lang="en")
+  
+  include ../components/headerfile
+
+  body
+    
+    +header
+
+    .themebody-wrap
+     
+      
+      // theme body start
+      .theme-body(data-simplebar).common-dash
+        .container-fluid
+          .row
+            .col-md-12
+              .card
+                .card-header
+                  h4 Add Appointment
+                .card-body
+                  form
+                    .row
+                      .form-group.col-md-4
+                        .form-label Title
+                        select.form-select.hidesearch(name="patienttitle[]")
+                          option(value="patientitle") Title
+                          option(value="Miss") Miss
+                          option(value="Mr.") Mr.
+                          option(value="Mrs.") Mrs.
+                      .form-group.col-md-4
+                        .form-label First Name
+                        input(class="form-control" type="text" placeholder="First Name")
+                      .form-group.col-md-4
+                        .form-label last name
+                        input(class="form-control" type="text" placeholder="Last Name")
+                      .form-group.col-md-4
+                        .form-label Date of Birth
+                        input(class="datepicker-here form-control" type="text" value="" data-date-format="dd/mm/yyyy" data-language="en" placeholder="DD/MM/YYYY")
+                      .form-group.col-md-4
+                        .form-label Gender
+                        select.form-select
+                          option(value="Gender") Select Gender
+                          option(value="Male") Male
+                          option(value="Female") Female
+                      .form-group.col-md-4
+                        .form-label Department Name
+                        select.form-select.hidesearch(name="Department[]")
+                          option(value="Audiologists") Audiologists
+                          option(value="Cardiologists") Cardiologists
+                          option(value="Endocrinologist") Endocrinologist
+                          option(value="Oncologists") Oncologists
+                          option(value="Neurology") Neurology
+                          option(value="Orthopedics") Orthopedics
+                          option(value="Gynaecology") Gynaecology
+                          option(value="Microbiology") Microbiology
+                      .form-group.col-md-4
+                        .form-label Appointment With
+                        input(class="form-control" type="text" placeholder="Enter Doctor Name")
+                      .form-group.col-md-4
+                        .form-label Appointment Date
+                        input(class="datepicker-here form-control" type="text" value="" data-date-format="dd/mm/yyyy" data-language="en" placeholder="Select Appointment Date")
+                      .form-group.col-md-4
+                        .form-label Appointment Time
+                        input(class="form-control" type="time")
+                      .form-group.col-md-4
+                        .form-label Phone
+                        input(class="form-control" type="text" placeholder="")
+                      .form-group.col-md-4
+                        .form-label Email
+                        input(class="form-control" type="text" placeholder="")
+                      .form-group.col-md-4
+                        .form-label City
+                        select.form-select.hidesearch(name="bloodgroup[]")
+                          option(value="") Select City
+                          option(value="Tokyo") Tokyo
+                          option(value="Dubai") Dubai
+                          option(value="Barcelona" selected) Barcelona
+                          option(value="Rome") Rome
+                          option(value="Singapore") Singapore
+                          option(value="Amsterdam") Amsterdam
+                          option(value="NewYork") New York
+                      .form-group.col-md-4
+                        .form-label State
+                        select.form-select.hidesearch(name="State[]")
+                          option(value="") Select State
+                          option(value="Washington") Washington
+                          option(value="Minnesota") Minnesota
+                          option(value="Utah") Utah
+                          option(value="Idaho") Idaho
+                      .form-group.col-md-4
+                        .form-label Country
+                        select.form-select.hidesearch(name="Country[]")
+                          option(value="") Select Country
+                          option(value="japan") japan
+                          option(value="india") india
+                          option(value="uk") uk
+                          option(value="itly") itly
+                          option(value="usa") usa
+                      .form-group.col-md-4
+                        .form-label Postal/zip Code
+                        input(class="form-control" type="text" placeholder="Enter Postal/zip Code")
+                      .form-group.col-md-6
+                        .form-label Address
+                        textarea.form-control(placeholder="Enter Patient Address")
+                      .form-group.col-md-6
+                        .form-label Nots
+                        textarea.form-control(placeholder="Patient History")
+                      .form-group.text-end.mb-0
+                        a.btn.btn-sm.btn-primary(href="javascript:void(0);") Submit
+                        a.btn.btn-sm.btn-danger.ml-8(href="javascript:void(0);") Cancle
+      // theme body end
+    
+    // footer start
+    +footer
+    // footer end
+
+    +footerfile

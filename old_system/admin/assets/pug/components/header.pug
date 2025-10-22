@@ -1,0 +1,145 @@
+// Loader Start
++loader
+// Loader End
+
+// Header Start
+header.codex-header
+  .flex-between
+    .header-left.d-flex.align-items-center
+      .sidebar-action.navicon-wrap
+        i(data-feather="menu")
+      .navsearch-bar
+        .input-group
+          input.form-control(type="text" value="" placeholder="Search Here.....")
+          span.input-group-text
+            i(data-feather="search")
+    .header-right
+      ul.nav-iconlist
+        li
+          .navicon-wrap.btn-windowfull
+            i(data-feather="maximize")
+        li
+          .action-toggle.navicon-wrap
+            i(data-feather="bell")
+            .noti-count
+          .hover-dropdown.navnotification-drop
+            .drop-header
+              h6 notification
+                span 05           
+            ul.scroll-primary(data-simplebar)
+              li
+                .media
+                  .badgeavtar.bg-success A
+                  .media-body.ml-10
+                    h6 Successful Paid Invoice #1579
+                    span.text-light 20 mins ago
+              li
+                .media
+                  .badgeavtar.bg-warning 
+                    i.fa.fa-clock-o
+                  .media-body.ml-10
+                    h6 Confirmed Dr Aleni Joshep visit
+                    span.text-light 2 hours ago
+              li
+                .media
+                  .badgeavtar.bg-info 
+                    i.fa.fa-times
+                  .media-body.ml-10
+                    h6 Cancel Appointment at 5:00 PM
+                    span.text-light 2 hours ago
+              li
+                .media
+                  .badgeavtar.bg-success A
+                  .media-body.ml-10
+                    h6 Successful Paid Invoice #1215
+                    span.text-light 3 hours ago
+              li
+                .media
+                  .badgeavtar.bg-secondary
+                      i.fa.fa-check
+                  .media-body.ml-10
+                    h6 Great Speed Notify of 2.5 LTC
+                    span.text-light 4 hours ago
+            .drop-footer
+              a(href="javascript:void(0)") See All Notification
+        li
+          .navicon-wrap
+            i(data-feather="mail")
+            .noti-count
+          .hover-dropdown.navmail-drop
+            .drop-header
+              h6 Mail
+                span 08           
+            ul.scroll-primary(data-simplebar)
+              li
+                .media
+                  .avtar-wrap
+                    img.img-fluid(src="../assets/images/avtar/2.jpg" alt="")
+                  .media-body.ml-10
+                    h6 Anna Mull
+                      span.text-light.ml-10.fs-10 - 20 mins ago
+                    span.text-light Successful Paid Invoice #1579
+              li
+                .media
+                  .avtar-wrap
+                    img.img-fluid(src="../assets/images/avtar/3.jpg" alt="")
+                  .media-body.ml-10
+                    h6 Hal Appeno
+                      span.text-light.ml-10.fs-10 - 30 mins ago
+                    span.text-light Successful Paid Invoice #1579
+              li
+                .media
+                  .avtar-wrap
+                    img.img-fluid(src="../assets/images/avtar/4.jpg" alt="")
+                  .media-body.ml-10
+                    h6 Paul Molive
+                      span.text-light.ml-10.fs-10 - 45 mins ago
+                    span.text-light Successful Paid Invoice #1579
+              li
+                .media
+                  .avtar-wrap
+                    img.img-fluid(src="../assets/images/avtar/5.jpg" alt="")
+                  .media-body.ml-10
+                    h6 Saul T. Balls
+                      span.text-light.ml-10.fs-10 - 50 mins ago
+                    span.text-light Successful Paid Invoice #1579
+              li
+                .media
+                  .avtar-wrap
+                    img.img-fluid(src="../assets/images/avtar/6.jpg" alt="")
+                  .media-body.ml-10
+                    h6 Anna Mull
+                      span.text-light.ml-10.fs-10 - 1 hour ago
+                    span.text-light Successful Paid Invoice #1579
+              li
+                .media
+                  .avtar-wrap
+                    img.img-fluid(src="../assets/images/avtar/7.jpg" alt="")
+                  .media-body.ml-10
+                    h6 William Stephin
+                      span.text-light.ml-10.fs-10 - 2 hour ago
+                    span.text-light Successful Paid Invoice #1579
+            .drop-footer
+              a(href="javascript:void(0)") See All Messages
+        
+        li.nav-profile
+          a.action-toggle(href="javascript:void(0)")
+            .media
+              .user-icon
+                img.img-fluid.rounded-50(src='../assets/images/avtar/admin.jpg' alt='logo')             
+          .hover-dropdown.navprofile-drop
+            ul
+              li
+                a(href="support.html")
+                  i.ti-help-alt
+                  | help
+              li
+                a(href="javascript:void(0)") 
+                  i.ti-settings
+                  | setting
+              li
+                a(href="login.html")
+                  i.fa.fa-sign-out
+                  | log out
+include sidebar
+// Header End

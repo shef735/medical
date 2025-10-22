@@ -1,0 +1,212 @@
+-var apexchart = true ;
+-var patientdashboard = true;
+doctype html
+html(lang="en")
+  include ../components/headerfile
+  body
+
+    +header
+
+
+    .themebody-wrap
+
+      // breadcrumb start
+      +codexbreadcrumb('profile','application')
+      // breadcrumb end
+
+      // theme body start
+      .theme-body
+        .container-fluid.cdxuser-profile
+          .row       
+            .col-xxl-4.col-xl-12
+              .row
+                .col-xxl-12.col-md-6
+                  .card
+                    .card-header
+                      h4 Personal Information
+                    .card-body
+                      .table-responsive
+                        ul.contact-list
+                          li 
+                            span name:
+                            | Daniel Smith
+                          li 
+                            span date of birth:
+                            | 18-09-2015
+                          li 
+                            span Gender:
+                            | Male
+                          li 
+                            span Address:
+                            | Live In Uk
+                          li 
+                            span Phone:
+                            | +1 80 606590
+                          li 
+                            span Email:
+                            | daniel@example.com
+                .col-xxl-12.col-md-6
+                  .card.doctor-probox                   
+                    .img-wrap
+                    .card-body.pt-0
+                      .profile-head
+                        .proimg-wrap
+                          img.img-fluid(src="../assets/images/avtar/1.jpg" , alt="")
+                        h4 Cedric Kelly
+                        span 25 years, California
+                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    ul.docactivity-list
+                      li
+                        h4 50kg
+                        span Weight
+                      li
+                        h4 170cm
+                        span Height
+                      li
+                        h4 55kg
+                        span Goal
+                .col-xxl-12.col-lg-8
+                  .card
+                    .card-header
+                      h4 Notifications
+                    .card-body
+                      ul.docnoti-list
+                        li
+                          .media
+                            img.rounded-50.w-40(src="../assets/images/avtar/1.jpg" alt="")
+                            .media-body
+                              h6 Dr. Anna  Send you Photo
+                              span.text-light 10, Feb ,2023
+                            .badge.badge-primary 10:15 Pm
+                        li
+                          .media
+                            img.rounded-50.w-40(src="../assets/images/avtar/2.jpg" alt="")
+                            .media-body
+                              h6 Dr. Anna  Send you Photo
+                              span.text-light 05, March ,2023
+                            .badge.badge-primary 09:20 Pm
+                        li
+                          .media
+                            img.rounded-50.w-40(src="../assets/images/avtar/3.jpg" alt="")
+                            .media-body
+                              h6 Dr. Anna  Send you Photo
+                              span.text-light 01, Jan ,2023
+                            .badge.badge-primary 03:40 Pm
+                        li
+                          .media
+                            img.rounded-50.w-40(src="../assets/images/avtar/4.jpg" alt="")
+                            .media-body
+                              h6 Dr. Anna  Send you Photo
+                              span.text-light 25, Feb ,2023
+                            .badge.badge-primary 05:26 Am                   
+                    .card-footer
+                      a.btn.btn-primary.d-block.mx-auto.btn-lg(href="javascript:void(0)") See All Notification  
+            .col-xxl-8.col-xl-12
+              .row
+                .col-sm-6
+                  .card.patientreport-card
+                    .card-header.border-0      
+                      div
+                        h4 Blood pressure
+                        span In the normal
+                      div.report-count
+                        h3.text-primary 120/80
+                        span mmHG
+                    .card-body.p-0
+                      #bloodpreport
+                .col-sm-6
+                  .card.patientreport-card
+                    .card-header.border-0      
+                      div
+                        h4 Heart Rate
+                        span Above the normal
+                      div.report-count
+                        h3.text-secondary 99
+                        span Per min
+                    .card-body.p-0
+                      #heartrate
+                .col-sm-6
+                  .card.patientreport-card
+                    .card-header.border-0      
+                      div
+                        h4 Glucose Rate
+                        span In the normal
+                      div.report-count
+                        h3.text-success 97
+                        span mg/dl
+                    .card-body.p-0
+                      #glucoserate
+                .col-sm-6
+                  .card.patientreport-card
+                    .card-header.border-0      
+                      div
+                        h4 Clolesterol
+                        span In the normal
+                      div.report-count
+                        h3.text-warning 124
+                        span mg/dl
+                    .card-body.p-0
+                      #clolesterol
+                .col-xl-12
+                  .card
+                    .card-header
+                      h4 Patient Visits
+                    .card-body
+                      .table-responsive
+                        table.table.table-bordered(style='width:100%;')
+                          thead
+                            tr
+                              th Doctor Name
+                              th visit Date
+                              th visit Time 
+                              th Treatment
+                              th Charges
+                              th Status                           
+                          tbody
+                            tr
+                              td Dr. Tiger Nixon
+                              td 10/05/2023
+                              td 09:30 Am
+                              td Operation
+                              td $80
+                              td Resheduled
+                            tr
+                              td Dr. Hal Appeno
+                              td 05/06/2023
+                              td 08:00 Am
+                              td Check up
+                              td $50
+                              td Fever
+                            tr
+                              td Dr. Pat Agonia
+                              td 20/02/2023
+                              td 10:30 Am
+                              td Admit
+                              td $75
+                              td Ortho
+                            tr
+                              td Dr. Paul Molive
+                              td 15/08/2023
+                              td 03:00 Pm
+                              td  Blood Test
+                              td $60
+                              td General Check-up
+                            tr
+                              td Dr. Polly Tech
+                              td 12/07/2023
+                              td 12:00 Pm
+                              td Discharge
+                              td $40
+                              td Injury
+                .col-xl-12
+                  .card
+                    .card-header
+                      h4 Patient Activities
+                    .card-body
+                      #bloodlevel
+      // theme body end
+
+    // footer start 
+    +footer
+    +footerfile
+    // footer end

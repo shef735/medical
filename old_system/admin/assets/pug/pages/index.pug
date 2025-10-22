@@ -1,0 +1,534 @@
+-var apexchart = true ;
+-var flagicon  = true ;
+-var slickslider = true ;
+-var hospitaldashboard = true ;
+doctype html
+html(lang="en")
+  
+  include ../components/headerfile
+
+  body
+    
+    +header
+
+    .themebody-wrap
+
+      // breadcrumb start
+      .codex-breadcrumb
+        .container-fluid
+          .breadcrumb-contain
+            .left-breadcrumb
+              ul.breadcrumb.mb-0
+                li.breadcrumb-item
+                  a(href='index.html') 
+                    h1 Dashboard
+                li.breadcrumb-item.active
+                  a(href='javascript:void(0);') Default
+            .right-breadcrumb
+              ul
+                li
+                  .bread-wrap
+                    i.fa.fa-clock-o
+                  span.liveTime
+                li
+                  .bread-wrap
+                    i.fa.fa-calendar
+                  span.getDate
+      // breadcrumb end
+      
+      // theme body start
+      .theme-body(data-simplebar).common-dash
+        .container-fluid
+          .row
+            .col-lg-6
+              .card.hos-welcome
+                .card-body
+                  h3
+                    | Welcome to
+                    br
+                    | Medixo Hospital
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.       
+                  a.btn.btn-secondary(href="javascript:void(0);") Read More
+            .col-lg-6
+              .row
+                .col-sm-6
+                  .card.hosinfo-count
+                    .card-body
+                      .media
+                        .icon-wrap.bg-warning
+                          i.icofont-patient-bed
+                        .count-detail
+                          h3
+                            span.counter.mr-5 500
+                            | Bed
+                          p Total Hospital Beds
+                .col-sm-6
+                  .card.hosinfo-count
+                    .card-body
+                      .media
+                        .icon-wrap.bg-secondary
+                          i.icofont-doctor
+                        .count-detail
+                          h3
+                            span.counter.mr-5 800
+                            | Doctors
+                          p Available Doctors
+                .col-sm-6
+                  .card.hosinfo-count
+                    .card-body
+                      .media
+                        .icon-wrap.bg-success
+                          i.icofont-medicine
+                        .count-detail
+                          h3
+                            span.counter.mr-5 650
+                            | Bills
+                          p Pharmacy Medics
+                .col-sm-6
+                  .card.hosinfo-count
+                    .card-body
+                      .media
+                        .icon-wrap.bg-info
+                          i.icofont-ambulance-cross
+                        .count-detail
+                          h3
+                            span.counter.mr-5 900
+                            | ambulance
+                          p All Ambulance Cars
+            .col-xxl-8.col-lg-7
+              .card.earning-chart
+                .card-header
+                  h4 Hospital Survay
+                  .setting-card.action-menu
+                    a.action-toggle(href="javascript:void(0)")
+                      i.codeCopy(data-feather="more-horizontal")
+                    ul.action-dropdown
+                      li
+                        a(href='javascript:void(0);')
+                          i.fa.fa-calendar-o
+                          | weekly
+                      li
+                        a(href='javascript:void(0);')
+                          i.fa.fa-calendar-check-o
+                          | monthly
+                      li
+                        a(href='javascript:void(0);')
+                          i.fa.fa-calendar
+                          | yearly
+                .card-body
+                  #hospitalsurvay
+            .col-xxl-4.col-lg-5
+              .card
+                .card-header
+                  h4 Notifications
+                .card-body
+                  ul.docnoti-list.dashnoti-list(data-simplebar)
+                    li
+                      .media
+                        img.rounded-50.w-40(src="../assets/images/avtar/1.jpg" alt="")
+                        .media-body
+                          h6 Dr. Anna  Send you Photo
+                          span.text-light 10, Feb ,2023
+                        .badge.badge-primary 10:15 Pm
+                    li
+                      .media
+                        img.rounded-50.w-40(src="../assets/images/avtar/2.jpg" alt="")
+                        .media-body
+                          h6 Dr. Anna  Send you Photo
+                          span.text-light 05, March ,2023
+                        .badge.badge-primary 09:20 Pm
+                    li
+                      .media
+                        img.rounded-50.w-40(src="../assets/images/avtar/3.jpg" alt="")
+                        .media-body
+                          h6 Dr. Anna  Send you Photo
+                          span.text-light 01, Jan ,2023
+                        .badge.badge-primary 03:40 Pm
+                    li
+                      .media
+                        img.rounded-50.w-40(src="../assets/images/avtar/4.jpg" alt="")
+                        .media-body
+                          h6 Dr. Anna  Send you Photo
+                          span.text-light 25, Feb ,2023
+                        .badge.badge-primary 05:26 Am
+                .card-footer
+                  a.btn.btn-primary.d-block.mx-auto.btn-lg(href="javascript:void(0)") See All Notification
+            .col-xxl-4.col-lg-5
+              .card.recentpatient-card
+                .card-header
+                  h4 Recent Patient
+                  .setting-card.action-menu
+                    a.action-toggle(href="javascript:void(0)")
+                      i.codeCopy(data-feather="more-horizontal")
+                    ul.action-dropdown
+                      li
+                        a(href='javascript:void(0);')
+                          i.fa.fa-calendar-o
+                          | weekly
+                      li
+                        a(href='javascript:void(0);')
+                          i.fa.fa-calendar-check-o
+                          | monthly
+                      li
+                        a(href='javascript:void(0);')
+                          i.fa.fa-calendar
+                          | yearly
+                .card-body
+                  .table-responsive
+                    table.table
+                      tbody
+                        tr
+                          td.pt-0
+                            .media
+                              .badgeavtar.bg-primary J
+                              .media-body.ml-10
+                                h6.text-default Jordan Nt
+                                p.text-light 41 Years Old
+                          td.pt-0
+                            span.badge.badge-success Recovered
+                        tr
+                          td
+                            .media
+                              .badgeavtar.bg-secondary A
+                              .media-body.ml-10
+                                h6.text-default Angela Nurhayati
+                                p.text-light 41 Years Old
+                          td 
+                            span.badge.badge-success New Patient
+                        tr
+                          td
+                            .media
+                              .badgeavtar.bg-success T
+                              .media-body.ml-10
+                                h6.text-default Thomas Jaja
+                                p.text-light 28 Years Old
+                          td 
+                            span.badge.badge-warning On Recovery
+                        tr
+                          td
+                            .media
+                              .badgeavtar.bg-warning J
+                              .media-body.ml-10
+                                h6.text-default Jordan Nt
+                                p.text-light 20 Years Old
+                          td 
+                            span.badge.badge-info Treatment
+                        tr
+                          td
+                            .media
+                              .badgeavtar.bg-info J
+                              .media-body.ml-10
+                                h6.text-default Jordan Nt
+                                p.text-light 30 Years Old
+                          td 
+                            span.badge.badge-warning On Recovery
+            .col-xxl-8.col-lg-7
+              .card.toprated-doctor
+                .card-header
+                  h4 Top Rated Doctors
+                .card-body
+                  .ratedoctor-slide
+                    div
+                      .hosdoct-grid
+                        .img-wrap
+                          img.img-fluid(src="../assets/images/avtar/1.jpg" alt="")
+                        .doct-detail
+                          h4 Dr. Anna Mull
+                          span  Cardiologists
+                          p 20 Bowman St, South Windsor, Mt 39508
+                          ul.codex-soclist
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-facebook
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-twitter
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-instagram
+                    div
+                      .hosdoct-grid
+                        .img-wrap
+                          img.img-fluid(src="../assets/images/avtar/2.jpg" alt="")
+                        .doct-detail
+                          h4 Dr. Anna Mull
+                          span  Cardiologists
+                          p 50 Bowman St, South Windsor, Mt 39508
+                          ul.codex-soclist
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-facebook
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-twitter
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-instagram
+                    div
+                      .hosdoct-grid
+                        .img-wrap
+                          img.img-fluid(src="../assets/images/avtar/3.jpg" alt="")
+                        .doct-detail
+                          h4 Dr. Anna Mull
+                          span  Cardiologists
+                          p 30 Bowman St, South Windsor, Mt 39508
+                          ul.codex-soclist
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-facebook
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-twitter
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-instagram
+                    div
+                      .hosdoct-grid
+                        .img-wrap
+                          img.img-fluid(src="../assets/images/avtar/4.jpg" alt="")
+                        .doct-detail
+                          h4 Dr. Anna Mull
+                          span  Cardiologists
+                          p 30 Bowman St, South Windsor, Mt 39508
+                          ul.codex-soclist
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-facebook
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-twitter
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-instagram
+                    div
+                      .hosdoct-grid
+                        .img-wrap
+                          img.img-fluid(src="../assets/images/avtar/5.jpg" alt="")
+                        .doct-detail
+                          h4 Dr. Anna Mull
+                          span  Cardiologists
+                          p 30 Bowman St, South Windsor, Mt 39508
+                          ul.codex-soclist
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-facebook
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-twitter
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-instagram
+                    div
+                      .hosdoct-grid
+                        .img-wrap
+                          img.img-fluid(src="../assets/images/avtar/6.jpg" alt="")
+                        .doct-detail
+                          h4 Dr. Anna Mull
+                          span  Cardiologists
+                          p 30 Bowman St, South Windsor, Mt 39508
+                          ul.codex-soclist
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-facebook
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-twitter
+                            li
+                              a(href='javascript:void(0);')
+                                i.fa.fa-instagram
+            
+            .col-lg-6
+              .card.visitor-performance
+                .card-header
+                  h4 Operation Success Rate
+                  .setting-card.action-menu
+                    a.action-toggle(href="javascript:void(0)")
+                      i.codeCopy(data-feather="more-horizontal")
+                    ul.action-dropdown
+                      li
+                        a(href='javascript:void(0);')
+                          i.fa.fa-calendar-o
+                          | weekly
+                      li
+                        a(href='javascript:void(0);')
+                          i.fa.fa-calendar-check-o
+                          | monthly
+                      li
+                        a(href='javascript:void(0);')
+                          i.fa.fa-calendar
+                          | yearly
+                .card-body
+                  #recoverystatistics
+            .col-lg-6
+              .card.visitor-ratetbl
+                .card-header
+                  h4 Common Diseases Report
+                  .setting-card.action-menu
+                    a.action-toggle(href="javascript:void(0)")
+                      i.codeCopy(data-feather="more-horizontal")
+                    ul.action-dropdown
+                      li
+                        a(href='javascript:void(0);')
+                          i.fa.fa-calendar-o
+                          | weekly
+                      li
+                        a(href='javascript:void(0);')
+                          i.fa.fa-calendar-check-o
+                          | monthly
+                      li
+                        a(href='javascript:void(0);')
+                          i.fa.fa-calendar
+                          | yearly
+                .card-body.p-0
+                  #diseasesreport
+            .col-xxl-8.col-lg-6
+              .card.patientvisits-tbl
+                .card-header
+                  h4 Patient Visits
+                .card-body
+                  .table-responsive
+                    table.table.table-bordered(style='width:100%;')
+                      thead
+                        tr
+                          th Doctor Name
+                          th visit Date
+                          th visit Time 
+                          th Treatment
+                          th Charges
+                          th Status
+                          th Action
+                      tbody
+                        tr
+                          td Dr. Tiger Nixon
+                          td 10/05/2023
+                          td 09:30 Am
+                          td Operation
+                          td $80
+                          td Resheduled
+                          td
+                            a.text-success(href='edit-doctor.html')
+                              i.w-18(data-feather='edit')
+                            a.text-danger.ml-8(href='javascript:void(0);')
+                              i.w-18(data-feather='trash-2')
+                        tr
+                          td Dr. Hal Appeno
+                          td 05/06/2023
+                          td 08:00 Am
+                          td Check up
+                          td $50
+                          td Fever
+                          td
+                            a.text-success(href='edit-doctor.html')
+                              i.w-18(data-feather='edit')
+                            a.text-danger.ml-8(href='javascript:void(0);')
+                              i.w-18(data-feather='trash-2')
+                        tr
+                          td Dr. Pat Agonia
+                          td 20/02/2023
+                          td 10:30 Am
+                          td Admit
+                          td $75
+                          td Ortho
+                          td
+                            a.text-success(href='edit-doctor.html')
+                              i.w-18(data-feather='edit')
+                            a.text-danger.ml-8(href='javascript:void(0);')
+                              i.w-18(data-feather='trash-2')
+                        tr
+                          td Dr. Paul Molive
+                          td 15/08/2023
+                          td 03:00 Pm
+                          td  Blood Test
+                          td $60
+                          td General Check-up
+                          td
+                            a.text-success(href='edit-doctor.html')
+                              i.w-18(data-feather='edit')
+                            a.text-danger.ml-8(href='javascript:void(0);')
+                              i.w-18(data-feather='trash-2')
+                        tr
+                          td Dr. Polly Tech
+                          td 12/07/2023
+                          td 12:00 Pm
+                          td Discharge
+                          td $40
+                          td Injury
+                          td
+                            a.text-success(href='edit-doctor.html')
+                              i.w-18(data-feather='edit')
+                            a.text-danger.ml-8(href='javascript:void(0);')
+                              i.w-18(data-feather='trash-2')
+                        tr
+                          td Dr. Hal Appeno
+                          td 05/06/2023
+                          td 08:00 Am
+                          td Check up
+                          td $50
+                          td Fever
+                          td
+                            a.text-success(href='edit-doctor.html')
+                              i.w-18(data-feather='edit')
+                            a.text-danger.ml-8(href='javascript:void(0);')
+                              i.w-18(data-feather='trash-2')
+            .col-xxl-4.col-lg-6
+              .card.dash-chat
+                .card-header
+                  h4 live caht
+                .card-body  
+                  .dash-chatbox
+                    ul.chating-list(data-simplebar)
+                      li
+                        .user-msgbox
+                          .media
+                            img.img-fluid(src="../assets/images/avtar/1.jpg" alt="image")
+                            .media-body
+                              p Lorem ipsum dolor sit amet
+                      li
+                        .admin-msgbox
+                          .media
+                            .media-body
+                              p Adipisicing elit, sed do eiusmod.
+                            img.img-fluid(src="../assets/images/avtar/2.jpg" alt="image")
+                      li
+                        .admin-msgbox
+                          .media
+                            .media-body
+                              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+                            img.img-fluid(src="../assets/images/avtar/2.jpg" alt="image")
+                      li
+                        .user-msgbox
+                          .media
+                            img.img-fluid(src="../assets/images/avtar/1.jpg" alt="image")
+                            .media-body
+                              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+                      li
+                        .admin-msgbox
+                          .media
+                            .media-body
+                              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            img.img-fluid(src="../assets/images/avtar/2.jpg" alt="image")
+                      li
+                        .user-msgbox
+                          .media
+                            img.img-fluid(src="../assets/images/avtar/1.jpg" alt="image")
+                            .media-body
+                              p Lorem ipsum dolor sit amet
+                      li
+                        .admin-msgbox
+                          .media
+                            .media-body
+                              p Adipisicing elit, sed do eiusmod.
+                            img.img-fluid(src="../assets/images/avtar/2.jpg" alt="image")
+                    .userchat-typebox.d-flex
+                      a.btn.btn-primary.mr-10
+                        i(data-feather="smile")
+                      input.form-control(type='text' placeholder='Type a message' value='' autocomplete='off')
+                      a.btn.btn-primary.ml-10
+                        i(data-feather="send")
+      // theme body end
+    
+    // footer start
+    +footer
+    // footer end
+
+    +footerfile

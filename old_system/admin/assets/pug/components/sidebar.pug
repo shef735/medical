@@ -1,0 +1,260 @@
+// sidebar start
+.codex-sidebar
+  .logo-gridwrap
+    a.lightlogo(href="index.html")
+      img.img-fluid(src="../assets/images/logo/logo.png" alt='sidebar-lightlogo')
+    .sidebar-action
+      i(data-feather="menu")
+  .icon-logo
+    a.lightlogo(href="index.html")
+      img.img-fluid(src="../assets/images/logo/icon-logo.png" alt='sidebar-lightlogo')
+  ul.codex-menu.custom-scroll(data-simplebar)
+    li.cdxmenu-title
+      h5 main
+    li.menu-item
+      a(href="javascript:void(0);")
+        .icon-item
+          i.icofont-home
+        span dashboard   
+        i.fa.fa-angle-down
+      ul.submenu-list
+        li
+          a(href="index.html") Hospital Dashboard
+        li
+          a(href="doctor-dashboard.html") Doctor Dashboard
+        li
+          a(href="patient-dashboard.html") Patient Dashboard
+    li.menu-item
+      a(href="javascript:void(0);")
+        .icon-item
+          i.icofont-doctor-alt
+        span doctors
+        i.fa.fa-angle-down
+      ul.submenu-list
+        li
+          a(href="all-doctors.html") all doctors
+        li
+          a(href="add-doctor.html") add doctor
+        li
+          a(href="edit-doctor.html") edit doctor       
+    li.menu-item
+      a(href="javascript:void(0);")
+        .icon-item
+          i.icofont-paralysis-disability
+        span patients
+        i.fa.fa-angle-down
+      ul.submenu-list
+        li
+          a(href="all-patients.html") all patients
+        li
+          a(href="add-patient.html") add patient
+        li
+          a(href="edit-patient.html") edit patient       
+    li.menu-item
+      a(href="javascript:void(0);")
+        .icon-item
+          i.icofont-ui-calendar
+        span Appointments
+        i.fa.fa-angle-down
+      ul.submenu-list
+        li
+          a(href="doctor-schedule.html") Doctor schedule
+        li
+          a(href="add-appointment.html") add appointment
+        li
+          a(href="edit-appointment.html") edit appointment
+        li
+          a(href="appointment-list.html") view all appointment
+    li.menu-item
+      a(href="javascript:void(0);")
+        .icon-item
+          i.icofont-bill
+        span billing
+        i.fa.fa-angle-down
+      ul.submenu-list
+        li
+          a(href="payment-list.html") payment
+        li
+          a(href="add-payment.html") add payment
+        li
+          a(href="patient-invoice.html") patient invoice
+    li.menu-item
+      a(href="event-management.html")
+        .icon-item
+          i.icofont-list
+        span Event Management
+    li.menu-item
+      a(href="javascript:void(0);")
+        .icon-item
+          i.icofont-key
+        span Access Pages
+        i.fa.fa-angle-down
+      ul.submenu-list
+        li
+          a(href="login.html") login
+        li
+          a(href="register.html") register
+        li
+          a(href="forgot-password.html") forgot password
+        li
+          a(href="new-password.html") reset password
+        li
+          a(href="verify-email.html") verify email
+        li
+          a(href="verify-pin.html") verify pin
+        li
+          a(href="error-page.html") 404
+    li.menu-item
+      a(href="javascript:void(0);")
+        .icon-item
+          i.icofont-support
+        span support
+        i.fa.fa-angle-down
+      ul.submenu-list
+        li
+          a(href="faq.html") faq
+        li
+          a(href="support.html") help center
+    li.cdxmenu-title
+      h5 user interface
+    li.menu-item
+      a(href="javascript:void(0);")
+        .icon-item
+          i.icofont-layers
+        span Table
+        i.fa.fa-angle-down
+      ul.submenu-list
+        li
+          a(href="basic-table.html") table
+        li
+          a(href="data-table.html") data table
+        li
+          a(href="data-table-ajax.html") ajax datatable
+    li.menu-item
+      a(href="javascript:void(0);")
+        .icon-item
+          i.icofont-site-map
+        span Forms
+        i.fa.fa-angle-down
+      ul.submenu-list
+        li
+          a(href="element-input.html") form element
+        li
+          a(href="element-checkbox-radio.html") checkbox & radio
+        li
+          a(href="element-datepicker.html") datepicker
+    li.menu-item
+      a(href="javascript:void(0);")
+        .icon-item
+          i.icofont-pie-chart
+        span Charts
+        i.fa.fa-angle-down
+      ul.submenu-list
+        li
+          a(href="chart-apex.html") apex chart
+        li.menu-item
+          a(href="chart-echarts.html") echarts
+        li.menu-item
+          a(href="chart-morris.html") morris charts
+        li.menu-item
+          a(href="chart-chartsjs.html") charts js
+        li.menu-item
+          a(href="chart-sparkline.html") sparkline charts
+    li.menu-item
+      a(href="javascript:void(0);")
+        .icon-item
+          i.icofont-database
+        span Advance element
+        i.fa.fa-angle-down
+      ul.submenu-list
+        li
+          a(href="timeline-one.html") timeline one
+        li
+          a(href="timeline-two.html") timeline two
+        li
+          a(href="pricing.html") pricing tables
+        li
+          a(href="element-select2.html") select 2
+        li
+          a(href="element-switch.html") switch
+        li
+          a(href="element-dropzone.html") dropzone
+        li
+          a(href="element-rangeslider.html") range slider
+        li
+          a(href="bootstrap-notify.html") bootstrap notify
+        li
+          a(href="element-sweetalert2.html") sweetalert2
+        li
+          a(href="element-scrollbar.html") scrollbar
+        li
+         a(href="element-lightbox.html") light box
+    
+    li.menu-item
+      a(href="javascript:void(0);")
+        .icon-item
+          i.icofont-layout
+        span Componet
+        i.fa.fa-angle-down
+      ul.submenu-list
+        li
+          a(href="element-typography.html") typography
+        li
+          a(href="element-color.html") color
+        li
+          a(href="element-themeclass.html") helper class
+        li
+          a(href="element-alert.html") Alert 
+        li
+          a(href="element-avtar.html") Avtar
+        li
+          a(href="element-button.html") Button 
+        li
+          a(href="element-grid.html") grid
+        li
+          a(href="element-dropdown.html") Dropdown
+        li
+          a(href="element-breadcrumb.html") Breadcrumb
+        li
+          a(href="element-collapse.html") Collapse
+        li
+          a(href="element-accordion.html") Accordion
+        li
+          a(href="element-badge.html") badge
+        li
+          a(href="element-modal.html") modal
+        li
+          a(href="element-tab.html") tabs
+        li
+          a(href="element-popover.html") popover
+        li
+          a(href="element-tooltip.html") tooltip
+        li
+          a(href="element-card.html") card
+        li
+          a(href="element-progressbar.html") progress bar
+        li
+          a(href="element-pagination.html") pagination
+    li.menu-item
+      a(href="javascript:void(0);")
+        .icon-item
+          i.icofont-star-shape
+        span Icons
+        i.fa.fa-angle-down
+      ul.submenu-list
+        li
+          a(href="icon-fontawesome.html") Font Awesome
+        li
+          a(href="icon-themify.html") Themify
+        li
+          a(href="icon-feather.html") Feather
+        li
+          a(href="icon-iconfont.html") icon font
+  .sidebarpro-sec
+    img.img-fluid(src="../assets/images/pro-sec.png" alt="")
+    h6 Best Experianced Helth
+      br
+      | Care  Doctor
+    a.btn.btn-primary.btn-sm(href="javascript:void(0);") Chek Now
+           
+// sidebar end

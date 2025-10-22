@@ -1,0 +1,291 @@
+-var datepicker = true ;
+-var select2 = true;
+-var datatable = true;
+doctype html
+html(lang="en")
+  include ../components/headerfile
+  body    
+    +header
+
+
+    .themebody-wrap
+
+      // breadcrumb start
+      +codexbreadcrumb('Datatable Advance','application')
+      // breadcrumb end
+
+      // theme body start
+      .theme-body.codex-chat
+        .container-fluid
+          .row
+            .col-12
+              .card   
+                .card-body
+                  a.btn.btn-primary.float-end.mb-15(href='javascript:void(0);' data-bs-toggle='modal' data-bs-target='#patientmodalmodal') Add Patient
+                  table.patients-tbl.table(style='width:100%;')
+                    thead
+                      tr
+                        th Name
+                        th Birth Date 
+                        th Age
+                        th Gender
+                        th Blood Group
+                        th Phone No
+                        th Email
+                        th Status
+                        th Action
+                    tbody
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/1.jpg' alt='')
+                            span.ml-10 Tiger Nixon
+                        td 10/12/1998
+                        td 25
+                        td Male
+                        td A+
+                        td +1 50 456589
+                        td example@email.com
+                        td 
+                          span.badge.badge-info New Patient
+                        td
+                          a(href='edit-patient.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/2.jpg' alt='')
+                            span.ml-10 Garrett Winters
+                        td 12/05/1995
+                        td 28
+                        td Female
+                        td o+
+                        td +1 60 508089
+                        td example@email.com
+                        td 
+                          span.badge.badge-success Recovered
+                        td
+                          a(href='edit-patient.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/3.jpg' alt='')
+                            span.ml-10 Ashton Cox
+                        td 05/05/1990
+                        td 33
+                        td Male
+                        td B+
+                        td +1 80 606590
+                        td example@email.com
+                        td 
+                          span.badge.badge-warning In Treatment
+                        td
+                          a(href='edit-patient.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/4.jpg' alt='')
+                            span.ml-10 Cedric Kelly
+                        td 20/08/1985
+                        td 35
+                        td Female 
+                        td A+
+                        td +1 50 456589
+                        td example@email.com
+                        td 
+                          span.badge.badge-warning In Treatment
+                        td
+                          a(href='edit-patient.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/5.jpg' alt='')
+                            span.ml-10 Brielle Williamson
+                        td 20/01/2000
+                        td 20
+                        td Male
+                        td B-
+                        td +1 20 302860
+                        td example@email.com
+                        td 
+                          span.badge.badge-info New Patient
+                        td
+                          a(href='edit-patient.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/6.jpg' alt='')
+                            span.ml-10 Rhona Davidson
+                        td 02/06/2015
+                        td 8
+                        td Female
+                        td A-
+                        td +1 22 443346
+                        td example@email.com
+                        td 
+                          span.badge.badge-success Recovered
+                        td
+                          a(href='edit-patient.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/7.jpg' alt='')
+                            span.ml-10 Jena Gaines
+                        td 25/02/2012
+                        td 23
+                        td Male
+                        td B+
+                        td +1 18 982234
+                        td example@email.com
+                        td 
+                          span.badge.badge-info New Patient
+                        td
+                          a(href='edit-patient.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/8.jpg' alt='')
+                            span.ml-10 Charde Marshall
+                        td 30/05/2005
+                        td 8
+                        td Male
+                        td A+
+                        td +1 28 353089
+                        td example@email.com
+                        td 
+                          span.badge.badge-warning In Treatment
+                        td
+                          a(href='edit-patient.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/9.jpg' alt='')
+                            span.ml-10 Paul Byrd
+                        td 10/12/1998
+                        td 25
+                        td Male
+                        td A+
+                        td +1 26 282296
+                        td example@email.com
+                        td 
+                          span.badge.badge-info New Patient
+                        td
+                          a(href='edit-patient.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/10.jpg' alt='')
+                            span.ml-10 Gloria Little
+                        td 30/05/1995
+                        td 35
+                        td Female
+                        td A+
+                        td +1 30 456589
+                        td example@email.com
+                        td 
+                          span.badge.badge-info New Patient
+                        td
+                          a(href='edit-patient.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+                      tr
+                        td
+                          .d-flex.align-items-center
+                            img.img-fluid.rounded-50.w-40(src='../assets/images/avtar/11.jpg' alt='')
+                            span.ml-10 Dai Rios
+                        td 10/12/1998
+                        td 25
+                        td Male
+                        td A+
+                        td +1 50 456589
+                        td example@email.com
+                        td 
+                          span.badge.badge-info New Patient
+                        td
+                          a(href='edit-patient.html')
+                            i.w-18(data-feather='edit')
+                          a.text-danger.ml-8(href='javascript:void(0);')
+                            i.w-18(data-feather='trash-2')
+
+                // Patient Modal Start
+                #patientmodalmodal.modal.fade
+                  .modal-dialog.modal-dialog-centered
+                    .modal-content
+                      .modal-header
+                        h5.modal-title Add New Doctor               
+                      .modal-body
+                        form
+                          .row
+                            .form-group.col-md-6
+                              label.form-label Name
+                              input.form-control(type='text' placeholder='Patient Name')
+                            .form-group.col-md-6
+                              label.form-label Date Of Birth
+                              input.datepicker-here.form-control(type='text' placeholder='DD/MM/YYYY' data-date-format='dd/mm/yyyy' data-language='en')
+                            .form-group.col-md-6
+                              label.form-label Age
+                              input.form-control(type='text' required='' placeholder='Age')
+                            .form-group.col-md-6
+                              .form-label Gender             
+                              select.form-select.form-control.hidesearch(name="gender[]")
+                                option(value="Gender") Select Gender
+                                option(value="Male") Male
+                                option(value="Female") Female
+                            .form-group.col-md-6
+                              .form-label Blood Group
+                              select.form-select.form-control.hidesearch(name="bloodgroup[]")
+                                option(value="") Select Blood Group
+                                option(value="A+") A+
+                                option(value="A-") A-
+                                option(value="B+") B+
+                                option(value="B-") B-
+                                option(value="O+") O+
+                                option(value="O-") O-
+                                option(value="AB+") AB+
+                                option(value="AB-") AB-
+                            .form-group.col-md-6
+                              .form-label Phone                                  
+                              input.form-control(type='text' required='' placeholder='Phone Number')
+                            .form-group.col-md-6
+                              label.form-label Email
+                              input.form-control(type='text' required='' placeholder='Email Id')
+                      .modal-footer
+                        button.btn.btn-primary(type='button') Save
+                        button.btn.btn-danger(type='button' data-bs-dismiss='modal') Close
+                // Patient Modal Start
+
+      // theme body end
+
+
+    // footer start
+    +footer
+    // footer end
+
+    +footerfile         
