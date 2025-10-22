@@ -237,7 +237,7 @@ if (!empty($result['fields'])) {
         <div class="repeating-header-print">
             <header class="report-header">
                 <div class="logo">
-                    <img src="../images/logo.png" alt="Laboratory Logo" style="max-height: 100px; margin-top:-20px">
+                    <img src="../../uploads/logo/logo_GH.png" alt="Laboratory Logo" style="max-height: 100px; margin-top:-20px">
                 </div>
                 <div class="lab-details">
                     GASTROHEP, Gen. Miguel Malvar Hospital <br>

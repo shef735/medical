@@ -379,7 +379,8 @@ $_SESSION['company_name']=$header_company_code.' - '.$company_name_full;
     <div class="container">
         <header>
             <div class="logo-container">
-                <img src="../../uploads/logo/logo_<?php echo strtok($_SESSION['company_name'], " ") ?>.png" alt="Company Logo" class="company-logo">
+            
+                <img src="../uploads/logo/logo_<?php echo strtok($_SESSION['company_name'], " ") ?>.png" alt="Company Logo" class="company-logo">
             </div>
         </header>
 
