@@ -422,8 +422,9 @@ function calculateAge($birthdate) {
                        <th>Patient ID</th>   
                         <th>Name</th>                    
                         <th>Age</th>
-                        <th>Gender</th>                      
-                        <th style="width: 400px;">Action</th>
+                        <th>Gender</th> 
+                                    
+                        <th style="width:250px;">Action</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -468,23 +469,23 @@ function calculateAge($birthdate) {
                           echo '</td>';
                             echo '<td>'.$age.'</td>';
                             echo '<td>'.$gender.'</td>';
+                            
             
                           echo '<td class="action-cell">';
 
                           ?>
-                               <a href="../../daily-chart/view_patient.php?id=<?php echo $company['id']; ?>" class="action-link view-link">View</a>
+                               <a href="daily-chart/view_patient.php?id=<?php echo $company['id']; ?>" class="action-link view-link">View</a>
                                 <a href="patient-form/edit_patient_form.php?id=<?php echo $company['id']; ?>" class="action-link edit-link">Edit</a>
-                                <a href="../../daily-chart/index.php?delete_id=<?php echo $company['id']; ?>" 
+                              <!--  <a href="../../daily-chart/index.php?delete_id=<?php echo $company['id']; ?>" 
                                    class="action-link delete-link" 
-                                   onclick="return confirm('Are you sure you want to delete this patient?')">Delete</a>
+                                   onclick="return confirm('Are you sure you want to delete this patient?')">Delete</a> -->
 
                            <a href="#" class="action-link add-note-link" 
                                 data-bs-toggle="modal" 
                                 data-bs-target="#addNoteModal"
                                 data-patient-id="<?php echo $company['id']; ?>">Add Note</a>
 
-                           <a href="../../daily-chart/patient_visits.php?patient_id=<?php echo $company['id']; ?>" 
-                           class="action-link add-visit-link">Visits</a>      
+                     
                       
 
                       <?php  

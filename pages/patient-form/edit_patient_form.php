@@ -24,6 +24,7 @@ $current_values = [
     'last_name' => $patient['last_name'],
     'first_name' => $patient['first_name'],
     'middle_name' => $patient['middle_name'],
+    'address' => $patient['address'],
     'email' => $patient['email'],
     'birthday' => $patient['birthday'],
     'phone' => $patient['phone'],
@@ -52,7 +53,7 @@ $current_values = [
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
-        /* Copy all the CSS from patient_form.php */
+        /* Your existing CSS styles */
         * {
             margin: 0;
             padding: 0;
@@ -172,108 +173,107 @@ $current_values = [
             background-color: #2980b9;
         }
         
-      .camera-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
+        .camera-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
 
-.camera-preview {
-    width: 320px;
-    height: 240px;
-    border: 2px solid #3498db;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000;
-    overflow: hidden;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+        .camera-preview {
+            width: 320px;
+            height: 240px;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-.camera-preview img, 
-.camera-preview video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Changed from 'contain' to 'cover' for better framing */
-}
+        .camera-preview img, 
+        .camera-preview video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-.camera-controls {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
+        .camera-controls {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
 
-.camera-btn {
-    padding: 8px 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    transition: all 0.3s;
-    font-size: 14px;
-}
+        .camera-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
 
-.camera-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
+        .camera-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
 
-.capture-btn {
-    background: linear-gradient(135deg, #3498db, #2980b9);
-    color: white;
-}
+        .capture-btn {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+        }
 
-.start-camera-btn {
-    background: linear-gradient(135deg, #28a745, #218838);
-    color: white;
-}
+        .start-camera-btn {
+            background: linear-gradient(135deg, #28a745, #218838);
+            color: white;
+        }
 
-.stop-camera-btn {
-    background: linear-gradient(135deg, #dc3545, #c82333);
-    color: white;
-}
+        .stop-camera-btn {
+            background: linear-gradient(135deg, #dc3545, #c82333);
+            color: white;
+        }
 
-.upload-btn {
-    background: #f8f9fa;
-    border: 1px solid #ddd;
-    color: #333;
-}
+        .upload-btn {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            color: #333;
+        }
 
-.switch-camera-btn {
-    background: #6c757d;
-    color: white;
-}
+        .switch-camera-btn {
+            background: #6c757d;
+            color: white;
+        }
 
-.camera-status {
-    margin-top: 8px;
-    font-size: 13px;
-    color: #6c757d;
-    text-align: center;
-    min-height: 20px;
-}
+        .camera-status {
+            margin-top: 8px;
+            font-size: 13px;
+            color: #6c757d;
+            text-align: center;
+            min-height: 20px;
+        }
 
-/* Focus guidelines for better composition */
-.camera-preview::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    pointer-events: none;
-    z-index: 1;
-}
+        .camera-preview::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            pointer-events: none;
+            z-index: 1;
+        }
         
         .upload-btn {
             background-color: #f8f9fa;
@@ -312,7 +312,7 @@ $current_values = [
 <body>
     <div class="form-container">
         <div class="header">
-            <a href="edit_patient.php" class="home-btn">
+            <a href="../patient-list.php" class="home-btn">
                 <i class="fas fa-arrow-left"></i> BACK TO LIST
             </a>
             <h1 class="page-title">Edit Patient Information</h1>
@@ -411,67 +411,184 @@ $current_values = [
                 <!-- Right Column - Address Section -->
                 <div class="form-column">
                     <?php
-                    // Include address.php but pass current values
-                    $psgc_region = $current_values['psgc_region'];
-                    $psgc_province = $current_values['psgc_province'];
-                    $psgc_municipality = $current_values['psgc_municipality'];
-                    $psgc_barangay = $current_values['psgc_barangay'];
-                    $ZipCode = $current_values['ZipCode'];
-                    $NoBldgName = $current_values['NoBldgName'];
-                    $StreetName = $current_values['StreetName'];
+                    // Pass current values to address.php using global variables or extract
+                    $address_values = [
+                        'psgc_region' => $current_values['psgc_region'],
+                        'psgc_province' => $current_values['psgc_province'],
+                        'psgc_municipality' => $current_values['psgc_municipality'],
+                        'psgc_barangay' => $current_values['psgc_barangay'],
+                        'ZipCode' => $current_values['ZipCode'],
+                        'NoBldgName' => $current_values['NoBldgName'],
+                        'StreetName' => $current_values['StreetName'],
+                        'address' => $current_values['address']
+                    ];
+                    
+                    // Include address.php with the values
                     include "address.php";
                     ?>
                 </div>
             </div>
             
             <!-- Camera Section -->
-           <div class="camera-section">
-        <h3 class="camera-title">Patient Photo</h3>
-        <div class="camera-container">
-            <div class="camera-preview" id="cameraPreview">
-                <?php if(!empty($current_values['photo']) && file_exists($current_values['photo'])): ?>
-                    <img src="<?php echo $current_values['photo']; ?>" alt="Current Patient Photo">
-                <?php else: ?>
-                    <span>No image selected</span>
-                <?php endif; ?>
+            <div class="camera-section">
+                <h3 class="camera-title">Patient Photo</h3>
+                <div class="camera-container">
+                    <div class="camera-preview" id="cameraPreview">
+                        <?php if(!empty($current_values['photo']) && file_exists($current_values['photo'])): ?>
+                            <img src="<?php echo $current_values['photo']; ?>" alt="Current Patient Photo">
+                        <?php else: ?>
+                            <span>No image selected</span>
+                        <?php endif; ?>
+                    </div>
+                    <div class="camera-controls">
+                        <button type="button" class="camera-btn start-camera-btn" id="startCameraBtn">
+                            <i class="fas fa-camera"></i> Start Camera
+                        </button>
+                        <button type="button" class="camera-btn capture-btn" id="captureBtn" disabled>
+                            <i class="fas fa-camera-retro"></i> Capture Photo
+                        </button>
+                        <button type="button" class="camera-btn stop-camera-btn" id="stopCameraBtn" disabled>
+                            <i class="fas fa-stop-circle"></i> Stop Camera
+                        </button>
+                        <input type="file" id="cameraInput" accept="image/*" name="patient_photo_file" style="display: none;">
+                        <button type="button" class="camera-btn upload-btn" id="uploadBtn">
+                            <i class="fas fa-upload"></i> Upload Photo
+                        </button>
+                    </div>
+                    <div class="camera-status" id="cameraStatus">Camera is not active</div>
+                    <input type="hidden" name="patient_photo_base64" id="patientPhotoBase64" value="">
+                </div>
             </div>
-            <div class="camera-controls">
-                <button type="button" class="camera-btn start-camera-btn" id="startCameraBtn">
-                    <i class="fas fa-camera"></i> Start Camera
-                </button>
-                <button type="button" class="camera-btn capture-btn" id="captureBtn" disabled>
-                    <i class="fas fa-camera-retro"></i> Capture Photo
-                </button>
-                <button type="button" class="camera-btn stop-camera-btn" id="stopCameraBtn" disabled>
-                    <i class="fas fa-stop-circle"></i> Stop Camera
-                </button>
-                <input type="file" id="cameraInput" accept="image/*" name="patient_photo_file" style="display: none;">
-                <button type="button" class="camera-btn upload-btn" id="uploadBtn">
-                    <i class="fas fa-upload"></i> Upload Photo
-                </button>
-            </div>
-            <div class="camera-status" id="cameraStatus">Camera is not active</div>
-            <input type="hidden" name="patient_photo_base64" id="patientPhotoBase64" value="">
-        </div>
-    </div>
-    
             
             <!-- Submit Button -->
             <button class="submit-btn" type="submit" id="sub">
-                <i class="fas fa-save"></i> UPDATE PATIENT INFORMATION
+                <i class="fas fa-save"></i> &nbsp;UPDATE PATIENT INFORMATION
             </button>
         </form>
     </div>
     
     <script>
-        // Handle photo upload
+        // Camera functionality
+        let stream = null;
+        let video = null;
+        let canvas = null;
+
+        document.getElementById('startCameraBtn').addEventListener('click', async function() {
+            try {
+                // Request camera access
+                stream = await navigator.mediaDevices.getUserMedia({ 
+                    video: { 
+                        width: { ideal: 640 },
+                        height: { ideal: 480 },
+                        facingMode: 'environment'
+                    }, 
+                    audio: false 
+                });
+                
+                // Create video element if it doesn't exist
+                if (!video) {
+                    video = document.createElement('video');
+                    video.autoplay = true;
+                    video.playsInline = true;
+                }
+                
+                // Set video source to camera stream
+                video.srcObject = stream;
+                
+                // Clear preview and add video
+                const preview = document.getElementById('cameraPreview');
+                preview.innerHTML = '';
+                preview.appendChild(video);
+                
+                // Update UI
+                document.getElementById('startCameraBtn').disabled = true;
+                document.getElementById('captureBtn').disabled = false;
+                document.getElementById('stopCameraBtn').disabled = false;
+                document.getElementById('cameraStatus').textContent = 'Camera is active - Ready to capture';
+                document.getElementById('cameraStatus').style.color = '#28a745';
+                
+            } catch (error) {
+                console.error('Error accessing camera:', error);
+                document.getElementById('cameraStatus').textContent = 'Error accessing camera: ' + error.message;
+                document.getElementById('cameraStatus').style.color = '#dc3545';
+            }
+        });
+
+        document.getElementById('captureBtn').addEventListener('click', function() {
+            if (!video) return;
+            
+            // Create canvas if it doesn't exist
+            if (!canvas) {
+                canvas = document.createElement('canvas');
+            }
+            
+            const context = canvas.getContext('2d');
+            
+            // Set canvas dimensions to match video
+            canvas.width = video.videoWidth;
+            canvas.height = video.videoHeight;
+            
+            // Draw current video frame to canvas
+            context.drawImage(video, 0, 0, canvas.width, canvas.height);
+            
+            // Convert canvas to data URL (lower quality to reduce size)
+            const imageDataUrl = canvas.toDataURL('image/jpeg', 0.7);
+            
+            // Create image element and display captured photo
+            const img = document.createElement('img');
+            img.src = imageDataUrl;
+            
+            // Update preview
+            const preview = document.getElementById('cameraPreview');
+            preview.innerHTML = '';
+            preview.appendChild(img);
+            
+            // Store the base64 encoded image in a hidden field
+            document.getElementById('patientPhotoBase64').value = imageDataUrl;
+            
+            // Clear any file input
+            document.getElementById('cameraInput').value = '';
+            
+            // Update status
+            document.getElementById('cameraStatus').textContent = 'Photo captured successfully!';
+            document.getElementById('cameraStatus').style.color = '#28a745';
+        });
+
+        document.getElementById('stopCameraBtn').addEventListener('click', function() {
+            if (stream) {
+                // Stop all tracks in the stream
+                stream.getTracks().forEach(track => track.stop());
+                stream = null;
+                
+                // Update UI
+                document.getElementById('startCameraBtn').disabled = false;
+                document.getElementById('captureBtn').disabled = true;
+                document.getElementById('stopCameraBtn').disabled = true;
+                document.getElementById('cameraStatus').textContent = 'Camera stopped';
+                document.getElementById('cameraStatus').style.color = '#6c757d';
+            }
+        });
+
+        // Handle photo upload as fallback
         document.getElementById('uploadBtn').addEventListener('click', function() {
             document.getElementById('cameraInput').click();
         });
-        
+
         document.getElementById('cameraInput').addEventListener('change', function(e) {
             const file = e.target.files[0];
             if (file) {
+                // Validate file type
+                if (!file.type.match('image.*')) {
+                    alert('Please select an image file.');
+                    return;
+                }
+                
+                // Validate file size (max 5MB)
+                if (file.size > 5 * 1024 * 1024) {
+                    alert('Please select an image smaller than 5MB.');
+                    return;
+                }
+                
                 const reader = new FileReader();
                 reader.onload = function(event) {
                     const preview = document.getElementById('cameraPreview');
@@ -480,13 +597,17 @@ $current_values = [
                     img.src = event.target.result;
                     preview.appendChild(img);
                     
-                    // Store the base64 encoded image in a hidden field
-                    document.getElementById('patientPhoto').value = event.target.result;
+                    // Clear base64 data when using file upload
+                    document.getElementById('patientPhotoBase64').value = '';
+                    
+                    // Update status
+                    document.getElementById('cameraStatus').textContent = 'Photo uploaded successfully!';
+                    document.getElementById('cameraStatus').style.color = '#28a745';
                 };
                 reader.readAsDataURL(file);
             }
         });
-        
+
         // Form validation
         document.getElementById('patientForm').addEventListener('submit', function(e) {
             let isValid = true;
@@ -507,168 +628,5 @@ $current_values = [
             }
         });
     </script>
-
-
-    <script>
-    // Camera functionality
-    let stream = null;
-    let video = null;
-    let canvas = null;
-
-    document.getElementById('startCameraBtn').addEventListener('click', async function() {
-        try {
-            // Request camera access
-            stream = await navigator.mediaDevices.getUserMedia({ 
-                video: { 
-                    width: { ideal: 640 },
-                    height: { ideal: 480 },
-                    facingMode: 'environment'
-                }, 
-                audio: false 
-            });
-            
-            // Create video element if it doesn't exist
-            if (!video) {
-                video = document.createElement('video');
-                video.autoplay = true;
-                video.playsInline = true;
-            }
-            
-            // Set video source to camera stream
-            video.srcObject = stream;
-            
-            // Clear preview and add video
-            const preview = document.getElementById('cameraPreview');
-            preview.innerHTML = '';
-            preview.appendChild(video);
-            
-            // Update UI
-            document.getElementById('startCameraBtn').disabled = true;
-            document.getElementById('captureBtn').disabled = false;
-            document.getElementById('stopCameraBtn').disabled = false;
-            document.getElementById('cameraStatus').textContent = 'Camera is active - Ready to capture';
-            document.getElementById('cameraStatus').style.color = '#28a745';
-            
-        } catch (error) {
-            console.error('Error accessing camera:', error);
-            document.getElementById('cameraStatus').textContent = 'Error accessing camera: ' + error.message;
-            document.getElementById('cameraStatus').style.color = '#dc3545';
-        }
-    });
-
-    document.getElementById('captureBtn').addEventListener('click', function() {
-        if (!video) return;
-        
-        // Create canvas if it doesn't exist
-        if (!canvas) {
-            canvas = document.createElement('canvas');
-        }
-        
-        const context = canvas.getContext('2d');
-        
-        // Set canvas dimensions to match video
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        
-        // Draw current video frame to canvas
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
-        
-        // Convert canvas to data URL (lower quality to reduce size)
-        const imageDataUrl = canvas.toDataURL('image/jpeg', 0.7);
-        
-        // Create image element and display captured photo
-        const img = document.createElement('img');
-        img.src = imageDataUrl;
-        
-        // Update preview
-        const preview = document.getElementById('cameraPreview');
-        preview.innerHTML = '';
-        preview.appendChild(img);
-        
-        // Store the base64 encoded image in a hidden field
-        document.getElementById('patientPhotoBase64').value = imageDataUrl;
-        
-        // Clear any file input
-        document.getElementById('cameraInput').value = '';
-        
-        // Update status
-        document.getElementById('cameraStatus').textContent = 'Photo captured successfully!';
-        document.getElementById('cameraStatus').style.color = '#28a745';
-    });
-
-    document.getElementById('stopCameraBtn').addEventListener('click', function() {
-        if (stream) {
-            // Stop all tracks in the stream
-            stream.getTracks().forEach(track => track.stop());
-            stream = null;
-            
-            // Update UI
-            document.getElementById('startCameraBtn').disabled = false;
-            document.getElementById('captureBtn').disabled = true;
-            document.getElementById('stopCameraBtn').disabled = true;
-            document.getElementById('cameraStatus').textContent = 'Camera stopped';
-            document.getElementById('cameraStatus').style.color = '#6c757d';
-        }
-    });
-
-    // Handle photo upload as fallback
-    document.getElementById('uploadBtn').addEventListener('click', function() {
-        document.getElementById('cameraInput').click();
-    });
-
-    document.getElementById('cameraInput').addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (file) {
-            // Validate file type
-            if (!file.type.match('image.*')) {
-                alert('Please select an image file.');
-                return;
-            }
-            
-            // Validate file size (max 5MB)
-            if (file.size > 5 * 1024 * 1024) {
-                alert('Please select an image smaller than 5MB.');
-                return;
-            }
-            
-            const reader = new FileReader();
-            reader.onload = function(event) {
-                const preview = document.getElementById('cameraPreview');
-                preview.innerHTML = '';
-                const img = document.createElement('img');
-                img.src = event.target.result;
-                preview.appendChild(img);
-                
-                // Clear base64 data when using file upload
-                document.getElementById('patientPhotoBase64').value = '';
-                
-                // Update status
-                document.getElementById('cameraStatus').textContent = 'Photo uploaded successfully!';
-                document.getElementById('cameraStatus').style.color = '#28a745';
-            };
-            reader.readAsDataURL(file);
-        }
-    });
-
-    // Form validation
-    document.getElementById('patientForm').addEventListener('submit', function(e) {
-        let isValid = true;
-        const requiredFields = document.querySelectorAll('input[required]');
-        
-        requiredFields.forEach(field => {
-            if (!field.value.trim()) {
-                isValid = false;
-                field.style.borderColor = 'red';
-            } else {
-                field.style.borderColor = '#ddd';
-            }
-        });
-        
-        if (!isValid) {
-            e.preventDefault();
-            alert('Please fill in all required fields.');
-        }
-    });
-</script>
 </body>
 </html>

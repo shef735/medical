@@ -147,7 +147,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $psgc_barangay = mysqli_real_escape_string($conn, $_POST['psgc_barangay']);
         $ZipCode = mysqli_real_escape_string($conn, $_POST['ZipCode']);
         $NoBldgName = mysqli_real_escape_string($conn, $_POST['NoBldgName']);
-        $StreetName = mysqli_real_escape_string($conn, $_POST['StreetName']);
+        $StreetName = '';
          
         // Calculate BMI
         $bmi = calculateBMI($weight_kg, $height_cm);
@@ -553,10 +553,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </div>
             </div>
 
-             <div class="warning-message">
-                <i class="fas fa-exclamation-triangle"></i>
-                <strong>Note:</strong> Do not refresh this page or use the back button to avoid duplicate entries.
-            </div>
+            
             
             <div class="button-group">
                 <a href="questions.php" class="btn btn-success">

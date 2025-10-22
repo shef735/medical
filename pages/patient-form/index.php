@@ -447,13 +447,13 @@
                 <!-- Right Column - Address Section -->
                 <div class="form-column">
                     <div class="form-group">
-                        <label class="form-label">House/ Building No. / Building Name</label>
-                        <input class="form-control" type="text" name="NoBldgName" id="NoBldgName" placeholder="House/ Building No. / Building Name">
+                        <label class="form-label">Address:</label>
+                        <textarea class="form-control" type="text" name="NoBldgName" id="NoBldgName" placeholder="House/ Building No. / Building Name"></textarea>
                     </div>
                     
-                    <div class="form-group">
+                    <div class="form-group" style="display: none;">
                         <label class="form-label">Unit No / Street / Subdivision</label>
-                        <input type="text" class="form-control" name="StreetName" required id="StreetName" placeholder="Unit No / Street / Subdivision">
+                        <input type="text" class="form-control" name="StreetName" id="StreetName">
                     </div>
                     
                     <div class="form-group">
