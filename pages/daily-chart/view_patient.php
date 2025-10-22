@@ -683,6 +683,7 @@ textarea.detail-value {
     background-color: #95a5a6;
 }
 
+
  </style>
 </head>
 <body>

@@ -160,3 +160,11 @@ $cdquery="SELECT main_db  FROM ".$my_nc." GROUP BY main_db";
             uom, inv, encoded, note, cost 
         FROM ".$v1_transactions." 
         WHERE UPPER(transactions_".$menu_sort.")='".strtoupper($transactions)."'"; 
+
+
+
+UPDATE medical_resources.clinic_visits os
+JOIN medical_resources.patient_info mf ON os.user_id = mf.user_id
+SET os.last_name = mf.last_name, os.first_name = mf.first_name,
+     os.patient_code = mf.patient_code  
+WHERE os.user_id = mf.user_id

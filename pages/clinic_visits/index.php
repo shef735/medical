@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patient S.O.A.P. Management System</title>
+    <title>Patient Visit</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
         :root {
@@ -807,7 +807,7 @@
             <a style="float: right;" href="../index.php" class="btn btn-success">
                 Home
             </a>
-            <h1>Patient S.O.A.P. Management System</h1>
+            <h1>Patient Record</h1>
         </header>
 
         <section class="search-patient">
@@ -882,7 +882,7 @@
                                 </div>
                             </div>
                             
-                            <div class="section-header s-section">Subjective (Review of Systems)</div>
+                            <div class="section-header s-section">Subjective</div>
                             <div class="form-group">
                                 <textarea class="form-control" id="review_of_systems" name="review_of_systems" rows="4" placeholder="Patient's complaints, symptoms, medical history..."></textarea>
                             </div>
@@ -908,10 +908,10 @@
                                     <input type="text" class="form-control" id="notes" name="notes" placeholder="Additional clinical notes...">
                                 </div>
                             </div>
-                        
+                                                        <button style="visibility: hidden;" type="button" class="btn btn-danger" id="modal-cancel-btn">Cancel</button>
+
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-danger" id="modal-cancel-btn">Cancel</button>
-                                <button type="submit" class="btn btn-primary">
+                                <button  style="width: 100%;" type="submit" class="btn btn-primary">
                                     <span>💾</span> Save Visit
                                 </button>
                             </div>
