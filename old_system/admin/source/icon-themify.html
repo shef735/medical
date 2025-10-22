@@ -1,0 +1,2208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+    <meta name="keywords" content="admin template, html 5 admin template , medixo admin , dashboard template, bootstrap 5 admin template, responsive admin template">
+    <title>Medixo - Medical & Hospital Admin Template</title>
+    <!-- shortcut icon-->
+    <link rel="shortcut icon" href="../assets/images/logo/icon-logo.png" type="image/x-icon">
+    <!-- Fonts css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+    <!-- Font awesome -->
+    <link href="../assets/css/vendor/font-awesome.css" rel="stylesheet">
+    <link href="../assets/css/vendor/themify-icons.css" rel="stylesheet">
+    <link href="../assets/css/vendor/icoicon.css" rel="stylesheet">
+    <!-- Scrollbar-->
+    <link href="../assets/css/vendor/simplebar.css" rel="stylesheet">
+    <!-- Bootstrap css-->
+    <link href="../assets/css/vendor/bootstrap.css" rel="stylesheet">
+    <!-- Custom css-->
+    <link href="../assets/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+      <!-- Loader Start-->
+        <div class="codex-loader">
+          <div class="loader-item">
+            <svg class="spinner-pulse" version="1.2" height="210" width="550" xmlns="http://www.w3.org/2000/svg" viewport="0 0 60 60" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <path class="spinnersub-pulse" fill="none" stroke-width="3" stroke-linejoin="round" d="M0,90L250,90Q257,60 262,87T267,95 270,88 273,92t6,35 7,-60T290,127 297,107s2,-11 10,-10 1,1 8,-10T319,95c6,4 8,-6 10,-17s2,10 9,11h210"></path>
+            </svg>
+          </div>
+        </div>
+      <!-- Loader End-->
+      <!-- Header Start-->
+      <header class="codex-header">
+        <div class="flex-between">
+          <div class="header-left d-flex align-items-center">
+            <div class="sidebar-action navicon-wrap"><i data-feather="menu"></i></div>
+            <div class="navsearch-bar">
+              <div class="input-group">
+                <input class="form-control" type="text" value="" placeholder="Search Here....."><span class="input-group-text"><i data-feather="search"></i></span>
+              </div>
+            </div>
+          </div>
+          <div class="header-right">
+            <ul class="nav-iconlist">
+              <li>
+                <div class="navicon-wrap btn-windowfull"><i data-feather="maximize"></i></div>
+              </li>
+              <li>
+                <div class="action-toggle navicon-wrap"><i data-feather="bell"></i>
+                  <div class="noti-count"></div>
+                </div>
+                <div class="hover-dropdown navnotification-drop">
+                  <div class="drop-header">
+                    <h6>notification<span>05           </span></h6>
+                  </div>
+                  <ul class="scroll-primary" data-simplebar>
+                    <li>
+                      <div class="media">
+                        <div class="badgeavtar bg-success">A</div>
+                        <div class="media-body ml-10">
+                          <h6>Successful Paid Invoice #1579</h6><span class="text-light">20 mins ago</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="badgeavtar bg-warning"> <i class="fa fa-clock-o"></i></div>
+                        <div class="media-body ml-10">
+                          <h6>Confirmed Dr Aleni Joshep visit</h6><span class="text-light">2 hours ago</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="badgeavtar bg-info"> <i class="fa fa-times"></i></div>
+                        <div class="media-body ml-10">
+                          <h6>Cancel Appointment at 5:00 PM</h6><span class="text-light">2 hours ago</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="badgeavtar bg-success">A</div>
+                        <div class="media-body ml-10">
+                          <h6>Successful Paid Invoice #1215</h6><span class="text-light">3 hours ago</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="badgeavtar bg-secondary"><i class="fa fa-check"></i></div>
+                        <div class="media-body ml-10">
+                          <h6>Great Speed Notify of 2.5 LTC</h6><span class="text-light">4 hours ago</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="drop-footer"><a href="javascript:void(0)">See All Notification</a></div>
+                </div>
+              </li>
+              <li>
+                <div class="navicon-wrap"><i data-feather="mail"></i>
+                  <div class="noti-count"></div>
+                </div>
+                <div class="hover-dropdown navmail-drop">
+                  <div class="drop-header">
+                    <h6>Mail<span>08           </span></h6>
+                  </div>
+                  <ul class="scroll-primary" data-simplebar>
+                    <li>
+                      <div class="media">
+                        <div class="avtar-wrap"><img class="img-fluid" src="../assets/images/avtar/2.jpg" alt=""></div>
+                        <div class="media-body ml-10">
+                          <h6>Anna Mull<span class="text-light ml-10 fs-10">- 20 mins ago</span></h6><span class="text-light">Successful Paid Invoice #1579</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="avtar-wrap"><img class="img-fluid" src="../assets/images/avtar/3.jpg" alt=""></div>
+                        <div class="media-body ml-10">
+                          <h6>Hal Appeno<span class="text-light ml-10 fs-10">- 30 mins ago</span></h6><span class="text-light">Successful Paid Invoice #1579</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="avtar-wrap"><img class="img-fluid" src="../assets/images/avtar/4.jpg" alt=""></div>
+                        <div class="media-body ml-10">
+                          <h6>Paul Molive<span class="text-light ml-10 fs-10">- 45 mins ago</span></h6><span class="text-light">Successful Paid Invoice #1579</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="avtar-wrap"><img class="img-fluid" src="../assets/images/avtar/5.jpg" alt=""></div>
+                        <div class="media-body ml-10">
+                          <h6>Saul T. Balls<span class="text-light ml-10 fs-10">- 50 mins ago</span></h6><span class="text-light">Successful Paid Invoice #1579</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="avtar-wrap"><img class="img-fluid" src="../assets/images/avtar/6.jpg" alt=""></div>
+                        <div class="media-body ml-10">
+                          <h6>Anna Mull<span class="text-light ml-10 fs-10">- 1 hour ago</span></h6><span class="text-light">Successful Paid Invoice #1579</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="media">
+                        <div class="avtar-wrap"><img class="img-fluid" src="../assets/images/avtar/7.jpg" alt=""></div>
+                        <div class="media-body ml-10">
+                          <h6>William Stephin<span class="text-light ml-10 fs-10">- 2 hour ago</span></h6><span class="text-light">Successful Paid Invoice #1579</span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="drop-footer"><a href="javascript:void(0)">See All Messages</a></div>
+                </div>
+              </li>
+              <li class="nav-profile"><a class="action-toggle" href="javascript:void(0)">
+                  <div class="media">
+                    <div class="user-icon"><img class="img-fluid rounded-50" src="../assets/images/avtar/admin.jpg" alt="logo"></div>
+                  </div></a>
+                <div class="hover-dropdown navprofile-drop">
+                  <ul>
+                    <li><a href="support.html"><i class="ti-help-alt"></i>help</a></li>
+                    <li><a href="javascript:void(0)"> <i class="ti-settings"></i>setting</a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out"></i>log out</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- sidebar start-->
+      <div class="codex-sidebar">
+        <div class="logo-gridwrap"><a class="lightlogo" href="index.html"><img class="img-fluid" src="../assets/images/logo/logo.png" alt="sidebar-lightlogo"></a>
+          <div class="sidebar-action"><i data-feather="menu"></i></div>
+        </div>
+        <div class="icon-logo"><a class="lightlogo" href="index.html"><img class="img-fluid" src="../assets/images/logo/icon-logo.png" alt="sidebar-lightlogo"></a></div>
+        <ul class="codex-menu custom-scroll" data-simplebar>
+          <li class="cdxmenu-title">
+            <h5>main</h5>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-home"></i></div><span>dashboard   </span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="index.html">Hospital Dashboard</a></li>
+              <li><a href="doctor-dashboard.html">Doctor Dashboard</a></li>
+              <li><a href="patient-dashboard.html">Patient Dashboard</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-doctor-alt"></i></div><span>doctors</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="all-doctors.html">all doctors</a></li>
+              <li><a href="add-doctor.html">add doctor</a></li>
+              <li><a href="edit-doctor.html">edit doctor       </a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-paralysis-disability"></i></div><span>patients</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="all-patients.html">all patients</a></li>
+              <li><a href="add-patient.html">add patient</a></li>
+              <li><a href="edit-patient.html">edit patient       </a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-ui-calendar"></i></div><span>Appointments</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="doctor-schedule.html">Doctor schedule</a></li>
+              <li><a href="add-appointment.html">add appointment</a></li>
+              <li><a href="edit-appointment.html">edit appointment</a></li>
+              <li><a href="appointment-list.html">view all appointment</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-bill"></i></div><span>billing</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="payment-list.html">payment</a></li>
+              <li><a href="add-payment.html">add payment</a></li>
+              <li><a href="patient-invoice.html">patient invoice</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="event-management.html">
+              <div class="icon-item"><i class="icofont-list"></i></div><span>Event Management</span></a></li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-key"></i></div><span>Access Pages</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="login.html">login</a></li>
+              <li><a href="register.html">register</a></li>
+              <li><a href="forgot-password.html">forgot password</a></li>
+              <li><a href="new-password.html">reset password</a></li>
+              <li><a href="verify-email.html">verify email</a></li>
+              <li><a href="verify-pin.html">verify pin</a></li>
+              <li><a href="error-page.html">404</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-support"></i></div><span>support</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="faq.html">faq</a></li>
+              <li><a href="support.html">help center</a></li>
+            </ul>
+          </li>
+          <li class="cdxmenu-title">
+            <h5>user interface</h5>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-layers"></i></div><span>Table</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="basic-table.html">table</a></li>
+              <li><a href="data-table.html">data table</a></li>
+              <li><a href="data-table-ajax.html">ajax datatable</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-site-map"></i></div><span>Forms</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="element-input.html">form element</a></li>
+              <li><a href="element-checkbox-radio.html">checkbox & radio</a></li>
+              <li><a href="element-datepicker.html">datepicker</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-pie-chart"></i></div><span>Charts</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="chart-apex.html">apex chart</a></li>
+              <li class="menu-item"><a href="chart-echarts.html">echarts</a></li>
+              <li class="menu-item"><a href="chart-morris.html">morris charts</a></li>
+              <li class="menu-item"><a href="chart-chartsjs.html">charts js</a></li>
+              <li class="menu-item"><a href="chart-sparkline.html">sparkline charts</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-database"></i></div><span>Advance element</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="timeline-one.html">timeline one</a></li>
+              <li><a href="timeline-two.html">timeline two</a></li>
+              <li><a href="pricing.html">pricing tables</a></li>
+              <li><a href="element-select2.html">select 2</a></li>
+              <li><a href="element-switch.html">switch</a></li>
+              <li><a href="element-dropzone.html">dropzone</a></li>
+              <li><a href="element-rangeslider.html">range slider</a></li>
+              <li><a href="bootstrap-notify.html">bootstrap notify</a></li>
+              <li><a href="element-sweetalert2.html">sweetalert2</a></li>
+              <li><a href="element-scrollbar.html">scrollbar</a></li>
+              <li><a href="element-lightbox.html">light box</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-layout"></i></div><span>Componet</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="element-typography.html">typography</a></li>
+              <li><a href="element-color.html">color</a></li>
+              <li><a href="element-themeclass.html">helper class</a></li>
+              <li><a href="element-alert.html">Alert </a></li>
+              <li><a href="element-avtar.html">Avtar</a></li>
+              <li><a href="element-button.html">Button </a></li>
+              <li><a href="element-grid.html">grid</a></li>
+              <li><a href="element-dropdown.html">Dropdown</a></li>
+              <li><a href="element-breadcrumb.html">Breadcrumb</a></li>
+              <li><a href="element-collapse.html">Collapse</a></li>
+              <li><a href="element-accordion.html">Accordion</a></li>
+              <li><a href="element-badge.html">badge</a></li>
+              <li><a href="element-modal.html">modal</a></li>
+              <li><a href="element-tab.html">tabs</a></li>
+              <li><a href="element-popover.html">popover</a></li>
+              <li><a href="element-tooltip.html">tooltip</a></li>
+              <li><a href="element-card.html">card</a></li>
+              <li><a href="element-progressbar.html">progress bar</a></li>
+              <li><a href="element-pagination.html">pagination</a></li>
+            </ul>
+          </li>
+          <li class="menu-item"><a href="javascript:void(0);">
+              <div class="icon-item"><i class="icofont-star-shape"></i></div><span>Icons</span><i class="fa fa-angle-down"></i></a>
+            <ul class="submenu-list">
+              <li><a href="icon-fontawesome.html">Font Awesome</a></li>
+              <li><a href="icon-themify.html">Themify</a></li>
+              <li><a href="icon-feather.html">Feather</a></li>
+              <li><a href="icon-iconfont.html">icon font</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="sidebarpro-sec"><img class="img-fluid" src="../assets/images/pro-sec.png" alt="">
+          <h6>Best Experianced Helth<br>Care  Doctor</h6><a class="btn btn-primary btn-sm" href="javascript:void(0);">Chek Now</a>
+        </div>
+      </div>
+      <!-- sidebar end-->
+      <!-- Header End-->
+    <div class="themebody-wrap">
+      <!-- breadcrumb start-->
+        <div class="codex-breadcrumb">
+          <div class="container-fluid">
+            <div class="breadcrumb-contain">
+              <div class="left-breadcrumb">
+                <ul class="breadcrumb mb-0">
+                  <li class="breadcrumb-item"><a href="index.html">
+                      <h1>Dashboard</h1></a></li>
+                  <li class="breadcrumb-item"><a href="javascript:void(0);">icons</a></li>
+                  <li class="breadcrumb-item active"><a href="javascript:void(0);">Themify Icons</a></li>
+                </ul>
+              </div>
+              <div class="right-breadcrumb">
+                <ul>
+                  <li>
+                    <div class="bread-wrap"><i class="fa fa-clock-o"></i></div><span class="liveTime"></span>
+                  </li>
+                  <li>
+                    <div class="bread-wrap"><i class="fa fa-calendar"></i></div><span class="getDate"></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- breadcrumb end-->
+      <!-- theme body start-->
+      <div class="theme-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header">
+                  <h4>Arrows & Direction Icons</h4>
+                </div>
+                <div class="card-body">
+                  <div class="row cdx-row">
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-arrow-up"></i></div>ti-arrow-up
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-arrow-right"></i></div>ti-arrow-right
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-arrow-left"></i></div>ti-arrow-left
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-arrow-down"></i></div>ti-arrow-down
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-arrows-vertical"></i></div>ti-arrows-vertical
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-arrows-horizontal"></i></div>ti-arrows-horizontal
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-angle-up"></i></div>ti-angle-up
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-angle-right"></i></div>ti-angle-right
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-angle-left"></i></div>ti-angle-left
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-angle-down"></i></div>ti-angle-down
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-angle-double-up"></i></div>ti-angle-double-up
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-angle-double-right"></i></div>ti-angle-double-right
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-angle-double-left"></i></div>ti-angle-double-left
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-angle-double-down"></i></div>ti-angle-double-down
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-move"></i></div>ti-move
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-fullscreen"></i></div>ti-fullscreen
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-arrow-top-right"></i></div>ti-arrow-top-right
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-arrow-top-left"></i></div>ti-arrow-top-left
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-arrow-circle-up"></i></div>ti-arrow-circle-up
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-arrow-circle-right"></i></div>ti-arrow-circle-right
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-arrow-circle-left"></i></div>ti-arrow-circle-left
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-arrow-circle-down"></i></div>ti-arrow-circle-down
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-arrows-corner"></i></div>ti-arrows-corner
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-split-v"></i></div>ti-split-v
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-split-v-alt"></i></div>ti-split-v-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-split-h"></i></div>ti-split-h
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-hand-point-up"></i></div>ti-hand-point-up
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-hand-point-right"></i></div>ti-hand-point-right
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-hand-point-left"></i></div>ti-hand-point-left
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-hand-point-down"></i></div>ti-hand-point-down
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-back-right"></i></div>ti-back-right
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-back-left"></i></div>ti-back-left
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-exchange-vertical"></i></div>ti-exchange-vertical
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h4>Web App Icons</h4>
+                </div>
+                <div class="card-body">
+                  <div class="row cdx-row">
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-wand"></i></div>ti-wand
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-save"></i></div>ti-save
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-save-alt"></i></div>ti-save-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-direction"></i></div>ti-direction
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-direction-alt"></i></div>ti-direction-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-user"></i></div>ti-user
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-link"></i></div>ti-link
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-unlink"></i></div>ti-unlink
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-trash"></i></div>ti-trash
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-target"></i></div>ti-target
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-tag"></i></div>ti-tag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-desktop"></i></div>ti-desktop
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-tablet"></i></div>ti-tablet
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-mobile"></i></div>ti-mobile
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-email"></i></div>ti-email
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-star"></i></div>ti-star
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-spray"></i></div>ti-spray
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-signal"></i></div>ti-signal
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-shopping-cart"></i></div>ti-shopping-cart
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-shopping-cart-full"></i></div>ti-shopping-cart-full
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-settings"></i></div>ti-settings
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-search"></i></div>ti-search
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-zoom-in"></i></div>ti-zoom-in
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-zoom-out"></i></div>ti-zoom-out
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-cut"></i></div>ti-cut
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-ruler"></i></div>ti-ruler
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-ruler-alt-2"></i></div>ti-ruler-alt-2
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-ruler-pencil"></i></div>ti-ruler-pencil
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-ruler-alt"></i></div>ti-ruler-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-bookmark"></i></div>ti-bookmark
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-bookmark-alt"></i></div>ti-bookmark-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-reload"></i></div>ti-reload
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-plus"></i></div>ti-plus
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-minus"></i></div>ti-minus
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-close"></i></div>ti-close
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-pin"></i></div>ti-pin
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-pencil"></i></div>ti-pencil
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-pencil-alt"></i></div>ti-pencil-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-paint-roller"></i></div>ti-paint-roller
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-paint-bucket"></i></div>ti-paint-bucket
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-na"></i></div>ti-na
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-medall"></i></div>ti-medall
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-medall-alt"></i></div>ti-medall-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-marker"></i></div>ti-marker
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-marker-alt"></i></div>ti-marker-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-lock"></i></div>ti-lock
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-unlock"></i></div>ti-unlock
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-location-arrow"></i></div>ti-location-arrow
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout"></i></div>ti-layout
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layers"></i></div>ti-layers
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layers-alt"></i></div>ti-layers-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-key"></i></div>ti-key
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-image"></i></div>ti-image
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-heart"></i></div>ti-heart
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-heart-broken"></i></div>ti-heart-broken
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-hand-stop"></i></div>ti-hand-stop
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-hand-open"></i></div>ti-hand-open
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-hand-drag"></i></div>ti-hand-drag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-flag"></i></div>ti-flag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-flag-alt"></i></div>ti-flag-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-flag-alt-2"></i></div>ti-flag-alt-2
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-eye"></i></div>ti-eye
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-import"></i></div>ti-import
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-export"></i></div>ti-export
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-cup"></i></div>ti-cup
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-crown"></i></div>ti-crown
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-comments"></i></div>ti-comments
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-comment"></i></div>ti-comment
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-comment-alt"></i></div>ti-comment-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-thought"></i></div>ti-thought
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-clip"></i></div>ti-clip
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-check"></i></div>ti-check
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-check-box"></i></div>ti-check-box
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-camera"></i></div>ti-camera
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-announcement"></i></div>ti-announcement
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-brush"></i></div>ti-brush
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-brush-alt"></i></div>ti-brush-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-palette"></i></div>ti-palette
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-briefcase"></i></div>ti-briefcase
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-bolt"></i></div>ti-bolt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-bolt-alt"></i></div>ti-bolt-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-blackboard"></i></div>ti-blackboard
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-bag"></i></div>ti-bag
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-world"></i></div>ti-world
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-wheelchair"></i></div>ti-wheelchair
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-car"></i></div>ti-car
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-truck"></i></div>ti-truck
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-timer"></i></div>ti-timer
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-ticket"></i></div>ti-ticket
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-thumb-up"></i></div>ti-thumb-up
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-thumb-down"></i></div>ti-thumb-down
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-stats-up"></i></div>ti-stats-up
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-stats-down"></i></div>ti-stats-down
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-shine"></i></div>ti-shine
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-shift-right"></i></div>ti-shift-right
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-shift-left"></i></div>ti-shift-left
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-shift-right-alt"></i></div>ti-shift-right-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-shift-left-alt"></i></div>ti-shift-left-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-shield"></i></div>ti-shield
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-notepad"></i></div>ti-notepad
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-server"></i></div>ti-server
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-pulse"></i></div>ti-pulse
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-printer"></i></div>ti-printer
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-power-off"></i></div>ti-power-off
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-plug"></i></div>ti-plug
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-pie-chart"></i></div>ti-pie-chart
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-panel"></i></div>ti-panel
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-package"></i></div>ti-package
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-music"></i></div>ti-music
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-music-alt"></i></div>ti-music-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-mouse"></i></div>ti-mouse
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-mouse-alt"></i></div>ti-mouse-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-money"></i></div>ti-money
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-microphone"></i></div>ti-microphone
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-menu"></i></div>ti-menu
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-menu-alt"></i></div>ti-menu-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-map"></i></div>ti-map
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-map-alt"></i></div>ti-map-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-location-pin"></i></div>ti-location-pin
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-light-bulb"></i></div>ti-light-bulb
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-info"></i></div>ti-info
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-infinite"></i></div>ti-infinite
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-id-badge"></i></div>ti-id-badge
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-hummer"></i></div>ti-hummer
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-home"></i></div>ti-home
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-help"></i></div>ti-help
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-headphone"></i></div>ti-headphone
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-harddrives"></i></div>ti-harddrives
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-harddrive"></i></div>ti-harddrive
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-gift"></i></div>ti-gift
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-game"></i></div>ti-game
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-filter"></i></div>ti-filter
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-files"></i></div>ti-files
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-file"></i></div>ti-file
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-zip"></i></div>ti-zip
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-folder"></i></div>ti-folder
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-envelope"></i></div>ti-envelope
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-dashboard"></i></div>ti-dashboard
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-cloud"></i></div>ti-cloud
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-cloud-up"></i></div>ti-cloud-up
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-cloud-down"></i></div>ti-cloud-down
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-clipboard"></i></div>ti-clipboard
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-calendar"></i></div>ti-calendar
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-book"></i></div>ti-book
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-bell"></i></div>ti-bell
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-basketball"></i></div>ti-basketball
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-bar-chart"></i></div>ti-bar-chart
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-bar-chart-alt"></i></div>ti-bar-chart-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-archive"></i></div>ti-archive
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-anchor"></i></div>ti-anchor
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-alert"></i></div>ti-alert
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-alarm-clock"></i></div>ti-alarm-clock
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-agenda"></i></div>ti-agenda
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-write"></i></div>ti-write
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-wallet"></i></div>ti-wallet
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-video-clapper"></i></div>ti-video-clapper
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-video-camera"></i></div>ti-video-camera
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-vector"></i></div>ti-vector
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-support"></i></div>ti-support
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-stamp"></i></div>ti-stamp
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-slice"></i></div>ti-slice
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-shortcode"></i></div>ti-shortcode
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-receipt"></i></div>ti-receipt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-pin2"></i></div>ti-pin2
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-pin-alt"></i></div>ti-pin-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-pencil-alt2"></i></div>ti-pencil-alt2
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-eraser"></i></div>ti-eraser
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-more"></i></div>ti-more
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-more-alt"></i></div>ti-more-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-microphone-alt"></i></div>ti-microphone-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-magnet"></i></div>ti-magnet
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-line-double"></i></div>ti-line-double
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-line-dotted"></i></div>ti-line-dotted
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-line-dashed"></i></div>ti-line-dashed
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-ink-pen"></i></div>ti-ink-pen
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-info-alt"></i></div>ti-info-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-help-alt"></i></div>ti-help-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-headphone-alt"></i></div>ti-headphone-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-gallery"></i></div>ti-gallery
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-face-smile"></i></div>ti-face-smile
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-face-sad"></i></div>ti-face-sad
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-credit-card"></i></div>ti-credit-card
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-comments-smiley"></i></div>ti-comments-smiley
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-time"></i></div>ti-time
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-share"></i></div>ti-share
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-share-alt"></i></div>ti-share-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-rocket"></i></div>ti-rocket
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-new-window"></i></div>ti-new-window
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-rss"></i></div>ti-rss
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-rss-alt"></i></div>ti-rss-alt
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h4>Control Icons</h4>
+                </div>
+                <div class="card-body">      
+                  <div class="row cdx-row">     
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-control-stop"></i></div>ti-control-stop
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-control-shuffle"></i></div>ti-control-shuffle
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-control-play"></i></div>ti-control-play
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-control-pause"></i></div>ti-control-pause
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-control-forward"></i></div>ti-control-forward
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-control-backward"></i></div>ti-control-backward
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-volume"></i></div>ti-volume
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-control-skip-forward"></i></div>ti-control-skip-forward
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-control-skip-backward"></i></div>ti-control-skip-backward
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-control-record"></i></div>ti-control-record
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-control-eject"></i></div>ti-control-eject
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h4>Text Editor</h4>
+                </div>
+                <div class="card-body">        
+                  <div class="row cdx-row">    
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-paragraph"></i></div>ti-paragraph
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-uppercase"></i></div>ti-uppercase
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-underline"></i></div>ti-underline
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-text"></i></div>ti-text
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-Italic"></i></div>ti-Italic
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-smallcap"></i></div>ti-smallcap
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-list"></i></div>ti-list
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-list-ol"></i></div>ti-list-ol
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-align-right"></i></div>ti-align-right
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-align-left"></i></div>ti-align-left
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-align-justify"></i></div>ti-align-justify
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-align-center"></i></div>ti-align-center
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-quote-right"></i></div>ti-quote-right
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-quote-left"></i></div>ti-quote-left
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h4>Layout Icons</h4>
+                </div>
+                <div class="card-body">       
+                  <div class="row cdx-row">    
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-width-full"></i></div>ti-layout-width-full
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-width-default"></i></div>ti-layout-width-default
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-width-default-alt"></i></div>ti-layout-width-default-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-tab"></i></div>ti-layout-tab
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-tab-window"></i></div>ti-layout-tab-window
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-tab-v"></i></div>ti-layout-tab-v
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-tab-min"></i></div>ti-layout-tab-min
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-slider"></i></div>ti-layout-slider
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-slider-alt"></i></div>ti-layout-slider-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-sidebar-right"></i></div>ti-layout-sidebar-right
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-sidebar-none"></i></div>ti-layout-sidebar-none
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-sidebar-left"></i></div>ti-layout-sidebar-left
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-placeholder"></i></div>ti-layout-placeholder
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-menu"></i></div>ti-layout-menu
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-menu-v"></i></div>ti-layout-menu-v
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-menu-separated"></i></div>ti-layout-menu-separated
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-menu-full"></i></div>ti-layout-menu-full
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-media-right"></i></div>ti-layout-media-right
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-media-right-alt"></i></div>ti-layout-media-right-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-media-overlay"></i></div>ti-layout-media-overlay
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-media-overlay-alt"></i></div>ti-layout-media-overlay-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-media-overlay-alt-2"></i></div>ti-layout-media-overlay-alt-2
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-media-left"></i></div>ti-layout-media-left
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-media-left-alt"></i></div>ti-layout-media-left-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-media-center"></i></div>ti-layout-media-center
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-media-center-alt"></i></div>ti-layout-media-center-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-list-thumb"></i></div>ti-layout-list-thumb
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-list-thumb-alt"></i></div>ti-layout-list-thumb-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-list-post"></i></div>ti-layout-list-post
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-list-large-image"></i></div>ti-layout-list-large-image
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-line-solid"></i></div>ti-layout-line-solid
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-grid4"></i></div>ti-layout-grid4
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-grid3"></i></div>ti-layout-grid3
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-grid2"></i></div>ti-layout-grid2
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-grid2-thumb"></i></div>ti-layout-grid2-thumb
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-cta-right"></i></div>ti-layout-cta-right
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-cta-left"></i></div>ti-layout-cta-left
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-cta-center"></i></div>ti-layout-cta-center
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-cta-btn-right"></i></div>ti-layout-cta-btn-right
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-cta-btn-left"></i></div>ti-layout-cta-btn-left
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-column4"></i></div>ti-layout-column4
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-column3"></i></div>ti-layout-column3
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-column2"></i></div>ti-layout-column2
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-accordion-separated"></i></div>ti-layout-accordion-separated
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-accordion-merged"></i></div>ti-layout-accordion-merged
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-accordion-list"></i></div>ti-layout-accordion-list
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-widgetized"></i></div>ti-widgetized
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-widget"></i></div>ti-widget
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-widget-alt"></i></div>ti-widget-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-view-list"></i></div>ti-view-list
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-view-list-alt"></i></div>ti-view-list-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-view-grid"></i></div>ti-view-grid
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-upload"></i></div>ti-upload
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-download"></i></div>ti-download
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-loop"></i></div>ti-loop
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-sidebar-2"></i></div>ti-layout-sidebar-2
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-grid4-alt"></i></div>ti-layout-grid4-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-grid3-alt"></i></div>ti-layout-grid3-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-grid2-alt"></i></div>ti-layout-grid2-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-column4-alt"></i></div>ti-layout-column4-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-column3-alt"></i></div>ti-layout-column3-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-layout-column2-alt"></i></div>ti-layout-column2-alt
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-header">
+                  <h4>Brand Icons</h4>
+                </div>
+                <div class="card-body">
+                  <div class="row cdx-row">
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-flickr"></i></div>ti-flickr
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-flickr-alt"></i></div>ti-flickr-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-instagram"></i></div>ti-instagram
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-google"></i></div>ti-google
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-github"></i></div>ti-github
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-facebook"></i></div>ti-facebook
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-dropbox"></i></div>ti-dropbox
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-dropbox-alt"></i></div>ti-dropbox-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-dribbble"></i></div>ti-dribbble
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-apple"></i></div>ti-apple
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-android"></i></div>ti-android
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-yahoo"></i></div>ti-yahoo
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-trello"></i></div>ti-trello
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-stack-overflow"></i></div>ti-stack-overflow
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-soundcloud"></i></div>ti-soundcloud
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-sharethis"></i></div>ti-sharethis
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-sharethis-alt"></i></div>ti-sharethis-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-reddit"></i></div>ti-reddit
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-microsoft"></i></div>ti-microsoft
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-microsoft-alt"></i></div>ti-microsoft-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-linux"></i></div>ti-linux
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-jsfiddle"></i></div>ti-jsfiddle
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-joomla"></i></div>ti-joomla
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-html5"></i></div>ti-html5
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-css3"></i></div>ti-css3
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-drupal"></i></div>ti-drupal
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-wordpress"></i></div>ti-wordpress
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-tumblr"></i></div>ti-tumblr
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-tumblr-alt"></i></div>ti-tumblr-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-skype"></i></div>ti-skype
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-youtube"></i></div>ti-youtube
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-vimeo"></i></div>ti-vimeo
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-vimeo-alt"></i></div>ti-vimeo-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-twitter"></i></div>ti-twitter
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-twitter-alt"></i></div>ti-twitter-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-linkedin"></i></div>ti-linkedin
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-pinterest"></i></div>ti-pinterest
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-pinterest-alt"></i></div>ti-pinterest-alt
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-themify-logo"></i></div>ti-themify-logo
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-themify-favicon"></i></div>ti-themify-favicon
+                      </div>
+                    </div>
+                    <div class="col-xxl-3 col-md-4 col-sm-6">
+                      <div class="exicon-box">
+                        <div class="icon-wrap"><i class="ti-themify-favicon-alt"></i></div>ti-themify-favicon-alt
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- theme body end-->
+    </div>
+    <!-- footer start -->
+      <footer class="codex-footer">
+        <p>Copyright 2022-23 © medixo All rights reserved.</p>
+      </footer>
+        <div class="scroll-top"><i class="fa fa-angle-double-up"></i></div>
+    <!-- footer end-->
+      <!-- main jquery-->
+      <script src="../assets/js/jquery-3.7.0.min.js"></script>
+      <!-- Feather iocns js-->
+      <script src="../assets/js/icons/feather-icon/feather.js"></script>
+      <!-- Bootstrap js-->
+      <script src="../assets/js/bootstrap.bundle.min.js"></script>
+      <script src="../assets/js/vendors/notify/bootstrap-notify.js"></script>
+      <script src="../assets/js/vendors/notify/bootstrap-customnotify.js"></script>
+      <!-- customizer-->
+      <script src="../assets/js/customizer.js"></script>
+      <!-- Scrollbar-->
+      <script src="../assets/js/vendors/simplebar.js"></script>
+      <!-- Custom script-->
+      <script src="../assets/js/custom-script.js"></script>
+  </body>
+</html>

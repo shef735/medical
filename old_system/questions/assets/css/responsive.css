@@ -1,0 +1,214 @@
+/*L-desktop*/
+
+@media (min-device-width:  1600px)
+{
+    
+}
+
+/*L-laptops*/
+@media (max-width: 1440px)
+{
+
+
+    
+}
+
+/*laptops/tablets*/
+@media(max-width: 1024px)
+{
+    .lap-50
+    {
+        width: 50%;
+    }
+    .lap-100
+    {
+        width: 100%;
+    }
+    .check-field label, .radio-field label
+    {
+        font-size: 18px;
+    }
+    .main-heading
+    {
+        font-size: 30px;
+    }
+    .image-f
+    {
+        display: none;
+    }
+    .p-text
+    {
+        font-size: 17px;
+    }
+    .next_prev
+    {
+        display: grid;
+        place-content: center;
+        margin: 30px 0;
+    }
+    .next_prev button
+    {
+        margin: 0 auto;
+    }
+    .radio-field-2 label
+    {
+        width: 72%;
+    }
+
+}
+
+
+/*tablets*/
+@media(max-width: 768px)
+{
+    .tab-50
+    {
+        width: 50%;
+    }
+    .tab-100
+    {
+        width: 100%;
+    }
+    .radio-field-2 label
+    {
+        font-size: 18px;
+    }
+    .radio-field-3 label
+    {
+        font-size: 18px;
+    }
+    .radio-field-3 label span
+    {
+        font-size: 16px;
+    }
+    .thankyou-page-inner h1
+    {
+        font-size: 50px;
+    }
+    .subscribe input
+    {
+        width: 60%;
+    }
+    .subscribe button
+    {
+        width: 40%;
+    }
+
+    
+
+
+}
+
+
+/*Smart phone*/
+@media(max-width: 576px)
+{
+    .quiz-text
+    {
+        width: 100%;
+    }
+    .main-heading
+    {
+        font-size: 23px;
+    }
+    .p-text
+    {
+        font-size: 15px;
+    }
+    .radio-field
+    {
+        height: 70px;
+    }
+    .radio-field label::before
+    {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+        margin-right: 20px;
+    }
+    .radio-field label, .check-field label
+    {
+        font-size: 12px;
+    }
+    .check-field
+    {
+        height: 60px;
+    }
+    .next_prev .bar-inner
+    {
+        width: 100%;
+    }
+    .check-field input::after
+    {
+        width: 30px;
+        height: 30px;
+        top: 15px;
+    }
+    .next_prev
+    {
+        display: grid;
+        place-content: center;
+        margin: 30px 0;
+    }
+    .radio-field-3 label
+    {
+        width: 75%;
+        font-size: 18px;
+    }
+    .radio-field-3 label span
+    {
+        font-size: 17px;
+    }
+    .radio-field-3 img
+    {
+        object-position: 0px -30px;
+    }
+    .radio-field-2
+    {
+        height: 90px;
+    }
+    .radio-field-2 input
+    {
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    .radio-field-2 label
+    {
+        font-size: 12px;
+    }
+    .radio-field-3 input
+    {
+        left: -10px;
+    }
+    .thankyou-page-inner span
+    {
+        font-size: 15px;
+    }
+
+
+
+    .thankyou-page-inner h1
+    {
+        width: 90%;
+        font-size: 30px;
+    }
+    .subscribe
+    {
+        width: 90%;
+        padding-left: 20px;
+        height: 60px;
+    }
+    .subscribe input
+    {
+        width: 50%;
+    }
+    .subscribe button
+    {
+        width: 50%;
+    }
+
+    
+}
+
+
