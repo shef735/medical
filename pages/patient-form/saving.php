@@ -127,6 +127,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $patient_code = generatePatientCode($conn);
 
           $photo_path = handlePhotoUpload($conn);
+
+          $_SESSION['user_id']=$patient_code;
         
         // Prepare data
         $date = mysqli_real_escape_string($conn, $_POST['date']);
@@ -556,7 +558,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             
             
             <div class="button-group">
-                <a href="questions.php" class="btn btn-success">
+                <a href="../questions/" class="btn btn-success">
                     <i class="fas fa-clipboard-list"></i>
                     Proceed to Medical Questions
                 </a>
@@ -609,20 +611,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         };
 
         // Auto-redirect to questions after 10 seconds if user doesn't choose
-        <?php if(isset($success) && $success): ?>
-        let redirectTimer = setTimeout(function() {
-            if(confirm('Would you like to proceed to medical questions now?')) {
-                window.location.href = 'questions.php';
-            }
-        }, 10000);
-
-        // Clear timer if user clicks any button
-        document.querySelectorAll('.btn').forEach(button => {
-            button.addEventListener('click', function() {
-                clearTimeout(redirectTimer);
-            });
-        });
-        <?php endif; ?>
+        
 
         // Prevent accidental page refresh
         window.addEventListener('beforeunload', function(e) {

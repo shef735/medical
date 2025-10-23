@@ -129,7 +129,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 </head>
 <body>
     <div class="login-container">
-        <img src="../../uploads/logo/logo_RMQ.png" alt="Company Logo" class="company-logo">
+        <img src="../uploads/logo/logo_GH.png" alt="Company Logo" class="company-logo">
         
         <h2>Welcome Back</h2>
         <p>Please enter your credentials to log in.</p>

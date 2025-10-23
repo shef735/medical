@@ -44,6 +44,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $_SESSION["username"] = $username;
                         $_SESSION['user_name'] = $username;
                         $_SESSION["fullname"] = $firstname . " " . $lastname;
+                        $_SESSION['last_name']= $lastname;
+                        $_SESSION['first_name']=$firstname;
+                        $_SESSION['middle_name']='';
 
                         // --- FETCH USER PERMISSIONS ---
                         $access_list = [];
