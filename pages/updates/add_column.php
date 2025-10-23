@@ -609,5 +609,19 @@ $prefix=ltrim($my_tables_use).'_laboratory.test_results';
 											  echo $col_name.' already exists! </br>';
 										  }
 	
+
+$prefix=ltrim($my_tables_use).'_resources.company';
+										  $col_name = 'logo_width';
+										  $column_attr = "VARCHAR(11) NOT NULL";
+										  $col = mysqli_query($conn,"SELECT ".$col_name." FROM ".$prefix);
+										  if (!$col){
+											  mysqli_query($conn,"ALTER TABLE ".$prefix." ADD ".$col_name." ". $column_attr );
+											  echo $col_name.' added </br>';			
+										  }
+										  else
+										  {
+											  echo $col_name.' already exists! </br>';
+										  }
+
 echo 'done';
 ?>

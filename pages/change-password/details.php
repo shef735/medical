@@ -90,22 +90,56 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--favicon-->
-     <!-- loader-->
-    <link href="../assets/css/pace.min.css" rel="stylesheet" />
-    <script src="../assets/js/pace.min.js"></script>
     <!-- Bootstrap CSS -->
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/css/bootstrap-extended.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link href="../assets/css/app.css" rel="stylesheet">
-    <link href="../assets/css/icons.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Pace CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.min.css" rel="stylesheet">
     <title>Change Password</title>
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .authentication-reset-password {
+            width: 100%;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+        .card-body {
+            padding: 2rem;
+        }
+        .btn-primary {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+        .btn-success {
+            background-color: #198754;
+            border-color: #198754;
+        }
+        .form-control:focus {
+            border-color: #86b7fe;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+    </style>
 </head>
 
 <body>
     <!-- wrapper -->
     <div class="wrapper">
-        <div  class="authentication-reset-password d-flex align-items-center justify-content-center">
+        <div class="authentication-reset-password d-flex align-items-center justify-content-center">
          <div class="container">
             <div class="row row-cols-1 row-cols-lg-2 row-cols-xl-3">
                 <div class="col mx-auto">
@@ -113,20 +147,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         <div class="card-body">
                             <div class="p-4">
                                 <div class="mb-4 text-center">
-                                   <img src="../../../uploads/logo/logo_<?php echo  $company_code ?>.png" style="width:<?php echo $logo_width ?>px" alt="" />
+                                   <img src="../../uploads/logo/logo_<?php echo  $company_code ?>.png" style="width:<?php echo $logo_width ?>px" alt="Company Logo" />
 
                                 </div>
                                 <div class="text-start mb-4">
-                                    <h5 class="">Change Password</h5>
-                                    <p class="mb-0">Please enter your current password and set a new password.</p>
+                                    <h5 class="card-title">Change Password</h5>
+                                    <p class="mb-0 text-muted">Please enter your current password and set a new password.</p>
                                 </div>
                                 
                                 <?php if ($error): ?>
-                                    <div class="alert alert-danger"><?php echo $error; ?></div>
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                        <?php echo $error; ?>
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
                                 <?php endif; ?>
                                 
                                 <?php if ($success): ?>
-                                    <div class="alert alert-success"><?php echo $success; ?></div>
+                                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                        <?php echo $success; ?>
+                                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                    </div>
                                 <?php endif; ?>
                                 
                                 <form method="POST" action="">
@@ -144,7 +184,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                     </div>
                                     <div class="d-grid gap-2">
                                         <button type="submit" class="btn btn-primary">Change Password</button> 
-                                        <a href="../index.php" class="btn btn-success"><i class='bx bx-home mr-1'></i>Home</a>
+                                        <a href="../index.php" class="btn btn-success">
+                                            <i class='fas fa-home me-1'></i>Home
+                                        </a>
                                     </div>
                                 </form>
                             </div>
@@ -158,6 +200,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- end wrapper -->
     
     <!-- Bootstrap JS -->
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Pace JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script>
+    
+    <script>
+        // Initialize Pace page loader
+        paceOptions = {
+            ajax: false,
+            document: false,
+            eventLag: false
+        };
+
+        // Add some basic interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-dismiss alerts after 5 seconds
+            setTimeout(function() {
+                const alerts = document.querySelectorAll('.alert');
+                alerts.forEach(function(alert) {
+                    const bsAlert = new bootstrap.Alert(alert);
+                    bsAlert.close();
+                });
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
