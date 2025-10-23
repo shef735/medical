@@ -72,7 +72,11 @@ switch ($action) {
         
         $visits = [];
         while ($row = mysqli_fetch_assoc($result)) {
-            $visits[] = $row;
+            if($row ['review_of_systems']=='' AND $row ['objective']=='' AND $row ['assessment']=='' AND $row ['plans']=='' ) {
+                continue;
+            }
+             $visits[] = $row;
+            
         }
         
         $response['success'] = true;
@@ -106,14 +110,14 @@ switch ($action) {
         $visit_id = (int)($_POST['visit_id'] ?? 0);
         $patient_id = (int)($_POST['patient_id'] ?? 0);
         
-        $visit_date = !empty($_POST['visit_date']) ? $_POST['visit_date'] : null;
-        $case_number = $_POST['case_number'] ?? null;
-        $review_of_systems = $_POST['review_of_systems'] ?? null;
-        $objective = $_POST['objective'] ?? null;
-        $assessment = $_POST['assessment'] ?? null;
-        $plans = $_POST['plans'] ?? null;
-        $next_visit = !empty($_POST['next_visit']) ? $_POST['next_visit'] : null;
-        $notes = $_POST['notes'] ?? null;
+        $visit_date = !empty($_POST['visit_date']) ? $_POST['visit_date'] : '';
+        $case_number = $_POST['case_number'] ?? '';
+        $review_of_systems = $_POST['review_of_systems'] ?? '';
+        $objective = $_POST['objective'] ?? '';
+        $assessment = $_POST['assessment'] ?? '';
+        $plans = $_POST['plans'] ?? '';
+        $next_visit = !empty($_POST['next_visit']) ? $_POST['next_visit'] : '';
+        $notes = $_POST['notes'] ?? '';
 
         if (empty($patient_id)) {
             $response['message'] = 'Patient ID is missing.';

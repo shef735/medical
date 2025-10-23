@@ -882,22 +882,22 @@
                                 </div>
                             </div>
                             
-                            <div class="section-header s-section">Subjective</div>
+                            <div class="section-header s-section"><strong>SUBJECTIVE</strong></div>
                             <div class="form-group">
-                                <textarea class="form-control" id="review_of_systems" name="review_of_systems" rows="4" placeholder="Patient's complaints, symptoms, medical history..."></textarea>
+                                <textarea required class="form-control" id="review_of_systems" name="review_of_systems" rows="4" placeholder="Patient's complaints, symptoms, medical history..."></textarea>
                             </div>
                             
-                            <div class="section-header o-section">Objective</div>
+                            <div class="section-header o-section"><strong>OBJECTIVE</strong></div>
                             <div class="form-group">
                                 <textarea class="form-control" id="objective" name="objective" rows="4" placeholder="Physical exam findings, lab results, vital signs..."></textarea>
                             </div>
                             
-                            <div class="section-header a-section">Assessment</div>
+                            <div class="section-header a-section"><strong>ASSESSMENT</strong></div>
                             <div class="form-group">
                                 <textarea class="form-control" id="assessment" name="assessment" rows="4" placeholder="Diagnosis, differential diagnosis, clinical impression..."></textarea>
                             </div>
                             
-                            <div class="section-header p-section">Plans</div>
+                            <div class="section-header p-section"><strong>PLANS</strong></div>
                             <div class="form-group">
                                 <textarea class="form-control" id="plans" name="plans" rows="4" placeholder="Treatment plan, medications, referrals, follow-up..."></textarea>
                             </div>
@@ -923,19 +923,19 @@
                                 <input style="font-size: 20px; text-align:center;color: red" type="date" id="prev_visit_date" readonly>
                             </h4>
                             <div class="form-group">
-                                <label>Subjective (S):</label>
+                                <label><strong>SUBJECTIVE:</strong></label>
                                 <p id="prev_review_of_systems" class="data-block">N/A</p>
                             </div>
                             <div class="form-group">
-                                <label>Objective (O):</label>
+                                <label><strong>OBJECTIVE:</strong></label>
                                 <p id="prev_objective" class="data-block">N/A</p>
                             </div>
                             <div class="form-group">
-                                <label>Assessment (A):</label>
+                                <label><strong>ASSESSMENT:</strong></label>
                                 <p id="prev_assessment" class="data-block">N/A</p>
                             </div>
                             <div class="form-group">
-                                <label>Plan (P):</label>
+                                <label><strong>PLANS:</strong></label>
                                 <p id="prev_plans" class="data-block">N/A</p>
                             </div>
                         </div>
